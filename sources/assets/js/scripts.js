@@ -47,10 +47,12 @@ $.each(issuesNSolutionsList, function(idx) {
             var issueId = issuesNSolutionsList[idx].issue_id,
                 issueName = issuesNSolutionsList[idx].issue_name,
                 solutions = issuesNSolutionsList[idx].solutions,
-                codepenUrl = issuesNSolutionsList[idx].codpen_url,
+                codepenUrl = issuesNSolutionsList[idx].codepen_url,
+                codepenUrl = codepenUrl ? '<a href="'+codepenUrl+'" target="_blank">here</a>' : 'Not Available',
                 sanSolutions = replaceHtmlEntites;
 console.log(solutions);
 console.log(typeof(solutions));
+console.log(codepenUrl);
                
             solutionsList += '<div class="panel panel-default">\
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse'+issueId+'">\
@@ -61,7 +63,9 @@ console.log(typeof(solutions));
                         <div id="collapse'+issueId+'" class="panel-collapse collapse">\
                             <div class="panel-body">';
             $.each(solutions, function(item){
-                solutionsList += '<h5>Solution '+solutions[item].id+'</h5><div>'+replaceHtmlEntites(solutions[item].solution)+'</div>';
+                solutionsList += '<h3 class="text-center">Solution '+solutions[item].id+'</h3>\
+                <div>'+replaceHtmlEntites(solutions[item].solution)+'</div>\
+                <p class="codepen-url">Codepen Url: '+codepenUrl+'</p>';
             });
 //             for(i=0; i<solutions.length; i++){
 //                 solutionsList += '<p>'+solutions[i].solution+'</p>';

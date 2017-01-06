@@ -23,11 +23,11 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
 	color:$basecolor;
-	text-decoration:underline;
 }
 
 a:hover, a:visited, a:focus, a:active {
 	color:$headingcolor;
+	text-decoration:none;
 }
 
 a.btn {
@@ -38,71 +38,20 @@ s {
 }
 
 // custom font colors ends
-header.page-title {
-	height:7em;
+[id*=collapse] > div > h3, .codepen-url {
+	padding: 6px;
+    background: $bordercolor;
+    border-radius: 5px;
 }
-header.page-title h1 {
-	font-size:5rem;
-	text-transform:uppercase;
+.panel-heading { 
+background:whitesmoke;
 }
-
-.cart {
-	border-bottom:5px solid $bordercolor;
-	padding-bottom:1em;
-	margin-bottom:(50em/14);
-}
-
-.cart-header {
-	border-top:1px solid $bordercolor;
-	padding:10px;
-	font-weight:bold;
-	border-bottom:5px solid $bordercolor;
-	margin:0 0 1em 0;
-}
-.checkout-header.row, .checkout-total {
-	padding:0 0 10px 0px;
-/* 	font-weight:bold; */
-	border-bottom:5px solid $bordercolor !important;
-	margin:0 0 1em 0;
-}
-.checkout-body {
-	border-bottom:1px solid $bordercolor;
-	margin-bottom:1em;
-}
-.checkout-body .row, .checkout-footer .row {
-	padding:0 0px 10px 0px;
-}
-.cart-items {
-	padding:1.25em 0;
-/* 	margin-bottom:1em; */
-	border-bottom:solid 1px $bordercolor;
-}
-.item-size, .item-price {
-	padding:8px
-}
-.item-price .glyphicon {
-	
-}
-.item-price h3, *[id*=otal] h3{
-	display:inline-block !important;
-	margin:0 !important;
-}
-
-.cart-items:last-child{
-	border-bottom:0;
-}
-
-.cart-items select {
-	padding:6px;
-}
-.item-short-desc {
-	margin:0 0 2em 0;
+.panel-heading:hover {
+background:darkgrey;
+color:#ffffff;
+transition:all .5s;	
 }
 
 img.visible-xs {
 	margin:0 auto !important;
-}
-.sign-in-mbl {
-	padding:1.5em;
-	border-top:1px solid $bordercolor;
 }
