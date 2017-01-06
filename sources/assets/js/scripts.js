@@ -15,62 +15,40 @@ window.onload = (function() {
     // xmlhttp.send();
     xmlhttp.open("GET", url2, true);
     xmlhttp.send();
-        function formatPrice(n) { return n > 9 ? "" + n : "0" + n; }
 
-
-        function sum(itemPrices){
-             
-         if (toString.call(itemPrices) !== "[object Array]")
-            return false;
-            var total =  0;
-            for(i=0; i<itemPrices.length; i++)
-              {                  
-                if(isNaN(itemPrices[i])){
-                continue;
-                 }
-                  total += Number(itemPrices[i]);
-               }
-             return total;
-            }
-        function calcDiscount(subTotal, totalQnty){
-            var discount = 0;
-            if (totalQnty == 3) {
-                discount = ((subTotal/100)*5);
-            } else if (totalQnty > 3 && totalQnty <= 6) {
-                discount = ((subTotal/100)*10);
-            } else if (totalQnty >= 7 ) {
-                discount = ((subTotal/100)*25);
-            } else {
-                discount = 0;
-            }
-            return discount;
-        }
-        function calcShipping(subTotal){
-            var shipping = 0;
-            if (subTotal >= 50) {
-                shipping = 0;
-            } else if (subTotal < 50 ) {
-                shipping = ((subTotal/100)*5);
-            } else {
-                shipping = ((subTotal/100)*5);
-            }
-            return shipping;
-        }        
+var replaceHtmlEntites = (function() {
+            var translate_re = /&(nbsp|amp|quot|lt|gt);/g,
+                translate = {
+                    'nbsp': String.fromCharCode(160),
+                    'amp': '&',
+                    'quot': '"',
+                    'lt': '<',
+                    'gt': '>'
+                },
+                translator = function($0, $1) {
+                    return translate[$1];
+                };
+        
+            return function(s) {
+                return s.replace(translate_re, translator);
+            };
+        })();       
 
 
     function myFunction(response) {
         var issues_n_solutions = JSON.parse(response),
-            issuesNSolutionsList = issues_n_solutions.issuesAndSolutions,
+            issuesNSolutionsList = issues_n_solutions[0].issuesAndSolutions,
             i, solutionsList = "",
             subTotal, discount, estimatedTotal, shipping, shippingPrice="", subTotalPrice="", discountPrice="", estimatedTotalPrice="", pricearray = [], quantityarray = [];
-
+console.log(issues_n_solutions);
 console.log(issuesNSolutionsList);
 
 $.each(issuesNSolutionsList, function(idx) {
             var issueId = issuesNSolutionsList[idx].issue_id,
                 issueName = issuesNSolutionsList[idx].issue_name,
                 solutions = issuesNSolutionsList[idx].solutions,
-                codepenUrl = issuesNSolutionsList[idx].codpen_url;
+                codepenUrl = issuesNSolutionsList[idx].codpen_url,
+                sanSolutions = replaceHtmlEntites;
 console.log(solutions);
 console.log(typeof(solutions));
                
@@ -82,12 +60,12 @@ console.log(typeof(solutions));
                         </a>\
                         <div id="collapse'+issueId+'" class="panel-collapse collapse">\
                             <div class="panel-body">';
-//             $.each(solutions, function(item){
-//                 solutionsList += '<p>'+item+'</p>';
-//             });
-            for(i=0; i<solutions.length; i++){
-                solutionsList += '<p>'+solutions+'</p>';
-            }
+            $.each(solutions, function(item){
+                solutionsList += '<h5>Solution '+solutions[item].id+'</h5><div>'+replaceHtmlEntites(solutions[item].solution)+'</div>';
+            });
+//             for(i=0; i<solutions.length; i++){
+//                 solutionsList += '<p>'+solutions[i].solution+'</p>';
+//             }
             
                 solutionsList += '</div></div></div>';
 } );
@@ -97,12 +75,7 @@ console.log(typeof(solutions));
 
 
         document.getElementById('accordion').innerHTML = solutionsList;
-        // document.getElementById('subTotal').innerHTML = subTotalPrice;
-        // document.getElementById('discountTotal').innerHTML = discountPrice;
-        // document.getElementById('shippingTotal').innerHTML = shippingPrice;
-        // document.getElementById('estimatedTotal').innerHTML = estimatedTotalPrice;
-        // totalItems = $(".cart-items").length;
-        // $('.total-items').html($('<div/>', { class: 'total-items' }).html(totalItems + ' items'));
+
     }
 
 

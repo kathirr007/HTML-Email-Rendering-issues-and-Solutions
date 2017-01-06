@@ -1,17 +1,38 @@
-{
+[{
     "issuesAndSolutions": [{
         "issue_id": "1",
         "issue_name": "Removing date/time styling from HTML email iPhone",
-        "solutions": {
-            "1": "Serenade your loved one - stroll hand in hand. Sense the cool breeze that skims off the lake and the crush of soft lawn beneath your feet. Take a dip in our massive pool, or go cycling. Blast a game of billiards with your friends. Immerse yourself in the aroma of steaming coffee or variations of it, at our bistro on the deck. &lt;br&gt;Pamper yourself at our spa or salon- choose from our various specialties that will leave you glowing. Tickle your taste buds, or make it exotic with our cuisine range. Cuddle in the cozy and luxurious cocoon of your choice.&lt;br&gt;&lt;br&gt;Wake up to another beautiful day. Welcome to luxury on the shores of Royale!&lt;br&gt;"
-        },
+        "solutions": [{
+            "id": "1",
+            "solution": "Serenade your loved one - stroll hand in hand. Sense the cool breeze that skims off the lake and the crush of soft lawn beneath your feet. Take a dip in our massive pool, or go cycling. Blast a game of billiards with your friends. Immerse yourself in the aroma of steaming coffee or variations of it, at our bistro on the deck. &lt;br&gt;Pamper yourself at our spa or salon- choose from our various specialties that will leave you glowing. Tickle your taste buds, or make it exotic with our cuisine range. Cuddle in the cozy and luxurious cocoon of your choice.&lt;br&gt;&lt;br&gt;Wake up to another beautiful day. Welcome to luxury on the shores of Royale!&lt;br&gt;"
+        }],
         "codepen_url": ""
     }, {
         "issue_id": "2",
-        "issue_name": "Removing date/time styling from HTML email iPhone",
-        "solutions": {
-            "1": "Serenade your loved one - stroll hand in hand. Sense the cool breeze that skims off the lake and"
-        },
+        "issue_name": "Hide and Show responsive technique",
+        "solutions": [{
+            "id": "1",
+            "solution": "Hide and show technique for HTML email is goes here"
+        }, {
+            "id": "2",
+            "solution": "Second solution for Hide and show technique for HTML email is goes here"
+        }],
+        "codepen_url": ""
+    }, {
+        "issue_id": "3",
+        "issue_name": "Removing date/timee",
+        "solutions": [{
+            "id": "1",
+            "solution": ""
+        }],
+        "codepen_url": ""
+    }, {
+        "issue_id": "4",
+        "issue_name": "To give the breaks in lengthy anchor links",
+        "solutions": [{
+            "id": "1",
+            "solution": ""
+        }],
         "codepen_url": ""
     }]
-}
+}]
