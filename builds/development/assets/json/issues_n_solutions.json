@@ -12,7 +12,7 @@
         "issue_name": "Content Expanded beyond the width of the wrapper table in Android 4.4 devices becasue of lengthy links",
         "solutions": [{
             "id": "1",
-            "solution": "Hide and show technique for HTML email is goes here"
+            "solution": "This is happenig becasue of the link text appear in html content"
         }, {
             "id": "2",
             "solution": "Second solution for Hide and show technique for HTML email is goes here"

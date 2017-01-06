@@ -27,16 +27,16 @@ fonts = [bootstrapSources + 'assets/fonts/**/*', sourceDir + 'assets/fonts/*.*']
 imgSources = [sourceDir + 'assets/images/**/*'];
 jsSources = [nodeModules + 'jquery/dist/jquery.min.js', nodeModules + 'mustache/mustache.min.js', bootstrapSources + 'assets/javascripts/bootstrap.min.js', sourceDir + 'assets/js/*.js'];
 sassSources = [bootstrapSources + 'assets/stylesheets/**/*.scss', sourceDir + 'assets/scss/**/*.scss'];
-htmlSources = [sourceDir + '*.html'];
-// htmlSources = { in : sourceDir + '*.html',
-//     watch: [sourceDir + '*.html', sourceDir + 'template/**/*'],
-//     out: outputDir,
-//     context: {
-//         devBuild: devBuild,
-//         author: pkg.author,
-//         version: pkg.version
-//     }
-// };
+// htmlSources = [sourceDir + '*.html'];
+htmlSources = { in : sourceDir + '*.html',
+    watch: [sourceDir + '*.html', sourceDir + 'template/**/*'],
+    out: outputDir,
+    context: {
+        devBuild: devBuild,
+        author: pkg.author,
+        version: pkg.version
+    }
+};
 jsonSources = [sourceDir + 'assets/json/*.json'];
 sassOpts = {
     outputStyle: env == 'development' ? 'nested' : 'compressed',
@@ -115,6 +115,6 @@ gulp.task('watch', function() {
     gulp.watch(jsonSources, ['json']);
     gulp.watch(sassSources, ['sass']);
     gulp.watch(imgSources, ['images']);
-    gulp.watch(htmlSources, ['html']);
+    gulp.watch(htmlSources.watch, ['html']);
 });
 gulp.task('default', ['html', 'sass', 'js', 'images', 'connect', 'json', 'watch']);
