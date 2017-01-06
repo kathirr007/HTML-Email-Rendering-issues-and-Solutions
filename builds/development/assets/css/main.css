@@ -4885,8 +4885,8 @@ body {
   padding: 0; }
 
 @media screen and (max-width: 991px) {
-  header.page-title h1 {
-    font-size: 2.5rem !important; }
+  .page-title {
+    font-size: 5vw !important; }
   header.page-title {
     border-bottom: 5px solid #dadada;
     height: 5em !important;
@@ -4968,6 +4968,9 @@ a.btn {
 s {
   color: #dadada; }
 
+/* .page-title {
+	font-size:5vw;
+} */
 [id*=collapse] > div > h3,
 .codepen-url {
   padding: 6px;

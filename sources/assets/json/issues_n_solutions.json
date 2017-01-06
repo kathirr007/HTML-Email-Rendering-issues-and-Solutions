@@ -14,7 +14,7 @@
       },
       {
         "issue_id": "2",
-        "issue_name": "Hide and Show responsive technique",
+        "issue_name": "Content Expanded beyond the width of the wrapper table in Android 4.4 devices becasue of lengthy links",
         "solutions": [
           {
             "id":"1",

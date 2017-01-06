@@ -9,7 +9,7 @@
         "codepen_url": "http://codepen.io/kathirr007/pen/VPLaGZ"
     }, {
         "issue_id": "2",
-        "issue_name": "Hide and Show responsive technique",
+        "issue_name": "Content Expanded beyond the width of the wrapper table in Android 4.4 devices becasue of lengthy links",
         "solutions": [{
             "id": "1",
             "solution": "Hide and show technique for HTML email is goes here"
