@@ -1,3 +1,8 @@
+env:
+  global:
+  - ENCRYPTION_LABEL: ac8eb6ebc312
+  - COMMIT_AUTHOR_EMAIL: kathirr007@gmail.com
+  
 language: node_js
 node_js:
   - "6"
@@ -9,8 +14,4 @@ before_script:
   - npm install -g gulp
 script: 
   - gulp travis 
-script: bash ./deploy.sh
-env:
-  global:
-  - ENCRYPTION_LABEL: "<ac8eb6ebc312>"
-  - COMMIT_AUTHOR_EMAIL: "kathirr007@gmail.com"
+  - bash ./deploy.sh
