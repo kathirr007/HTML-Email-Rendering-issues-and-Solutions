@@ -117,4 +117,8 @@ gulp.task('watch', function() {
     gulp.watch(imgSources, ['images']);
     gulp.watch(htmlSources.watch, ['html']);
 });
+
+ // default travis CI
+gulp.task('travis', ['html', 'sass', 'js', 'images', 'connect', 'json', 'watch'], function() {});   
+// default gulp
 gulp.task('default', ['html', 'sass', 'js', 'images', 'connect', 'json', 'watch']);
