@@ -1,0 +1,1 @@
+jekyll -d out/
