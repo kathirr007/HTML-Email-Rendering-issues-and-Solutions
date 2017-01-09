@@ -78,7 +78,7 @@ console.log(codepenUrl);
 
 
 
-        document.getElementById('accordion').innerHTML = solutionsList;
+        document.getElementById('dynamic_datas').innerHTML = solutionsList;
 
     }
 

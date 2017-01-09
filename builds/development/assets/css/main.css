@@ -4990,4 +4990,10 @@ s {
 img.visible-xs {
   margin: 0 auto !important; }
 
+.highlight {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px; }
+
 /*# sourceMappingURL=maps/main.css.map */

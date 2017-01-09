@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- @include template/_meta_all.html -->
+<!-- @include template/_meta_all.html -->
 </head>
 <body>
-    <div class="logo">
-        <!-- Menu End -->
-        <!--Logo-->
-    </div>
-    <div class="clear"></div>
-    <!--container-->
-    <div class="container">
-        <div class="main clearfix">
-            <h1 class="text-center page-title">HTML Email solutions, tips & best practices</h1>
-            <div class="clear"></div>
-            <div class="main-content">
-                <!-- You only need this form and the form-register.css -->
-                <div class="panel-group" id="accordion">
-                    <!-- Emergency contacts templates -->
-                    <div class="panel panel-default">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">Helplines</h4>
-                            </div>
-                        </a>
-                        <div id="collapse1" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <ul>
-                                    <li>Ambulance | <a href="tel:+91108">108</a></li>
-                                    <li>KR Hospital Mysore | <a href="tel:+910821-0821-2423300">0821-0821-2423300</a></li>
-                                    <li>Fire | <a href="tel:+91101">101</a>, <a href="tel:+912540970">2540970</a></li>
-                                    <li>Police | <a href="tel:+91100">100</a>, <a href="tel:+910821">0821</a> - <a href="tel:+912418139">2418139</a> ,<a href="tel:+912418339">2418339</a></li>
-                                    <li>Child Help Line | <a href="tel:+911098">1098</a>, <a href="tel:+910821-2418596">0821-2418596</a></li>
-                                    <li>Women&rsquo;s Help Line | <a href="tel:+91105">105</a>, <a href="tel:+910821-2148400">0821-2148400</a></li>
-                                    <li>Senior Citizen Helpline | <a href="tel:+911090">1090</a></li>
-                                    <li>Mysuru KSRTC Bus-Stand | <a href="tel:+910821-2520853">0821-2520853</a></li>
-                                    <li>Mysuru City Bus-Stand | <a href="tel:+910821-2425819">0821-2425819</a></li>
-                                    <li>Mysuru Railway Enquiry | <a href="tel:+910821-2422751">0821-2422751</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- @include template/_policestations.html -->
-                    <!-- @include template/_fireservices.html -->
-                    <!-- @include template/_lpgemergency.html -->
-                    <div id="test"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="logo"> 
+<!-- Menu End --> 
+<!--Logo--> 
+</div>
+<div class="clear"></div>
+<!--container-->
+<div class="container">
+<div class="main clearfix">
+<h1 class="text-center page-title">HTML Email solutions, tips & best practices</h1>
+<div class="clear"></div>
+<div class="main-content">
+<div id="static_contents">
+<h3>HTML Email coding tips and Best practices</h3>
+<p>It is best to start with HTML5 Doctype. Since now a days responsive is mandatory for all clients we need to code our HTML creatives with responisve ready. To make responsive we will be using media queries and some of the CSS3 styles. So, it is best to use CSS3 with HTML5 Doctype.</p>
+<p>Don't forget to add responsive meta tags to ensure the responsive work properly</p>
+<p class="bg-info highlight"> <em class="text-danger">mandatory</em><br>
+<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</code><br>
+<em class="text-danger">this is optional</em><br>
+<code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;</code> this is optional<br>
+</p>
+<p>Write the codes clean and neat to look good and readable to all developers like giving proper indents, adding meaningful classes and ids, adding reasonable title and alt texts to the images etc., which makes you a good coder.</p>
+<p>Always use nested table</p>
+</div>
+<div class="panel-group" id="dynamic_datas"> 
+<!-- Emergency contacts templates -->
+<div class="panel panel-default"> <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+<div class="panel-heading">
+<h4 class="panel-title">Helplines</h4>
+</div>
+</a>
+<div id="collapse1" class="panel-collapse collapse">
+<div class="panel-body">
+<ul>
+<li>Ambulance | <a href="tel:+91108">108</a></li>
+<li>KR Hospital Mysore | <a href="tel:+910821-0821-2423300">0821-0821-2423300</a></li>
+<li>Fire | <a href="tel:+91101">101</a>, <a href="tel:+912540970">2540970</a></li>
+<li>Police | <a href="tel:+91100">100</a>, <a href="tel:+910821">0821</a> - <a href="tel:+912418139">2418139</a> ,<a href="tel:+912418339">2418339</a></li>
+<li>Child Help Line | <a href="tel:+911098">1098</a>, <a href="tel:+910821-2418596">0821-2418596</a></li>
+<li>Women&rsquo;s Help Line | <a href="tel:+91105">105</a>, <a href="tel:+910821-2148400">0821-2148400</a></li>
+<li>Senior Citizen Helpline | <a href="tel:+911090">1090</a></li>
+<li>Mysuru KSRTC Bus-Stand | <a href="tel:+910821-2520853">0821-2520853</a></li>
+<li>Mysuru City Bus-Stand | <a href="tel:+910821-2425819">0821-2425819</a></li>
+<li>Mysuru Railway Enquiry | <a href="tel:+910821-2422751">0821-2422751</a></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- @include template/_policestations.html --> 
+<!-- @include template/_fireservices.html --> 
+<!-- @include template/_lpgemergency.html -->
+<div id="test"></div>
+</div>
+</div>
+</div>
+</div>
 </body>
-
 </html>
