@@ -55,7 +55,7 @@ console.log(typeof(solutions));
 console.log(codepenUrl);
                
             solutionsList += '<div class="panel panel-default">\
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse'+issueId+'">\
+                        <a data-toggle="collapse" data-parent="#dynamic_datas" href="#collapse'+issueId+'">\
                             <div class="panel-heading">\
                                 <h4 class="panel-title">'+issueName+'</h4>\
                             </div>\
