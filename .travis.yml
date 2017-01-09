@@ -15,3 +15,4 @@ before_script:
 script: 
   - gulp travis 
   - bash ./deploy.sh
+
