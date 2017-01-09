@@ -1,5 +1,7 @@
 # HTML Email Rendering issues and Solutions
 
+[![Build Status](https://travis-ci.org/kathirr007/HTML-Email-Rendering-issues-and-Solutions.svg?branch=master)](https://travis-ci.org/kathirr007/HTML-Email-Rendering-issues-and-Solutions)
+
 ### List of Rendering issues in HTML - Email Newsletter marketting with solutions and best practices to avoid the issues
 
 In order to Check App functionality, ensure that you have **[Git](http://git-scm.com/downloads)** and **[Node.js](http://nodejs.org)** installed.
