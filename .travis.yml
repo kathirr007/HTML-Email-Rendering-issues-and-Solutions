@@ -5,6 +5,12 @@ node_js:
   - "5.11"
 
 before_script:
+openssl aes-256-cbc -K $encrypted_ac8eb6ebc312_key -iv $encrypted_ac8eb6ebc312_iv -in id_rsa_02.enc -out id_rsa_02 -d
   - npm install -g gulp
 script: 
-  - gulp travis  
+  - gulp travis 
+script: bash ./deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "<ac8eb6ebc312>"
+  - COMMIT_AUTHOR_EMAIL: "kathirr007@gmail.com"
