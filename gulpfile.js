@@ -119,6 +119,6 @@ gulp.task('watch', function() {
 });
 
  // default travis CI
-gulp.task('travis', ['html', 'sass', 'js', 'images', 'connect', 'json', 'watch'], function() {});   
+gulp.task('travis', ['html', 'sass', 'js', 'images', 'json'], function() {});   
 // default gulp
 gulp.task('default', ['html', 'sass', 'js', 'images', 'connect', 'json', 'watch']);
