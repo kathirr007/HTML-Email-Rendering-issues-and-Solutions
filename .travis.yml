@@ -8,7 +8,7 @@ before_script:
 script:
   - gulp travis
   # - npm run-script deploy
-  - chmod +x ./deploy-ghpages.sh
+  - chmod +x ./deploy.sh
 
 env:
   global:
