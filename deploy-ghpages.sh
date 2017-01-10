@@ -5,7 +5,7 @@ node build.js
 ( cd out
  git init
  git config user.name "Travis-CI"
- git config user.email "travis@nodemeatspace.com"
+ git config user.email "kathirr007@gmail.com"
  # cp ../CNAME ./CNAME
  # cp ../countryiso.js ./countryiso.js
  git add .
