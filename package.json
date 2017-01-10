@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A Simple Responsive Shopping Cart page",
   "main": "index.html",
+  "scripts": {
+     "deploy": "./deploy-ghpages.sh"
+ },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kathirr007/Responsive-shopping-cart.git"
