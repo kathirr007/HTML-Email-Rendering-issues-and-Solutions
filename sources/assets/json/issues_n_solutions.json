@@ -3,7 +3,7 @@
     "issuesAndSolutions": [
       {
         "issue_id": "5",
-        "issue_name": "This on has been changed to check travis ci deployment",
+        "issue_name": "It has been changed to check travis ci deployment",
         "solutions": [
           {
             "id": "1",
