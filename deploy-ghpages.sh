@@ -20,6 +20,21 @@ git commit -m "deployed to github pages"
 git push --force --quiet $FULL_REPO master
 git status
 
+if [ -n "$GITHUB_API_KEY" ]; then
+    cd "$TRAVIS_BUILD_DIR"
+    # This generates a `web` directory containing the website.
+    make web
+    cd web
+    git init
+    git checkout -b gh-pages
+    git add .
+    git -c user.name='travis' -c user.email='travis' commit -m init
+    # Make sure to make the output quiet, or else the API token will leak!
+    # This works because the API key can replace your password.
+    git push -f -q https://$GITHUB_API_KEY@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git gh-pages &2>/dev/null
+    cd "$TRAVIS_BUILD_DIR"
+fi
+
 # #!/bin/bash
 # rm -rf out || exit 0;
 # mkdir out; 
