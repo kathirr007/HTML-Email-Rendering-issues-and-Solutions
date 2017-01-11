@@ -18,6 +18,7 @@ git add .
 git status
 git commit -m "deployed to github pages"
 git push --force --quiet $FULL_REPO master
+git status
 
 # #!/bin/bash
 # rm -rf out || exit 0;
