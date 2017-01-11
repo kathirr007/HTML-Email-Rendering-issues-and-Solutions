@@ -10,9 +10,8 @@ before_install:
 script:
 - gulp travis
 - chmod +x ./deploy-ghpages.sh
-after_success:
-- "./deploy-ghpages.sh"
--  if [ -n "$GITHUB_API_KEY" ]; then
+after_success: |
+  if [ -n "$GITHUB_API_KEY" ]; then
     cd "$TRAVIS_BUILD_DIR"
     # This generates a `web` directory containing the website.
     make web
