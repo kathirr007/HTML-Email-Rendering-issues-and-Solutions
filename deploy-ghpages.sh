@@ -16,7 +16,7 @@ git init
 git config user.email "kathirr007@gmail.com"
 git config user.name "kathirr007"
 
-# cp ../categoryCompare/inst/doc/categoryCompare_vignette.html index.html
+cp ../HTML-Email-Rendering-issues-and-Solutions/*.*
 
 git add .
 git commit -m "deployed to github pages"
