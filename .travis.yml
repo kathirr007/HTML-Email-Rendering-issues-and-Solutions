@@ -1,21 +1,17 @@
 language: node_js
 node_js:
-  - '6'
-  - '6.1'
-  - '5.11'
+- '6'
+- '6.1'
+- '5.11'
 before_script:
-  - npm install -g gulp
-  
-before_install:  
-  - chmod 755 ./deploy-ghpages.sh
+- npm install -g gulp
+before_install:
+- chmod 755 ./deploy-ghpages.sh
 script:
-  - gulp travis
-  - chmod +x ./deploy.sh
-
-
+- gulp travis
+- chmod +x ./deploy.sh
 after_success:
-  - ./deploy-ghpages.sh
-
+- "./deploy-ghpages.sh"
 env:
   global:
-  - secure: a4EYN/itqJ33pIWz7SNMuGUmFAK3s3Yd7k5KnX/hvp7NDat0VB4DBK39+Yjh4QRydSm5kr5KHSLFUHwqOB+AvWjddJJcYBbAkC9xcckI6kIW1UblVZxkttk/iVWliXBDke0hLf6O8oUEbAYWYuYRwzTqxOWFq3E72HizDsmGAtkPlBHNW0jBZKKa7aoW0MPWVeJFbgQKfAXD+mAm2JK6nn2fGVC3GbyVaZgGcidpfGuE+A5qpmg8fvYfmt6Qk0FMMQTu0WUTDQSFlkLK444xKii8G0BdZWHsKo+2Kx0O32SpvJkg7FdozrvHo3BlCkeUYAEQ+SEWWBnrsUn7l1IHYRizwKJcTYR2ER1U9cw8RCCWEabAwXc1lokgQtE9wz8wkuom1N/z4JkCxRndwmY9KFImT7sSKGT8k9wbQNzrR6eEJMzPzGN7NHyBjBlsxBoT1eb3lqMdMBv07XOwT204ehpETUsvbHxrgmiTZ7796FGbG7Gs4ozDXFZSX96AFT/6uXfJA8IMSUfRxPxVNg+MVfYOmYM8DB+stse3MOGzR2nn4nZlwA51ibA9LLJjjtNrX0FQQx5r84TlK/3ROlX2E+jz21ZHW9FI/twoNAAqfDFSx63Wudnza0tV/pu/yfxb939JPPXpyjao/QkSYOzr9ILcFaztp3NHaqnQCIBZDlk=
+    secure: VKUc5vUcn1gT/fCMNeu5h27pSCCQPpF9CfhG/qx4uRS41uT1n+EkDS+Y7YP3lSEUbN/goO5ERgHV41ZoI3GXrsnIp89j8E9vx8dyHLqLkgUmeA/Z0peb+d604I2WuiZ2x6DtFjqwPyOYb/YTHfimffIn0mA9yoNOUdywArfHMVJVSgzyQwcbRt+7BmV3w8ZMDxaSzYUctZA/Qmp8qTxvx1+8rUP1Wwkz94XWG/x/mBfuVLNi3W7xfC42E8KtIHa63dtUGwIUHDyMVu51rqeIkDLsh8n9ITXJcs2Z/Z2vZAHOp5RtXZiy4Dy5oWrXgsJC9MwENZKVHwIxdaN6kk1zBrttHDHFts4F1Clr55Pu5dyPH6RAZlScwbG5i/NRxidBIXnuBINvlnhSoCZjAdyMmkeMeoMuniSTKmpP8SVNYeZ5WX3BmjsnGJT1l8yLVPBH2R9NS4qvVLZrxzaklDUJ/SDAVff4BuY0NLVE1NsSYi+ipM4yJWeoc9Xj2UBrqkwNe9uYB4b0LBSjPF/1pCNS1I1Zc6T+VIFUODSMMLs+yn8IGwll0q4u2id93rReJLT+cxi3Nk4aGILqDa6HPPE70g/j9ECB+ZpdJbFjYIJaXjHYVvm0K+FmKoBlO//HQu7bPRyZzVc0OqNWwsdkjGOVqSzUFQQD30Mc8dxN0ZzOMDg=
