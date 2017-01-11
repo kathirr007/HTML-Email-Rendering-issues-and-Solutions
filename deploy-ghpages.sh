@@ -1,8 +1,5 @@
 #!/bin/bash
 
-rm -rf out || exit 0;
-mkdir out;
-
 GH_REPO="@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git"
 
 FULL_REPO="https://$GH_TOKEN$GH_REPO"
@@ -11,12 +8,11 @@ FULL_REPO="https://$GH_TOKEN$GH_REPO"
 #         tar xfz $files
 # done
 
-cd out
-git init
+
 git config user.email "kathirr007@gmail.com"
 git config user.name "kathirr007"
 
-cp ../HTML-Email-Rendering-issues-and-Solutions/*.*
+
 
 git add .
 git commit -m "deployed to github pages"
