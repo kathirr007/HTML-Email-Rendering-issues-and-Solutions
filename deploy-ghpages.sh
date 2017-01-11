@@ -15,6 +15,7 @@ git config user.name "kathirr007"
 
 git status
 git add .
+git status
 git commit -m "deployed to github pages"
 git push --force --quiet $FULL_REPO master
 

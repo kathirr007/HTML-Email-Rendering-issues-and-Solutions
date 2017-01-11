@@ -10,7 +10,7 @@
             "codepen_url": ""
         }, {
             "issue_id": "4",
-            "issue_name": "This too to test travis",
+            "issue_name": "This too to test travis automatic deployment",
             "solutions": [{
                 "id": "1",
                 "solution": ""
