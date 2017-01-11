@@ -5,23 +5,32 @@ node_js:
   - '5.11'
 before_script:
   - npm install -g gulp
+  
+before_install:  
+  - chmod 755 ./deploy-ghpages.sh
   # - openssl aes-256-cbc -K $encrypted_ac8eb6ebc312_key -iv $encrypted_ac8eb6ebc312_iv -in id_rsa_02.enc -out id_rsa_02 -d
 script:
   - gulp travis
   # - npm run-script deploy
   - chmod +x ./deploy.sh
 
-deploy:
-  provider: releases
-  api_key: "ca21f8a9d9c8fa06d4533c58a8390a0198d6df8e"
-  file: "*.*"
-  skip_cleanup: true
-  on:
-    tags: true
+
+
+
+after_success:
+  - ./deploy-ghpages.sh
+
+# deploy:
+#   provider: releases
+#   api_key: "ca21f8a9d9c8fa06d4533c58a8390a0198d6df8e"
+#   file: "*.*"
+#   skip_cleanup: true
+#   on:
+#     tags: true
 
 env:
   global:
-  - ENCRYPTION_LABEL: ac8eb6ebc312
+  # - ENCRYPTION_LABEL: ac8eb6ebc312
   # - COMMIT_AUTHOR_EMAIL: kathirr007@gmail.com
   - GH_REF: https://github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git
-  - secure: p/9vd6zqlsr24XZVw/Pbqb3EfP5+YJVEd/Db6tW6mD6ALb/aYPK8T2lyvsc93EevDRattjh4rvca0RVQ7GFARqCbKJsXqnX5xjq7KKSCPMjrXiTDU14VcNz0pNjXXEEa3Y9QfnnW1XsyAL9u/8Hog8+3cDpIkS9/bZge9EQf6BGrmXDkGgHETMPCjTCkkI4G8sWPI0ZQAXdv9jo9m79ETzitucFwuQesh7ERXedzGkZgp1N8rghSLaTobMGxil4r2d3IMUZGU/0HpCCh5mHeVYPT89GmNVMWU0TRutXAJUV7v0VMq+lB+GaGcUBNX38Qh+T0XpB16We5QkonIZbbtF03TirS4wpBdHDREpXMwmSCZsgkF5a3bzOcna+tLaKR1F9s50406NhiGujBNOjk3VBC4O4U4VXnsZxcaHyeV6jgWVxDmfQb/0QIHvShTuQBUTFZ4S7G0713SevN1KeMjiZhrahz9KEucXRMhEbvvzWIL8QKeQiHeXvHqF+Zu1NUowLoROjgRuZx8Rt6m0AcB20PRX5cH/Shynl6LbNzPRW9tHmp7ywjORBG1v1f/uDMhrEn3bXqINfWeBgCu2OB1P15OsmaSq/YMvtCRSGpZJCaEZRJtJFnhIvtmcSpwGel3p3FR72h5Qf565+OGEUbQQ+dEw/x7NVypSBw6iGkYn0=
+  - secure: a4EYN/itqJ33pIWz7SNMuGUmFAK3s3Yd7k5KnX/hvp7NDat0VB4DBK39+Yjh4QRydSm5kr5KHSLFUHwqOB+AvWjddJJcYBbAkC9xcckI6kIW1UblVZxkttk/iVWliXBDke0hLf6O8oUEbAYWYuYRwzTqxOWFq3E72HizDsmGAtkPlBHNW0jBZKKa7aoW0MPWVeJFbgQKfAXD+mAm2JK6nn2fGVC3GbyVaZgGcidpfGuE+A5qpmg8fvYfmt6Qk0FMMQTu0WUTDQSFlkLK444xKii8G0BdZWHsKo+2Kx0O32SpvJkg7FdozrvHo3BlCkeUYAEQ+SEWWBnrsUn7l1IHYRizwKJcTYR2ER1U9cw8RCCWEabAwXc1lokgQtE9wz8wkuom1N/z4JkCxRndwmY9KFImT7sSKGT8k9wbQNzrR6eEJMzPzGN7NHyBjBlsxBoT1eb3lqMdMBv07XOwT204ehpETUsvbHxrgmiTZ7796FGbG7Gs4ozDXFZSX96AFT/6uXfJA8IMSUfRxPxVNg+MVfYOmYM8DB+stse3MOGzR2nn4nZlwA51ibA9LLJjjtNrX0FQQx5r84TlK/3ROlX2E+jz21ZHW9FI/twoNAAqfDFSx63Wudnza0tV/pu/yfxb939JPPXpyjao/QkSYOzr9ILcFaztp3NHaqnQCIBZDlk=
