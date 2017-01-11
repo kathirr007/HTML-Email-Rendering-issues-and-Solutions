@@ -16,7 +16,7 @@ git config user.name "kathirr007"
 git status
 git add .
 git commit -m "deployed to github pages"
-git push --force --quiet $FULL_REPO master:gh-pages
+git push --force --quiet $FULL_REPO master
 
 # #!/bin/bash
 # rm -rf out || exit 0;

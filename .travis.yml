@@ -9,7 +9,7 @@ before_install:
 - chmod 755 ./deploy-ghpages.sh
 script:
 - gulp travis
-- chmod +x ./deploy.sh
+- chmod +x ./deploy-ghpages.sh
 after_success:
 - "./deploy-ghpages.sh"
 env:
