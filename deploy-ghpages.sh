@@ -7,14 +7,15 @@ GH_REPO="@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git"
 
 FULL_REPO="https://$GH_TOKEN$GH_REPO"
 
-for files in '*.tar.gz'; do
-        tar xfz $files
-done
+# for files in '*.tar.gz'; do
+#         tar xfz $files
+# done
 
 cd out
 git init
-git config user.name "Travis CI"
-git config user.email "$COMMIT_AUTHOR_EMAIL"
+git config user.email "kathirr007@gmail.com"
+git config user.name "kathirr007"
+
 # cp ../categoryCompare/inst/doc/categoryCompare_vignette.html index.html
 
 git add .
