@@ -13,7 +13,7 @@ git config user.email "kathirr007@gmail.com"
 git config user.name "kathirr007"
 
 
-
+git status
 git add .
 git commit -m "deployed to github pages"
 git push --force --quiet $FULL_REPO master:gh-pages
