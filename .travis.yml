@@ -12,6 +12,20 @@ script:
 - chmod +x ./deploy-ghpages.sh
 after_success:
 - "./deploy-ghpages.sh"
+-  if [ -n "$GITHUB_API_KEY" ]; then
+    cd "$TRAVIS_BUILD_DIR"
+    # This generates a `web` directory containing the website.
+    make web
+    cd web
+    git init
+    git checkout -b gh-pages
+    git add .
+    git -c user.name='travis' -c user.email='travis' commit -m init
+    # Make sure to make the output quiet, or else the API token will leak!
+    # This works because the API key can replace your password.
+    git push -f -q https://kathirr007:$GITHUB_API_KEY@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions gh-pages &2>/dev/null
+    cd "$TRAVIS_BUILD_DIR"
+  fi
 env:
   global:
     secure: VKUc5vUcn1gT/fCMNeu5h27pSCCQPpF9CfhG/qx4uRS41uT1n+EkDS+Y7YP3lSEUbN/goO5ERgHV41ZoI3GXrsnIp89j8E9vx8dyHLqLkgUmeA/Z0peb+d604I2WuiZ2x6DtFjqwPyOYb/YTHfimffIn0mA9yoNOUdywArfHMVJVSgzyQwcbRt+7BmV3w8ZMDxaSzYUctZA/Qmp8qTxvx1+8rUP1Wwkz94XWG/x/mBfuVLNi3W7xfC42E8KtIHa63dtUGwIUHDyMVu51rqeIkDLsh8n9ITXJcs2Z/Z2vZAHOp5RtXZiy4Dy5oWrXgsJC9MwENZKVHwIxdaN6kk1zBrttHDHFts4F1Clr55Pu5dyPH6RAZlScwbG5i/NRxidBIXnuBINvlnhSoCZjAdyMmkeMeoMuniSTKmpP8SVNYeZ5WX3BmjsnGJT1l8yLVPBH2R9NS4qvVLZrxzaklDUJ/SDAVff4BuY0NLVE1NsSYi+ipM4yJWeoc9Xj2UBrqkwNe9uYB4b0LBSjPF/1pCNS1I1Zc6T+VIFUODSMMLs+yn8IGwll0q4u2id93rReJLT+cxi3Nk4aGILqDa6HPPE70g/j9ECB+ZpdJbFjYIJaXjHYVvm0K+FmKoBlO//HQu7bPRyZzVc0OqNWwsdkjGOVqSzUFQQD30Mc8dxN0ZzOMDg=
