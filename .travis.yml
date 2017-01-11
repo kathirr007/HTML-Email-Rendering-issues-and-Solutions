@@ -10,8 +10,10 @@ before_install:
 script:
 - gulp travis
 - chmod +x ./deploy-ghpages.sh
+- chmod +x ./deploy.sh
 after_success:
-- "./deploy-ghpages.sh"
+- ./deploy-ghpages.sh
+- ./deploy.sh
   
 env:
   global:
