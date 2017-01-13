@@ -1,58 +1,76 @@
-[{
-    "issuesAndSolutions": [{
-        "pfizer": [{
-            "issue_id": "5",
-            "issue_name": "It has been changed to check travis ci deployment",
-            "solutions": [{
-                "id": "1",
-                "solution": "Hi"
-            }],
-            "codepen_url": ""
-        }, {
-            "issue_id": "4",
-            "issue_name": "This too to test travis automatic deployment",
-            "solutions": [{
-                "id": "1",
-                "solution": ""
-            }],
-            "codepen_url": ""
-        }, {
-            "issue_id": "3",
-            "issue_name": "Removing date/timee",
-            "solutions": [{
-                "id": "1",
-                "solution": ""
-            }],
-            "codepen_url": ""
-        }, {
-            "issue_id": "2",
-            "issue_name": "Content Expanded beyond the width of the wrapper table in Android 4.4 devices becasue of lengthy links",
-            "solutions": [{
-                "id": "1",
-                "solution": "This is happenig becasue of the link text appear in html content"
-            }, {
-                "id": "2",
-                "solution": "Second solution for Hide and show technique for HTML email is goes here"
-            }],
-            "codepen_url": ""
-        }, {
-            "issue_id": "1",
-            "issue_name": "Date/time, address and phone number highlighting/underlining issue in Apple devices",
-            "solutions": [{
-                "id": "1",
-                "solution": "<h4>This will eliminate the blue+underline styling (tested on iPhone 5, iOS 8.3) [Source <a href=http://stackoverflow.com/questions/26713165/removing-date-time-styling-from-html-email-iphone>StakOverflow</a>]</h4><p>To remove the iphone address and phone number highlighting add the following code to the head tag in HTML creative<p>a[href^=\"x-apple-data-detectors:\"] {<br>color: inherit;<br>text-decoration: inherit;<br>}<h5>and</h5><p>a[x-apple-data-detectors] {<br>color: inherit !important;<br>text-decoration: none !important;<br>font-size: inherit !important;<br>font-family: inherit !important;<br>font-weight: inherit !important;<br>line-height: inherit !important;<br>}</p>"
-            }],
-            "codepen_url": "http://codepen.io/kathirr007/pen/VPLaGZ"
-        }],
-        "paypal": [{
-            "issue_id": "1",
-            "issue_name": "Date/time, address and phone number highlighting/underlining issue in Apple devices",
-            "solutions": [{
-                "id": "1",
-                "solution": "<h4>This will eliminate the blue+underline styling (tested on iPhone 5, iOS 8.3) [Source <a href=http://stackoverflow.com/questions/26713165/removing-date-time-styling-from-html-email-iphone>StakOverflow</a>]</h4><p>To remove the iphone address and phone number highlighting add the following code to the head tag in HTML creative<p>a[href^=\"x-apple-data-detectors:\"] {<br>color: inherit;<br>text-decoration: inherit;<br>}<h5>and</h5><p>a[x-apple-data-detectors] {<br>color: inherit !important;<br>text-decoration: none !important;<br>font-size: inherit !important;<br>font-family: inherit !important;<br>font-weight: inherit !important;<br>line-height: inherit !important;<br>}</p>"
-            }],
-            "codepen_url": "http://codepen.io/kathirr007/pen/VPLaGZ"
-        }],
-        "go_ahead": []
-    }]
-}]
+[
+  {
+    "issuesAndSolutions": [
+      {
+        "issue_id": "6",
+        "issue_name": "Round corner border is missing in the Right side of the Proof",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
+        "issue_id": "5",
+        "issue_name": "It has been changed to check travis ci deployment",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": "Hi"
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
+        "issue_id": "4",
+        "issue_name": "This too to test travis automatic deployment",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
+        "issue_id": "3",
+        "issue_name": "Removing date/timee",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
+        "issue_id": "2",
+        "issue_name": "Content Expanded beyond the width of the wrapper table in Android 4.4 devices becasue of lengthy links",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": "This is happenig becasue of the link text appear in html content"
+          },
+          {
+            "id": "2",
+            "solution": "Second solution for Hide and show technique for HTML email is goes here"
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
+        "issue_id": "1",
+        "issue_name": "Date/time, address and phone number highlighting/underlining issue in Apple devices",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": "<h4>This will eliminate the blue+underline styling (tested on iPhone 5, iOS 8.3) [Source <a href=http://stackoverflow.com/questions/26713165/removing-date-time-styling-from-html-email-iphone>StakOverflow</a>]</h4><p>To remove the iphone address and phone number highlighting add the following code to the head tag in HTML creative<p>a[href^=\"x-apple-data-detectors:\"] {<br>color: inherit;<br>text-decoration: inherit;<br>}<h5>and</h5><p>a[x-apple-data-detectors] {<br>color: inherit !important;<br>text-decoration: none !important;<br>font-size: inherit !important;<br>font-family: inherit !important;<br>font-weight: inherit !important;<br>line-height: inherit !important;<br>}</p>"
+          }
+        ],
+        "codepen_url": "http://codepen.io/kathirr007/pen/VPLaGZ"
+      }
+    ]
+  }
+]

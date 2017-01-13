@@ -5930,8 +5930,11 @@ a:hover,
 a:visited,
 a:focus,
 a:active {
-  color: black;
+  /* 	color:$headingcolor; */
   text-decoration: none; }
+
+.codepen-url a {
+  font-weight: bold; }
 
 a.btn {
   text-decoration: none; }

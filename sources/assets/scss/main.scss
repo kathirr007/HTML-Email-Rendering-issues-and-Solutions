@@ -27,8 +27,11 @@ a {
 }
 
 a:hover, a:visited, a:focus, a:active {
-	color:$headingcolor;
+/* 	color:$headingcolor; */
 	text-decoration:none;
+}
+.codepen-url a {
+	font-weight:bold;
 }
 
 a.btn {

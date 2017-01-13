@@ -38,27 +38,27 @@ var replaceHtmlEntites = (function() {
     function myFunction(response) {
         var issues_n_solutions = JSON.parse(response),
             issuesNSolutionsList = issues_n_solutions[0].issuesAndSolutions,
-            pfizerSolutions = issuesNSolutionsList[0].pfizer,
-            paypalSolutions = issuesNSolutionsList[0].paypal,
-            goaheadSolutions = issuesNSolutionsList[0].go_ahead,
+//             pfizerSolutions = issuesNSolutionsList[0].pfizer,
+//             paypalSolutions = issuesNSolutionsList[0].paypal,
+//             goaheadSolutions = issuesNSolutionsList[0].go_ahead,
             i, solutionsList = "",
             subTotal, discount, estimatedTotal, shipping, shippingPrice="", subTotalPrice="", discountPrice="", estimatedTotalPrice="", pricearray = [], quantityarray = [];
 console.log(issues_n_solutions);
 console.log(issuesNSolutionsList);
-console.log(pfizerSolutions);
-console.log(paypalSolutions);
-console.log(goaheadSolutions);
+// console.log(pfizerSolutions);
+// console.log(paypalSolutions);
+// console.log(goaheadSolutions);
 
-$.each(pfizerSolutions, function(idx) {
-            var issueId = pfizerSolutions[idx].issue_id,
-                issueName = pfizerSolutions[idx].issue_name,
-                solutions = pfizerSolutions[idx].solutions,
-                codepenUrl = pfizerSolutions[idx].codepen_url,
-                codepenUrl = codepenUrl ? '<a href="'+codepenUrl+'" target="_blank">here</a>' : 'Not Available',
+$.each(issuesNSolutionsList, function(idx) {
+            var issueId = issuesNSolutionsList[idx].issue_id,
+                issueName = issuesNSolutionsList[idx].issue_name,
+                solutions = issuesNSolutionsList[idx].solutions,
+                codepenUrl = issuesNSolutionsList[idx].codepen_url,
+                codepenUrl = codepenUrl ? '<a href="'+codepenUrl+'" target="_blank">here</a>' : '<strong>Not Available</strong>',
                 sanSolutions = replaceHtmlEntites;
-console.log(solutions);
-console.log(typeof(solutions));
-console.log(codepenUrl);
+// console.log(solutions);
+// console.log(typeof(solutions));
+// console.log(codepenUrl);
                
             solutionsList += '<div class="panel panel-default">\
                         <a data-toggle="collapse" data-parent="#dynamic_datas" href="#collapse'+issueId+'">\
