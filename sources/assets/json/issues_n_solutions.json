@@ -2,6 +2,17 @@
   {
     "issuesAndSolutions": [
       {
+        "issue_id": "7",
+        "issue_name": "Rendering Issue in the CTA button",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
         "issue_id": "6",
         "issue_name": "Round corner border is missing in the Right side of the Proof",
         "solutions": [
