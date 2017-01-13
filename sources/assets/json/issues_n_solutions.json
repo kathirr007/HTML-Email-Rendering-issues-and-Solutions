@@ -1,6 +1,160 @@
 [
   {
     "issuesAndSolutions": [
+       {
+        "issue_id": "21",
+        "issue_name": "If the banner image is sliced into 4 parts for 4 different links a white line will appear in between the sliced images",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+       {
+        "issue_id": "20",
+        "issue_name": "In Gmail App extra white line will appear at the footer section",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+       {
+        "issue_id": "19",
+        "issue_name": "In Windows 10 Mail, a blue line may occur before the Map image",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+       {
+        "issue_id": "18",
+        "issue_name": "Southeastern Railway – Making the Map Image’s background as White and to the standard width and height",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+       {
+        "issue_id": "17",
+        "issue_name": "Southeastern Railway – Rendering issue may occur in shadow image(Top and bottom)",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
+        "issue_id": "16",
+        "issue_name": "In Windows 10 Mail, the texts which are hyperlinked will get underlined",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+       {
+        "issue_id": "15",
+        "issue_name": "In Windows 10 Mail, background images/spacer images wont get display",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+       {
+        "issue_id": "14",
+        "issue_name": "Follow Us or Get social text in the footer part will not render correctly",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
+        "issue_id": "13",
+        "issue_name": "In some creative, only the images will display but the text part will be missed",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+       {
+        "issue_id": "12",
+        "issue_name": "If the creative contains bullet points, we will notice the alignment  issue in some domains",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+       {
+        "issue_id": "11",
+        "issue_name": "In Yahoo domain (FF & Chrome) the creative will be completely left aligned",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
+        "issue_id": "10",
+        "issue_name": "White line will appear in the header part in Windows 10 Mail domain",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
+        "issue_id": "9",
+        "issue_name": "If footer section contains “Unsubscribe from M-Ticketing” it will not display correctly",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
+        "issue_id": "8",
+        "issue_name": "There will be double border in the Footer section after 3rd module and before Social Bar",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
       {
         "issue_id": "7",
         "issue_name": "Rendering Issue in the CTA button",
