@@ -1,7 +1,7 @@
 [{
     "issuesAndSolutions": [{
             "issue_id": "22",
-            "issue_name": "Added to test gulp-gh-pages plugin",
+            "issue_name": "Updated to test gulp-gh-pages plugin",
             "solutions": [{
                 "id": "1",
                 "solution": ""
