@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 GH_REPO="github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git"
 
@@ -29,7 +29,7 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add origin-pages https://${GH_TOKEN}@{GH_REPO} > /dev/null 2>&1
+  git remote add origin-pages https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git > /dev/null 2>&1
   git push --quiet --set-upstream origin-pages gh-pages
 }
 
