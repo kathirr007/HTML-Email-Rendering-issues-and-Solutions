@@ -30,7 +30,6 @@ before_deploy:
 - git config --global user.email publish@travis.github && git config --global user.name "Travis"
 - git config --global user.email "travis@travis-ci.org"
 - git config --global user.name "Travis CI"
-- git remote add origin-pages https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git > /dev/null 2>&1
 deploy:
   - edge: true
     skip_cleanup: true
