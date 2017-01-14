@@ -36,5 +36,5 @@ script:
 - chmod +x ./deploy-ghpages.sh
 - chmod +x ./deploy.sh
 after_success:
-- gulp deploy
+# - gulp deploy
 - "./deploy-ghpages.sh"
