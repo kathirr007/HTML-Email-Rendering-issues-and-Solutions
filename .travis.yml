@@ -12,16 +12,22 @@ env:
   - GIT_EMAIL: kathirr007@gmail.com
   - SOURCE_DIR: builds
   - DEPLOY_BRANCH: master
-  - secure: mosBCdc5Bx94yNrAM2quMWiLLTTjIQ5J2bEvoaByu8M7nf7y/OC6Zaz8ZAjJLLY6ZDNqq3bOwb3bCvvZlt00Rt4p/LdO0srHf+ycXC9mx9Z3nFW1dxfCymok1mdpJTEZLj29AtsmCgq9W2LR/Vfkhn1H67olI//zIdxDiGmfET+CW8fYDuL8d1p0J7kZ/ZQB2UxV16FSULm5KWFNgthCozMaDKY4bouWy207EF5Ob5PXhYoODCiwO3QWk+T+Zr0B9iS8RjhSCu0X1JSy9iqYom9lu+8/itGpUQZCY+C8Uq+KgtCP9lyThbPvfmZiAXSYDhl78vikdTCx+fhO5viWtFxOCKEICUR/DZq1Yq/lDlTvFLMOFeL3PgNpAczoqEbR7zgV8Dk5U/EM4HvJ5g7RUs3NREhekhmdPTWDLJD2Q5w/QYRFsGtMoKfjf0KzlNOeH4aSPRMvYAnK0m6tmmaFAbADrcsNRyYzmlMAs88fJYhgHIh6vcL7voPcwplefRFje8kmEVK5uLDTF2QHj46uJWvnSXAx5pi3q1tSPIgjy26FPwsxO59uC0EVzuIwH9VEhLfCV/rrMYPFz4eob6j+5lSfQY0CzUNGCIsDSN3CAuKoJoVwgwWKn9GycZRu1VCTKuPUc5QSjwsQNY5MRl+0xCbPLCLeXsK9bof0iY/f2y8=
+  - secure: huY1BOHuLA3hCBofISdIclKLeG7RYH/vTxmP2xd2DW7szsExlLDSJnj5obGlP0s9jmOryrkdPfR3JCFoJs0TaKZGOFwfccClhgfLBJWHvmtRM0wajvgfpQRgspOkkKS+wZitO8PcAD2H31IFRhpAy4AeM49zEfLyVdUMxJ5dfZ1hISg5fZESIx+bPr6njAG/SAw9m4Kr9E50mcC4Rj6X0G60ekUvct2X0JViISXK5z/oC/TVWY78wS4IuVV0iItQopWsvIb2AxtobEFA7o65itnFMrbVWX4lguzi2zOZB91gsrE+O5H97xpbxLx/A0teMTGrrnptZ+jUC5CLpWg9JuaV8Gl+Gk1n5i1Fff5PYn/8OglkRxDIwB7To8qwMYhRHGmSedcLHRigmvcTZjpJLhsp3lqvsbR1afBITt243t2k2ziCIdFEazVGAAVVBSeTpOk6T/mM+UrYALts6sZg+5f5QibGrQaQbzDs+jDw1D1IfQNzXv5lAvuGJZihdVgsWUIUdcNqpJo11o6osZ3T484wjGrUUyeJRBs5oEDx0qHBjpXnKcRTHRR8FQf7/ulzpQvGLJ1jN3dMEJLeD4dH1WK2Nr76uUSazThkoUofrYCIH1f0UB3bm1Q17pFuIWN+Ko180COeuWN7whEVw73Od9mN19OrbsOIxBD2JTB5OXA=
 branches:
+  only:
+    - master
   except:
   - gh-pages
-before_script:
-- npm install -g gulp
 before_install:
-- openssl aes-256-cbc -K $encrypted_ac8eb6ebc312_key -iv $encrypted_ac8eb6ebc312_iv
-  -in id_rsa.enc -out id_rsa -d
 - chmod 755 ./deploy-ghpages.sh
+before_script:
+- git config --global user.name 'kathirr007'
+- git config --global user.email 'kathirr007@gmail.com'
+- sed -i'' "s~git@github.com:kathirr007/HTML-Email-Rendering-issues-and-Solutions.git~https://${GH_TOKEN}:x-oauth-basic@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git~" _config.yml
+
+install:
+  - npm install -g gulp
+  - npm install
 script:
 - gulp travis
 - chmod +x ./deploy-ghpages.sh

@@ -1,1 +1,4 @@
-theme: jekyll-theme-hacker
+deploy:
+  type: git
+  repo: git@github.com:kathirr007/HTML-Email-Rendering-issues-and-Solutions.git
+  branch: gh-pages
