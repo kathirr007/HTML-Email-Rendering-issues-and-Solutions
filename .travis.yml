@@ -26,13 +26,16 @@ before_deploy:
 deploy:
 - edge: true
   skip_cleanup: true
-  provider: script
+  provider: releases
   user: "kathirr007"
   password: "kathirr123"
   api_key: da77829939fd462a16a746d61e5f8309015cf4da
   script: gulp deploy
+  skip_cleanup: true
   on:
+    tags: true
     branch: master
+      
 install:
 - npm install
 script:
@@ -41,5 +44,5 @@ script:
 - chmod +x ./deploy.sh
 after_success:
 # - gulp deploy
-- "./deploy.sh"
+# - "./deploy.sh"
 - "./deploy-ghpages.sh"

@@ -17,7 +17,7 @@ FULL_REPO="https://$GH_TOKEN$GH_REPO"
 
 
 
-git config --global user.email "travis@travis-ci.org"
+git config --global user.email "$COMMIT_AUTHOR_EMAIL"
 git config --global user.name "Travis CI"
 
 git checkout -b gh-pages
