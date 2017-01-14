@@ -32,8 +32,8 @@ script:
 - gulp travis
 - chmod +x ./deploy-ghpages.sh
 - chmod +x ./deploy.sh
-- npm run-script deploy
+# - npm run-script deploy
 after_success:
 - "./deploy-ghpages.sh"
-- "./deploy.sh"
-- npm run gh-pages-travis
+# - "./deploy.sh"
+# - npm run gh-pages-travis

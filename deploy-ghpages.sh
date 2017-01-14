@@ -9,8 +9,8 @@ FULL_REPO="https://$GH_TOKEN$GH_REPO"
 # done
 
 
-git config user.email "kathirr007@gmail.com"
-git config user.name "kathirr007"
+git config user.email "travis@travis-ci.org"
+git config user.name "Travis-CI"
 
 
 git status
