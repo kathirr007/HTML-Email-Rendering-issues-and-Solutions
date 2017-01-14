@@ -17,7 +17,7 @@ git status
 git add .
 git status
 git commit -m "deployed to github pages"
-git push --force --quiet $FULL_REPO master
+git push --force --quiet https://${GH_TOKEN}@${GH_REF} master
 git status
 
 
