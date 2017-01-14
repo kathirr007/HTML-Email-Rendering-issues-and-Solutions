@@ -8,6 +8,11 @@ env:
   - GH_TOKEN: da77829939fd462a16a746d61e5f8309015cf4da
   - GH_REF: github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions
   - secure: qYNsi0TZOEvtntgH9Vh7k1UNucTs0x9Bah1X3wPHFdFm27vFnpPfJEtxY0ch7cq7k/DKSiiwyXUmD8LZ+bcCabtR/mjmWv0EhbttCxemsuQbsw9LemHoqtqaltuizLXHXsXwfaBGY3fscYVu7x35Rnkl5Zz1yteIhDhsn4VLfS6Gs2ZZMmSCXRMxAOEAPHMKQp/liFbcecA6K5eLunghjcjaJT36twV7g3wZizhgdPfSu6S5SdbdxWaRp347S9fwO2KZR1+Q6TR/uRNMjv0gepi+j4TDPqHPLTVn/2zS77MJO0AvYCObl5BO7LgEQL08ivbsORhwrXJdt0lgkjXO26j5409xmi/iL7IfAKEOTSREWrljU4CMKqX/cArp9PBCEySxKiGMEOQm1LohCVGk/sOK8PsDEWgcwFNrbab4LID6KdqCPIHLGpbFklV6IjqdH0o/Y6zJqLoe9HUreGizPhRv14BDtXpMU3CKcpdTwW7xje5e+dfFiJojcjwZjUScMOhgnVjFSh5mYv4P0nXaYWoQ/bb8HdGhmaxOJ0umNz7kMyhTThFov0+pvHSHbG4K9ZRqWTaNrSHM5MsaCiNcqhwYsWGcrHbvqsxJk0eJqLz7IkkmeVSST/ZQepDQzmsxRs39fPQWbrdDw97eNiS5IBWa9MOP204XeP9bPqJ9/3U=
+  - SSH_KEY: "id_rsa"
+  - GIT_NAME: "HTML-Email-Rendering-issues-and-Solutions"
+  - GIT_EMAIL: "kathirr007@gmail.com"
+  - SOURCE_DIR: "builds"
+  - DEPLOY_BRANCH: "master"  
 branches:
   except:
   - gh-pages
