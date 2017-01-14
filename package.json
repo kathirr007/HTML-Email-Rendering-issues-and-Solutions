@@ -4,8 +4,9 @@
   "description": "A Simple Responsive Shopping Cart page",
   "main": "index.html",
   "scripts": {
-     "deploy": "./deploy-ghpages.sh"
- },
+    "deploy": "./deploy-ghpages.sh",
+    "gh-pages-travis": "gh-pages-travis"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kathirr007/Responsive-shopping-cart.git"
@@ -25,6 +26,7 @@
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.17.3",
     "del": "^2.2.2",
+    "gh-pages-travis": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-bootstrap-configurator": "^0.3.3",
