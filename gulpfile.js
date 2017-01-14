@@ -96,7 +96,7 @@ gulp.task('json', function() {
         .pipe(gulp.dest(outputDir + 'assets/json'));
 });
 gulp.task('deploy', ['html', 'sass', 'js', 'images', 'json'], function() {
-    return gulp.src('./build/kathirr007/HTML-Email-Rendering-issues-and-Solutions/builds/development/**/*')
+    return gulp.src('~/build/kathirr007/HTML-Email-Rendering-issues-and-Solutions/builds/development/**/*')
         .pipe($.ghPages());
 
 });
