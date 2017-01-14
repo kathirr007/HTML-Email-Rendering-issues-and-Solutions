@@ -3,12 +3,11 @@ node_js:
 - '6'
 - '6.1'
 - '5.11'
-
 env:
   global:
+  - GH_TOKEN: 98b14c67738e55ff52b06a258f83ac93c6849d0c
     GH_REF: https://github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git
-    secure: VKUc5vUcn1gT/fCMNeu5h27pSCCQPpF9CfhG/qx4uRS41uT1n+EkDS+Y7YP3lSEUbN/goO5ERgHV41ZoI3GXrsnIp89j8E9vx8dyHLqLkgUmeA/Z0peb+d604I2WuiZ2x6DtFjqwPyOYb/YTHfimffIn0mA9yoNOUdywArfHMVJVSgzyQwcbRt+7BmV3w8ZMDxaSzYUctZA/Qmp8qTxvx1+8rUP1Wwkz94XWG/x/mBfuVLNi3W7xfC42E8KtIHa63dtUGwIUHDyMVu51rqeIkDLsh8n9ITXJcs2Z/Z2vZAHOp5RtXZiy4Dy5oWrXgsJC9MwENZKVHwIxdaN6kk1zBrttHDHFts4F1Clr55Pu5dyPH6RAZlScwbG5i/NRxidBIXnuBINvlnhSoCZjAdyMmkeMeoMuniSTKmpP8SVNYeZ5WX3BmjsnGJT1l8yLVPBH2R9NS4qvVLZrxzaklDUJ/SDAVff4BuY0NLVE1NsSYi+ipM4yJWeoc9Xj2UBrqkwNe9uYB4b0LBSjPF/1pCNS1I1Zc6T+VIFUODSMMLs+yn8IGwll0q4u2id93rReJLT+cxi3Nk4aGILqDa6HPPE70g/j9ECB+ZpdJbFjYIJaXjHYVvm0K+FmKoBlO//HQu7bPRyZzVc0OqNWwsdkjGOVqSzUFQQD30Mc8dxN0ZzOMDg=
-
+  - secure: EtEobO1iiwP6Mdd7BqG0yPBiEufCdaWyr+1xg5jmoSNuZuHuh8GERws0dGF2grt9nCgE65BdL7IpwpvNhfIhzvWRJFlGtWTzsm2eqhhx8MQrawyLq9+Vb6byNxwggIfwyvjc2bDOnDFA+lsLHf6XU1hjgPvV3/g/+7zDC9bUedwV+wCTSj1kCQnRJ8ZDdn1QF4+H+nYptDUld2boir38lPf4GWlUt18VuEglXNeGo274TuPfDiwNK6Apl1XQcUnPnyH9nIawguc7Z6c82qBxGi+AktZ8Z5LU7MoXmFl3vQ6xlQelX995tUpqcNVPK8wUkXSDm/ozyYWVhopjsJlRCDXackLACBXRgMjY/2DH25pJfxJ57oIUYnQB+Ns4mlv4ZVEuGghMcDvSk5rjH3bg8GfPPlFn+pOhy1nJVLAjQRB/J6IoUzGCkGOaoJDV7hY74fHorjBq4rdNAVpFpLyDjJ+xqKZXLx5Wk5CnPn0qe2oOkDazRHFPj/jUXWMKAN8rNZtMcKjJ6ByQgvdFop6dDbVF5iOyfJzHuFXaj1iV6Omxcm7zl/rvK1NxmGw7MvbOlJ0E9YSIKteWnHORc8luIid7sy5709FKlWx/lU9POopMnpsBN9QeXt8qv0NZBfki3YovF9P77ocvfchWa14F051MgB3l4ibwul/1b0+ggNU=
 before_script:
 - npm install -g gulp
 before_install:
@@ -19,6 +18,5 @@ script:
 - chmod +x ./deploy.sh
 - npm run-script deploy
 after_success:
-- ./deploy-ghpages.sh
-- ./deploy.sh
- 
+- "./deploy-ghpages.sh"
+- "./deploy.sh"
