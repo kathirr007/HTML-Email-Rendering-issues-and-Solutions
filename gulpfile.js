@@ -95,6 +95,11 @@ gulp.task('json', function() {
         .pipe($.if(env === 'production', $.jsonminify()))
         .pipe(gulp.dest(outputDir + 'assets/json'));
 });
+gulp.task('deploy', [], function() {
+    return gulp.src('./builds/development/**/*')
+        .pipe($.ghPages());
+
+});
 gulp.task('connect', function() {
     $.connect.server({
         root: outputDir,

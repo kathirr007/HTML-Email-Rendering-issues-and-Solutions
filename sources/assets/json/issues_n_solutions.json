@@ -2,6 +2,17 @@
   {
     "issuesAndSolutions": [
        {
+        "issue_id": "22",
+        "issue_name": "Added to test gulp-gh-pages plugin",
+        "solutions": [
+          {
+            "id": "1",
+            "solution": ""
+          }
+        ],
+        "codepen_url": ""
+      },
+      {
         "issue_id": "21",
         "issue_name": "If the banner image is sliced into 4 parts for 4 different links a white line will appear in between the sliced images",
         "solutions": [
