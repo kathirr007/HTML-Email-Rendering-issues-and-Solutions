@@ -6,19 +6,21 @@ node_js:
 env:
   global:
   - GH_TOKEN: da77829939fd462a16a746d61e5f8309015cf4da
-  - GH_REF: github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions
-  - secure: qYNsi0TZOEvtntgH9Vh7k1UNucTs0x9Bah1X3wPHFdFm27vFnpPfJEtxY0ch7cq7k/DKSiiwyXUmD8LZ+bcCabtR/mjmWv0EhbttCxemsuQbsw9LemHoqtqaltuizLXHXsXwfaBGY3fscYVu7x35Rnkl5Zz1yteIhDhsn4VLfS6Gs2ZZMmSCXRMxAOEAPHMKQp/liFbcecA6K5eLunghjcjaJT36twV7g3wZizhgdPfSu6S5SdbdxWaRp347S9fwO2KZR1+Q6TR/uRNMjv0gepi+j4TDPqHPLTVn/2zS77MJO0AvYCObl5BO7LgEQL08ivbsORhwrXJdt0lgkjXO26j5409xmi/iL7IfAKEOTSREWrljU4CMKqX/cArp9PBCEySxKiGMEOQm1LohCVGk/sOK8PsDEWgcwFNrbab4LID6KdqCPIHLGpbFklV6IjqdH0o/Y6zJqLoe9HUreGizPhRv14BDtXpMU3CKcpdTwW7xje5e+dfFiJojcjwZjUScMOhgnVjFSh5mYv4P0nXaYWoQ/bb8HdGhmaxOJ0umNz7kMyhTThFov0+pvHSHbG4K9ZRqWTaNrSHM5MsaCiNcqhwYsWGcrHbvqsxJk0eJqLz7IkkmeVSST/ZQepDQzmsxRs39fPQWbrdDw97eNiS5IBWa9MOP204XeP9bPqJ9/3U=
-  - SSH_KEY: "id_rsa"
-  - GIT_NAME: "HTML-Email-Rendering-issues-and-Solutions"
-  - GIT_EMAIL: "kathirr007@gmail.com"
-  - SOURCE_DIR: "builds"
-  - DEPLOY_BRANCH: "master"  
+  - GH_REF: github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git
+  - SSH_KEY: id_rsa
+  - GIT_NAME: HTML-Email-Rendering-issues-and-Solutions
+  - GIT_EMAIL: kathirr007@gmail.com
+  - SOURCE_DIR: builds
+  - DEPLOY_BRANCH: master
+  - secure: mosBCdc5Bx94yNrAM2quMWiLLTTjIQ5J2bEvoaByu8M7nf7y/OC6Zaz8ZAjJLLY6ZDNqq3bOwb3bCvvZlt00Rt4p/LdO0srHf+ycXC9mx9Z3nFW1dxfCymok1mdpJTEZLj29AtsmCgq9W2LR/Vfkhn1H67olI//zIdxDiGmfET+CW8fYDuL8d1p0J7kZ/ZQB2UxV16FSULm5KWFNgthCozMaDKY4bouWy207EF5Ob5PXhYoODCiwO3QWk+T+Zr0B9iS8RjhSCu0X1JSy9iqYom9lu+8/itGpUQZCY+C8Uq+KgtCP9lyThbPvfmZiAXSYDhl78vikdTCx+fhO5viWtFxOCKEICUR/DZq1Yq/lDlTvFLMOFeL3PgNpAczoqEbR7zgV8Dk5U/EM4HvJ5g7RUs3NREhekhmdPTWDLJD2Q5w/QYRFsGtMoKfjf0KzlNOeH4aSPRMvYAnK0m6tmmaFAbADrcsNRyYzmlMAs88fJYhgHIh6vcL7voPcwplefRFje8kmEVK5uLDTF2QHj46uJWvnSXAx5pi3q1tSPIgjy26FPwsxO59uC0EVzuIwH9VEhLfCV/rrMYPFz4eob6j+5lSfQY0CzUNGCIsDSN3CAuKoJoVwgwWKn9GycZRu1VCTKuPUc5QSjwsQNY5MRl+0xCbPLCLeXsK9bof0iY/f2y8=
 branches:
   except:
   - gh-pages
 before_script:
 - npm install -g gulp
 before_install:
+- openssl aes-256-cbc -K $encrypted_ac8eb6ebc312_key -iv $encrypted_ac8eb6ebc312_iv
+  -in id_rsa.enc -out id_rsa -d
 - chmod 755 ./deploy-ghpages.sh
 script:
 - gulp travis
