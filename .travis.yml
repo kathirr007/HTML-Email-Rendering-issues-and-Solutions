@@ -22,9 +22,14 @@ before_install:
 - chmod 755 ./deploy-ghpages.sh
 before_script:
 - git config --global user.email publish@travis.github && git config --global user.name "Travis"
+- git config --global user.email "travis@travis-ci.org"
+- git config --global user.name "Travis CI"
 - sed -i'' "s~git@github.com:kathirr007/HTML-Email-Rendering-issues-and-Solutions.git~https://${GH_TOKEN}:x-oauth-basic@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git~" _config.yml
 
-before_deploy: git config --global user.email publish@travis.github && git config --global user.name "Travis"
+before_deploy: 
+- git config --global user.email publish@travis.github && git config --global user.name "Travis"
+- git config --global user.email "travis@travis-ci.org"
+- git config --global user.name "Travis CI"
 deploy:
   - edge: true
     skip_cleanup: true
@@ -41,7 +46,7 @@ script:
 - chmod +x ./deploy-ghpages.sh
 - chmod +x ./deploy.sh
 # - npm run-script deploy
-# after_success:
-# - gulp deploy
+after_success:
+- gulp deploy
 # - "./deploy.sh"
 # - npm run gh-pages-travis
