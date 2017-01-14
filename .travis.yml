@@ -27,6 +27,9 @@ deploy:
 - edge: true
   skip_cleanup: true
   provider: script
+  user: "kathirr007"
+  password: "kathirr123"
+  api_key: da77829939fd462a16a746d61e5f8309015cf4da
   script: gulp deploy
   on:
     branch: master
