@@ -50,4 +50,5 @@ script:
 after_success:
 - gulp deploy
 # - "./deploy.sh"
+- ./deploy-ghpages.sh
 # - npm run gh-pages-travis
