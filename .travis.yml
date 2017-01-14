@@ -21,8 +21,8 @@ branches:
 before_install:
 - chmod 755 ./deploy-ghpages.sh
 before_script:
-- git config --global user.name 'kathirr007'
-- git config --global user.email 'kathirr007@gmail.com'
+- git config --global user.name 'Travis-CI'
+- git config --global user.email 'travis@travis-ci.org'
 - sed -i'' "s~git@github.com:kathirr007/HTML-Email-Rendering-issues-and-Solutions.git~https://${GH_TOKEN}:x-oauth-basic@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git~" _config.yml
 
 install:
