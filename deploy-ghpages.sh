@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GH_REPO="@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git"
+GH_REPO="github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git"
 
 FULL_REPO="https://$GH_TOKEN$GH_REPO"
 
