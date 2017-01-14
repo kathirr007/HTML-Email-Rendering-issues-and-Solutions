@@ -41,7 +41,7 @@ script:
 - chmod +x ./deploy-ghpages.sh
 - chmod +x ./deploy.sh
 # - npm run-script deploy
-after_success:
-- gulp deploy
+# after_success:
+# - gulp deploy
 # - "./deploy.sh"
 # - npm run gh-pages-travis
