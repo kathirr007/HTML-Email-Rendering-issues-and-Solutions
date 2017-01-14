@@ -12,42 +12,38 @@ env:
   - GIT_EMAIL: kathirr007@gmail.com
   - SOURCE_DIR: builds
   - DEPLOY_BRANCH: master
-  - secure: huY1BOHuLA3hCBofISdIclKLeG7RYH/vTxmP2xd2DW7szsExlLDSJnj5obGlP0s9jmOryrkdPfR3JCFoJs0TaKZGOFwfccClhgfLBJWHvmtRM0wajvgfpQRgspOkkKS+wZitO8PcAD2H31IFRhpAy4AeM49zEfLyVdUMxJ5dfZ1hISg5fZESIx+bPr6njAG/SAw9m4Kr9E50mcC4Rj6X0G60ekUvct2X0JViISXK5z/oC/TVWY78wS4IuVV0iItQopWsvIb2AxtobEFA7o65itnFMrbVWX4lguzi2zOZB91gsrE+O5H97xpbxLx/A0teMTGrrnptZ+jUC5CLpWg9JuaV8Gl+Gk1n5i1Fff5PYn/8OglkRxDIwB7To8qwMYhRHGmSedcLHRigmvcTZjpJLhsp3lqvsbR1afBITt243t2k2ziCIdFEazVGAAVVBSeTpOk6T/mM+UrYALts6sZg+5f5QibGrQaQbzDs+jDw1D1IfQNzXv5lAvuGJZihdVgsWUIUdcNqpJo11o6osZ3T484wjGrUUyeJRBs5oEDx0qHBjpXnKcRTHRR8FQf7/ulzpQvGLJ1jN3dMEJLeD4dH1WK2Nr76uUSazThkoUofrYCIH1f0UB3bm1Q17pFuIWN+Ko180COeuWN7whEVw73Od9mN19OrbsOIxBD2JTB5OXA=
+  - secure: E6WQUgc5a0Wb6FBre6+fl0kNDHys0+btG5eXVpMOHFKYHmI0Pasw8Ja02ZLuZEM149jwrkyDOerLzhA+dX9rd+arDU3aAUtxEAnCfwlD7fRNN3ykALEzoyaByMP8o+NA7kaJSd37QfTKNAm7ggyYBtAIB92eZpRjPFZr1W4hi9E45Jbv4FqI/vww8TnI9JhmwRtPEk1IjBXpZM5SE1vKTXY/qMS9TbJa88wGglxwCWit0xMjgTzgjI5xKBZulE/36ET+QFQqMoOkkTz29hVU94mMsLXgO7UqsjmiL3gVizi/3kfwRrStm0BryuXBThFL8+LYiYpOlajQ9Dm0gH7jQOG9FQRHFpasG/ymHVTe9tz+ZhV7HFlnTbXcF826l4rJ+x9mhcBWPpfpX0cfwo4vRTzckL0ypCh+jKJ/VSV2ZbHXjHZAvZy+ElTMhETF25DVcooHre6xaB6WFMJEbrP6f775rG8TVCC6IlDBpP4F1+MZ3iTLL/b4OQOZERiyZ5Kkw/as80VgGOPBwHWqkrAKcL6UxT3wz4TdojpO7KdUFE8ROu4QydR8h8FmUzkIPmJ5EjUvpVBIynIhW0tyuxTV3BSJtCUyKp3+oF4xsX+gLh/danfmXuWMp8Jao7IhbtQVpQyWoK5FbEYyRYV9Fy2oJ83ylAHCQMjBOyudZXmOYP8=
 branches:
   only:
-    - master
+  - master
   except:
   - gh-pages
 before_install:
 - chmod 755 ./deploy-ghpages.sh
 before_script:
-- git config --global user.email publish@travis.github && git config --global user.name "Travis"
+- git config --global user.email publish@travis.github && git config --global user.name
+  "Travis"
 - git config --global user.email "travis@travis-ci.org"
 - git config --global user.name "Travis CI"
-- git remote add origin-pages https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git > /dev/null 2>&1
 
-before_deploy: 
-- git config --global user.email publish@travis.github && git config --global user.name "Travis"
+before_deploy:
+- git config --global user.email publish@travis.github && git config --global user.name
+  "Travis"
 - git config --global user.email "travis@travis-ci.org"
 - git config --global user.name "Travis CI"
 deploy:
-  - edge: true
-    skip_cleanup: true
-    provider: script
-    script: gulp deploy
-    on:
-      branch: master
-
+- edge: true
+  skip_cleanup: true
+  provider: script
+  script: gulp deploy
+  on:
+    branch: master
 install:
-  # - npm install -g gulp
-  - npm install
+- npm install
 script:
 - gulp travis
 - chmod +x ./deploy-ghpages.sh
 - chmod +x ./deploy.sh
-# - npm run-script deploy
 after_success:
 - gulp deploy
-# - "./deploy.sh"
-- ./deploy-ghpages.sh
-# - npm run gh-pages-travis
+- "./deploy-ghpages.sh"
