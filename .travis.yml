@@ -24,17 +24,11 @@ before_deploy:
 - git config --global user.email "$COMMIT_AUTHOR_EMAIL"
 - git config --global user.name "Travis CI"
 deploy:
-- edge: true
-  skip_cleanup: true
   provider: releases
-  user: "kathirr007"
-  password: "kathirr123"
   api_key: da77829939fd462a16a746d61e5f8309015cf4da
-  script: gulp deploy
   skip_cleanup: true
   on:
     tags: true
-    branch: master
       
 install:
 - npm install
