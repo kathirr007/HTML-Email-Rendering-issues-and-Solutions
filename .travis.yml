@@ -5,14 +5,7 @@ node_js:
 - '5.11'
 env:
   global:
-  - GH_TOKEN: da77829939fd462a16a746d61e5f8309015cf4da
-  - GH_REF: github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions
-  - SSH_KEY: id_rsa
-  - GIT_NAME: HTML-Email-Rendering-issues-and-Solutions
-  - GIT_EMAIL: kathirr007@gmail.com
-  - SOURCE_DIR: builds
-  - DEPLOY_BRANCH: master
-  - secure: E6WQUgc5a0Wb6FBre6+fl0kNDHys0+btG5eXVpMOHFKYHmI0Pasw8Ja02ZLuZEM149jwrkyDOerLzhA+dX9rd+arDU3aAUtxEAnCfwlD7fRNN3ykALEzoyaByMP8o+NA7kaJSd37QfTKNAm7ggyYBtAIB92eZpRjPFZr1W4hi9E45Jbv4FqI/vww8TnI9JhmwRtPEk1IjBXpZM5SE1vKTXY/qMS9TbJa88wGglxwCWit0xMjgTzgjI5xKBZulE/36ET+QFQqMoOkkTz29hVU94mMsLXgO7UqsjmiL3gVizi/3kfwRrStm0BryuXBThFL8+LYiYpOlajQ9Dm0gH7jQOG9FQRHFpasG/ymHVTe9tz+ZhV7HFlnTbXcF826l4rJ+x9mhcBWPpfpX0cfwo4vRTzckL0ypCh+jKJ/VSV2ZbHXjHZAvZy+ElTMhETF25DVcooHre6xaB6WFMJEbrP6f775rG8TVCC6IlDBpP4F1+MZ3iTLL/b4OQOZERiyZ5Kkw/as80VgGOPBwHWqkrAKcL6UxT3wz4TdojpO7KdUFE8ROu4QydR8h8FmUzkIPmJ5EjUvpVBIynIhW0tyuxTV3BSJtCUyKp3+oF4xsX+gLh/danfmXuWMp8Jao7IhbtQVpQyWoK5FbEYyRYV9Fy2oJ83ylAHCQMjBOyudZXmOYP8=
+   - secure: E6WQUgc5a0Wb6FBre6+fl0kNDHys0+btG5eXVpMOHFKYHmI0Pasw8Ja02ZLuZEM149jwrkyDOerLzhA+dX9rd+arDU3aAUtxEAnCfwlD7fRNN3ykALEzoyaByMP8o+NA7kaJSd37QfTKNAm7ggyYBtAIB92eZpRjPFZr1W4hi9E45Jbv4FqI/vww8TnI9JhmwRtPEk1IjBXpZM5SE1vKTXY/qMS9TbJa88wGglxwCWit0xMjgTzgjI5xKBZulE/36ET+QFQqMoOkkTz29hVU94mMsLXgO7UqsjmiL3gVizi/3kfwRrStm0BryuXBThFL8+LYiYpOlajQ9Dm0gH7jQOG9FQRHFpasG/ymHVTe9tz+ZhV7HFlnTbXcF826l4rJ+x9mhcBWPpfpX0cfwo4vRTzckL0ypCh+jKJ/VSV2ZbHXjHZAvZy+ElTMhETF25DVcooHre6xaB6WFMJEbrP6f775rG8TVCC6IlDBpP4F1+MZ3iTLL/b4OQOZERiyZ5Kkw/as80VgGOPBwHWqkrAKcL6UxT3wz4TdojpO7KdUFE8ROu4QydR8h8FmUzkIPmJ5EjUvpVBIynIhW0tyuxTV3BSJtCUyKp3+oF4xsX+gLh/danfmXuWMp8Jao7IhbtQVpQyWoK5FbEYyRYV9Fy2oJ83ylAHCQMjBOyudZXmOYP8=
 branches:
   only:
   - master
@@ -21,12 +14,12 @@ branches:
 before_install:
 - chmod 755 ./deploy-ghpages.sh
 before_script:
-- git config --global user.email "publish@travis.github" && git config --global user.name "Travis-CI"
+- git config --global user.email "travis@travis-ci.org" && git config --global user.name "Travis-CI"
 # - git config --global user.email "travis@travis-ci.org"
 # - git config --global user.name "Travis CI"
 
 before_deploy:
-- git config --global user.email "publish@travis.github" && git config --global user.name "Travis-CI"
+- git config --global user.email "travis@travis-ci.org" && git config --global user.name "Travis-CI"
 # - git config --global user.email "travis@travis-ci.org"
 # - git config --global user.name "Travis CI"
 deploy:
