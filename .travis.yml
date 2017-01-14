@@ -6,7 +6,7 @@ node_js:
 env:
   global:
   - GH_TOKEN: da77829939fd462a16a746d61e5f8309015cf4da
-  - GH_REF: github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git
+  - GH_REF: github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions
   - SSH_KEY: id_rsa
   - GIT_NAME: HTML-Email-Rendering-issues-and-Solutions
   - GIT_EMAIL: kathirr007@gmail.com
