@@ -25,9 +25,18 @@ before_script:
 - git config --global user.email 'travis@travis-ci.org'
 - sed -i'' "s~git@github.com:kathirr007/HTML-Email-Rendering-issues-and-Solutions.git~https://${GH_TOKEN}:x-oauth-basic@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git~" _config.yml
 
+before_deploy: git config --global user.email publish@travis.github && git config --global user.name "Travis"
+deploy:
+  - edge: true
+    skip_cleanup: true
+    provider: script
+    script: gulp deploy
+    on:
+      branch: master
+
 install:
   - npm install -g gulp
-  - npm install
+  # - npm install
 script:
 - gulp travis
 - chmod +x ./deploy-ghpages.sh
