@@ -17,16 +17,16 @@ FULL_REPO="https://$GH_TOKEN$GH_REPO"
 
 
 
-  git config --global user.email "travis@travis-ci.org"
-  git config --global user.name "Travis CI"
+git config --global user.email "travis@travis-ci.org"
+git config --global user.name "Travis CI"
 
-  git checkout -b gh-pages
-  git add .
-  git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
-  git status
+git checkout -b gh-pages
+git add .
+git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+git status
 
-  git remote add origin-pages https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin-pages gh-pages
+git remote add origin-pages https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git > /dev/null 2>&1
+git push --quiet --set-upstream origin-pages gh-pages
 
 
 
