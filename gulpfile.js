@@ -95,7 +95,7 @@ gulp.task('json', function() {
         .pipe($.if(env === 'production', $.jsonminify()))
         .pipe(gulp.dest(outputDir + 'assets/json'));
 });
-gulp.task('deploy', [], function() {
+gulp.task('deploy', ['html', 'sass', 'js', 'images', 'json'], function() {
     return gulp.src('./builds/development/**/*')
         .pipe($.ghPages());
 
