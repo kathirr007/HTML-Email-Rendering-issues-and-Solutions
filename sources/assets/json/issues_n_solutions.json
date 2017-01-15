@@ -3,7 +3,7 @@
     "issuesAndSolutions": [
        {
         "issue_id": "22",
-        "issue_name": "This has been added to test gulp-gh-pages",
+        "issue_name": "This has been added to test travis",
         "solutions": [
           {
             "id": "1",
