@@ -20,12 +20,12 @@ FULL_REPO="https://$GH_TOKEN$GH_REPO"
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis"
 
-git checkout -b gh-pages
-git add .
+# git checkout -b gh-pages
+git add "./builds/development/**/*"
 git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 git status
 
-git remote add origin-pages https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} > /dev/null 2>&1
+# git remote add origin-pages https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} > /dev/null 2>&1
 git push --force --quiet --set-upstream origin-pages gh-pages
 
 
