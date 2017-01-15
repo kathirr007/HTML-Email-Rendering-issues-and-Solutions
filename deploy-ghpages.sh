@@ -22,15 +22,22 @@ git config --global user.name "Travis"
 
 git push origin --delete https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git :gh-pages
 git checkout -b gh-pages
-gulp travis
-git status
-git add "./builds/development/**/*"
-git status
-git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
-git status
+git checkout --orphan gh-pages
+git rm -rf .
+git add .
+git commit -m "Init gh-pages"
+git push --set-upstream https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git origin:gh-pages
+git checkout master
+# gulp travis
+gulp deploy
+# git status
+# git add "./builds/development/**/*"
+# git status
+# git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+# git status
 
 # git remote add origin https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git > /dev/null 2>&1
-git push -ufq https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git master:gh-pages
+# git push -ufq https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git master:gh-pages
 
 
 # #!/bin/bash
