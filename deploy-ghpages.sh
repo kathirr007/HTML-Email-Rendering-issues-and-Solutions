@@ -20,7 +20,7 @@ FULL_REPO="https://$GH_TOKEN$GH_REPO"
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis"
 
-# git checkout -b gh-pages
+git checkout -b gh-pages
 git status
 git add "./builds/development/**/*"
 git status
