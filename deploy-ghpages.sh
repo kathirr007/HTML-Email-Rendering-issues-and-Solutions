@@ -30,7 +30,7 @@ git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 git status
 
 # git remote add origin https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git > /dev/null 2>&1
-git push -ufq https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git origin:gh-pages
+git push -ufq https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git
 
 
 # #!/bin/bash
