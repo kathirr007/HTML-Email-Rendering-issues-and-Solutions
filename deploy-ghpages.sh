@@ -29,8 +29,8 @@ git status
 git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 git status
 
-git remote add origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} > /dev/null 2>&1
-git push --force --quiet https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} origin:gh-pages
+git remote add origin https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git > /dev/null 2>&1
+git push --force --quiet https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git origin:gh-pages
 
 
 # #!/bin/bash
