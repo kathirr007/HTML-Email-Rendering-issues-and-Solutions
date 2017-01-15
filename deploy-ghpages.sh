@@ -33,10 +33,6 @@ git status
 git push --force --quiet https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}
 
 
-
-
-
-
 # #!/bin/bash
 # rm -rf out || exit 0;
 # mkdir out; 
