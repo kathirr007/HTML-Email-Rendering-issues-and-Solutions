@@ -50,3 +50,4 @@ bower_components
 .npm
 # gulp-gh-pages cache directory
 .publish
+.publish/**/*
