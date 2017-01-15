@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     pngcrush = require('imagemin-pngcrush'),
     clean = require('del'),
     jQuery = require('jquery'),
+    // jQuery = require('scrollmagic'),
     pkg = require('./package.json'),
     $ = require('gulp-load-plugins')({ lazy: true });
 var env,
@@ -25,7 +26,10 @@ nodeModules = './node_modules/';
 bootstrapSources = nodeModules + 'bootstrap-sass/';
 fonts = [bootstrapSources + 'assets/fonts/**/*', sourceDir + 'assets/fonts/*.*'];
 imgSources = [sourceDir + 'assets/images/**/*'];
-jsSources = [nodeModules + 'jquery/dist/jquery.min.js', nodeModules + 'mustache/mustache.min.js', bootstrapSources + 'assets/javascripts/bootstrap.min.js', sourceDir + 'assets/js/*.js'];
+jsSources = [nodeModules + 'jquery/dist/jquery.min.js',
+             nodeModules + 'scrollmagic/scrollmagic/minified/**/*',
+             bootstrapSources + 'assets/javascripts/bootstrap.min.js',
+             sourceDir + 'assets/js/*.js'];
 sassSources = [bootstrapSources + 'assets/stylesheets/**/*.scss', sourceDir + 'assets/scss/**/*.scss'];
 // htmlSources = [sourceDir + '*.html'];
 htmlSources = { in : sourceDir + '*.html',

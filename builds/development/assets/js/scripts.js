@@ -90,3 +90,29 @@ $.each(issuesNSolutionsList, function(idx) {
 
 
 })();
+
+$(function() {
+  var controller = new ScrollMagic.Controller();
+
+  var containerScene = new ScrollMagic.Scene({
+      triggerElement: 'div.container-fluid',
+      offset: 350
+      
+    })
+    .setPin('h1.page-title')
+    .addTo(controller);
+});
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    });
+
+    $('.scrollup').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });

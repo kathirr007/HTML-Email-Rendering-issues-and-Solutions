@@ -90,3 +90,6 @@ $.each(issuesNSolutionsList, function(idx) {
 
 
 })();
+
+// @include ../../template/js/_scrollmagic.js
+// @include ../../template/js/_scrollTop.js

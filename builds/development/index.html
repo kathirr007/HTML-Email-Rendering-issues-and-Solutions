@@ -8,24 +8,27 @@
     <title>HTML Email Solutuions</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/ScrollMagic.min.js"></script>
+    <script src="assets/js/plugins/debug.addIndicators.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 
 </head>
 
 <body>
-    <div class="logo">
-        <!-- Menu End -->
-        <!--Logo-->
-    </div>
-    <div class="clear"></div>
+
     <!--container-->
-    <div class="container">
-        <div class="main clearfix">
-            <h1 class="text-center page-title">HTML Email solutions, tips & best practices</h1>
-            <div class="clear"></div>
-            <div class="main-content">
+    <div class="container-fluid">
+        <div class="main clearfix" id="top">
+            <header>
+                <h1 class="text-center page-title">HTML Email solutions, tips & best practices</h1>
+            </header>
+
+            <div class="main-content container">
                 <div id="static_contents">
                     <h3>HTML Email coding tips and Best practices</h3>
                     <p>It is best to start with HTML5 Doctype. Since now a days responsive is mandatory for all clients we need to code our HTML creatives with responisve ready. To make responsive we will be using media queries and some of the CSS3 styles.
@@ -142,10 +145,32 @@
                     </div>
 
                     <div id="test"></div>
+
                 </div>
+                <a href="#top" class="scrollup"><img src="assets/images/arrow-circle-up.svg" /></a>
             </div>
         </div>
     </div>
+    <script src="//localhost:35729/livereload.js?snipver=1" async="" defer=""></script>
+    <script src="//localhost:35729/livereload.js?snipver=1" async="" defer=""></script>
+    <script src="//localhost:35729/livereload.js?snipver=1" async="" defer=""></script>
+    <script src="//localhost:35729/livereload.js?snipver=1" async="" defer=""></script>
+    <script src="//localhost:35729/livereload.js?snipver=1" async="" defer=""></script>
+    <script type="text/javascript">
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    </script>
+    <script src="//localhost:35729/livereload.js?snipver=1" async="" defer=""></script>
 </body>
 
 </html>
