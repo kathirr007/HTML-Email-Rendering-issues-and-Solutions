@@ -3,7 +3,7 @@
     "issuesAndSolutions": [
        {
         "issue_id": "22",
-        "issue_name": "This has been added to test travis",
+        "issue_name": "This has been added to test travis updated from github.com",
         "solutions": [
           {
             "id": "1",
