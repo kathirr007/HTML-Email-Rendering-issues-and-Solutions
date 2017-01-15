@@ -22,7 +22,7 @@ git config --global user.name "Travis"
 
 git checkout -b gh-pages
 git status
-git add "./builds/development/**/*"
+git add .
 git status
 git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 git status
