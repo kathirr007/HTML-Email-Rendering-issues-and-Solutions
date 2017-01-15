@@ -34,7 +34,7 @@ deploy:
 install:
 - npm install
 script:
-- gulp travis
+# - gulp travis
 - chmod +x ./deploy-ghpages.sh
 - chmod +x ./deploy.sh
 after_success:

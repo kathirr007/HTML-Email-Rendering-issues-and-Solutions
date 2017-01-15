@@ -21,6 +21,7 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis"
 
 git checkout -b gh-pages
+gulp travis
 git status
 git add .
 git status
@@ -28,7 +29,7 @@ git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 git status
 
 # git remote add origin-pages https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} > /dev/null 2>&1
-git push --force --quiet https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} master:gh-pages
+git push --force --quiet https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}
 
 
 
