@@ -29,7 +29,7 @@ git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 git status
 
 # git remote add origin-pages https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} > /dev/null 2>&1
-git push --force --quiet https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} master:gh-pages
+git push --force --quiet https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}
 
 
 
