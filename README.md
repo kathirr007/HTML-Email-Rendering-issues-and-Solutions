@@ -4,7 +4,7 @@
 
 ### List of Rendering issues in HTML - Email Newsletter marketting with solutions and best practices to avoid the issues
 
-To check live version please checkout **[here](https://kathirr007.github.io/HTML-Email-Rendering-issues-and-Solutions/builds/development/)**
+To check live version please checkout **[here](https://kathirr007.github.io/HTML-Email-Rendering-issues-and-Solutions/)**
 
 In order to Check App functionality, ensure that you have **[Git](http://git-scm.com/downloads)** and **[Node.js](http://nodejs.org)** installed.
 
