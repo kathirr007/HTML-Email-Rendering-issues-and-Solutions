@@ -20,7 +20,7 @@ FULL_REPO="https://$GH_TOKEN$GH_REPO"
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis"
 
-git push origin --delete https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git gh-pages
+git push origin --delete https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git :gh-pages
 git checkout -b gh-pages
 gulp travis
 git status
