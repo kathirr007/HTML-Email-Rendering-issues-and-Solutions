@@ -164,7 +164,7 @@
         "issue_name": "Content Expanded beyond the width of the wrapper table in Android 4.4 devices becasue of lengthy links",
         "solutions": [{
             "id": "1",
-            "solution": "This is happenig becasue of the link text appear in html content"
+            "solution": "<p>This issue will come when the link text is present in the actual contents of the email like<br><a href=\"https://www.southeasternrailway.co.uk/travel-information/live-travel-information/timetables/to-go-for-a-wonderful-family-trip\" target=\"_blank\">https://www.southeasternrailway.co.uk/travel-information/live-travel-information/timetables/to-go-for-a-wonderful-family-trip</a></p><p>To avoid this issue we need to add word-wrap and word-break style to the anchor tag</p><p>So the resulting code should be as below</p><p class=\"bg-info highlight\"><code>&lt;a href=&quot;https://www.southeasternrailway.co.uk/travel-information/live-travel-information/timetables/to-go-for-a-wonderful-family-trip&quot; target=&quot;_blank&quot;&gt;https://www.southeasternrailway.co.uk/travel-information/live-travel-information/timetables/to-go-for-a-wonderful-family-trip&lt;/a&gt;</code></p>"
         }, {
             "id": "2",
             "solution": "Second solution for Hide and show technique for HTML email is goes here"
