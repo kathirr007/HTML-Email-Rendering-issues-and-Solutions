@@ -20,11 +20,6 @@ before_deploy:
 - git config --global user.email "travis@travis-ci.org"
 - git config --global user.name "Travis"
 deploy:
-- provider: releases
-  api_key: da77829939fd462a16a746d61e5f8309015cf4da
-  skip_cleanup: true
-  on:
-    tags: true
 - edge: true
   skip_cleanup: true
   provider: script
@@ -37,4 +32,4 @@ script:
 - chmod +x ./deploy-ghpages.sh
 - chmod +x ./deploy.sh
 after_success:
-- "./deploy-ghpages.sh"
+# - "./deploy-ghpages.sh"
