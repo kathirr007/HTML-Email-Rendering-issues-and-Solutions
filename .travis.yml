@@ -25,12 +25,11 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-# - edge: true
-#   skip_cleanup: true
-#   provider: script
-#   script: gulp deploy
-#   on:
-#     branch: master
+- edge: true
+  skip_cleanup: true
+  provider: script
+  script: gulp deploy
+  
 install:
 - npm install
 script:
