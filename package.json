@@ -1,7 +1,7 @@
 {
-  "name": "responsive-shopping-cart-page",
+  "name": "HTML-Email-Rendering-issues-and-Solutions",
   "version": "1.0.0",
-  "description": "A Simple Responsive Shopping Cart page",
+  "description": "List of Rendering issues in HTML - Email Newsletter marketting with solutions and best practices to avoid the issues",
   "main": "index.html",
   "scripts": {
     "deploy": "./deploy-ghpages.sh",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kathirr007/Responsive-shopping-cart.git"
+    "url": "https://github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git"
   },
   "keywords": [
     "Shopping",
@@ -19,9 +19,9 @@
   "author": "Kathirr007",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kathirr007/Responsive-shopping-cart/issues"
+    "url": "https://github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions/issues"
   },
-  "homepage": "https://github.com/kathirr007/Responsive-shopping-cart#readme",
+  "homepage": "https://github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions#readme",
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.17.3",
