@@ -53,12 +53,12 @@ s {
     border-radius: 5px;
 }
 .panel-heading { 
-background:whitesmoke;
+background:tint($basecolor, 90%);
 }
 .panel-heading:hover {
-background:darkgrey;
-color:#ffffff;
-transition:all .1s;	
+background:tint($basecolor, 40%);
+color:tint($basecolor, 100%);
+transition:all 0.4s;	
 }
 
 img.visible-xs {
@@ -73,10 +73,11 @@ img.visible-xs {
 }
 
 .page-title {
-	background-color: beige;
+	background-color: tint($basecolor, 70%);
     padding: 10px;
     border-radius: 5px;
-    box-shadow: rgb(17, 34, 51) 3px 5px 5px;
+    box-shadow: $headingcolor 3px 5px 5px;
+    text-shadow:0px 1px tint($basecolor, 100%);
 }
 
 .scrollup {

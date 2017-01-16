@@ -5952,14 +5952,14 @@ s {
   border-radius: 5px; }
 
 .panel-heading {
-  background: whitesmoke; }
+  background: #efefef; }
 
 .panel-heading:hover {
-  background: darkgrey;
-  color: #ffffff;
-  -webkit-transition: all .1s;
-  -o-transition: all .1s;
-  transition: all .1s; }
+  background: #9c9c9c;
+  color: white;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
 
 img.visible-xs {
   margin: 0 auto !important; }
@@ -5971,11 +5971,12 @@ img.visible-xs {
   border-radius: 4px; }
 
 .page-title {
-  background-color: beige;
+  background-color: #cecece;
   padding: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: #112233 3px 5px 5px;
-          box-shadow: #112233 3px 5px 5px; }
+  -webkit-box-shadow: black 3px 5px 5px;
+          box-shadow: black 3px 5px 5px;
+  text-shadow: 0px 1px white; }
 
 .scrollup {
   width: 35px;
