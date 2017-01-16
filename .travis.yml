@@ -20,10 +20,10 @@ before_deploy:
 - git config --global user.email "travis@travis-ci.org"
 - git config --global user.name "Travis"
 deploy:
-- edge: true
-  skip_cleanup: true
-  provider: script
-  script: gulp deploy
+# - edge: true
+#   skip_cleanup: true
+#   provider: script
+#   script: gulp deploy
   
 install:
 - npm install
@@ -33,3 +33,4 @@ script:
 - chmod +x ./deploy.sh
 after_success:
 # - "./deploy-ghpages.sh"
+- gulp deploy
