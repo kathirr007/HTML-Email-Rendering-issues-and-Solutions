@@ -5957,9 +5957,9 @@ s {
 .panel-heading:hover {
   background: #9c9c9c;
   color: white;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s; }
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
 
 img.visible-xs {
   margin: 0 auto !important; }
