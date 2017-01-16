@@ -1,39 +1,44 @@
 #!/bin/bash
 
-GH_REPO="@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git"
+GH_REF="github.com/${TRAVIS_REPO_SLUG}"
+GH_REPO="github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git"
 
 FULL_REPO="https://$GH_TOKEN$GH_REPO"
 
-# for files in '*.tar.gz'; do
-#         tar xfz $files
-# done
+SOURCE_BRANCH="master"
+TARGET_BRANCH="gh-pages"
 
 
-git config user.email "kathirr007@gmail.com"
-git config user.name "kathirr007"
-
-
+# Clone the existing gh-pages for this repo into out/
+# Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
+# git clone https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git out
+gulp travis
+# cd out
+cd builds/development
+git init
+git config --global user.email "travis@travis-ci.org"
+git config --global user.name "Travis"
 git status
 git add .
 git status
-git commit -m "deployed to github pages"
-git push --force --quiet $FULL_REPO master
+git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 git status
+git push -ufq https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git master:gh-pages > /dev/null 2>&1
 
-if [ -n "$GITHUB_API_KEY" ]; then
-    cd "$TRAVIS_BUILD_DIR"
-    # This generates a `web` directory containing the website.
-    make web
-    cd web
-    git init
-    git checkout -b gh-pages
-    git add .
-    git -c user.name='travis' -c user.email='travis' commit -m init
-    # Make sure to make the output quiet, or else the API token will leak!
-    # This works because the API key can replace your password.
-    git push -f -q https://$GITHUB_API_KEY@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git gh-pages &2>/dev/null
-    cd "$TRAVIS_BUILD_DIR"
-fi
+
+# git config --global user.email "travis@travis-ci.org"
+# git config --global user.name "Travis"
+# gulp deploy
+
+# git status
+# git add "./builds/development/**/*"
+# git status
+# git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+# git status
+
+# git remote add origin https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git > /dev/null 2>&1
+# git push -ufq https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git master:gh-pages
+
 
 # #!/bin/bash
 # rm -rf out || exit 0;

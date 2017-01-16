@@ -48,3 +48,6 @@ bower_components
 
 # Optional npm cache directory
 .npm
+# gulp-gh-pages cache directory
+.publish
+.publish/**/*
