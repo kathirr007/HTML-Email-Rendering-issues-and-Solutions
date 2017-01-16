@@ -12,6 +12,7 @@ TARGET_BRANCH="gh-pages"
 # Clone the existing gh-pages for this repo into out/
 # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
 # git clone https://${GH_TOKEN}@github.com/kathirr007/HTML-Email-Rendering-issues-and-Solutions.git out
+gulp clean
 gulp travis
 # cd out
 cd builds/development
