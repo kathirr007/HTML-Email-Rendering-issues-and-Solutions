@@ -70,22 +70,15 @@ $(document).ready (function() {
             solutionsList += '</div></div></div>';
         });
         document.getElementById('dynamic_datas').innerHTML = solutionsList;
+        
     }
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-        $('.scrollup').fadeIn();
-    } else {
-        $('.scrollup').fadeOut();
-    }
-});
-$('a[href="#top"]').click(function() {
-    $("html, body").animate({
-        scrollTop: 0
-    }, 143);
-    return false;
-});
 
-
-});
-
+// @include ../../template/js/_scrollTop.js
 //  ../../template/js/_scrollmagic.js
+   
+
+
+
+});
+
+

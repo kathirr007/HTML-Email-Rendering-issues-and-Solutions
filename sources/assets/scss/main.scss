@@ -91,3 +91,18 @@ img.visible-xs {
 .scrollup img {
 	height:35px;
 }
+textarea[disabled] {
+	border:none; 
+	display:flex;
+	width:100%;
+	overflow: auto;
+	resize: none;
+	min-height:5em;
+}
+
+textarea.bg-success{
+	border:2px solid green !important;
+}
+textarea.bg-danger{
+	border:2px solid red !important;
+}

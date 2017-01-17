@@ -95,7 +95,8 @@ gulp.task('js', function() {
 gulp.task('json', function() {
     gulp.src(jsonSources)
         .pipe($.preprocess())
-        .pipe($.jsbeautifier())
+        // .pipe($.jsbeautifier())
+        .pipe($.jsonminify())
         .pipe($.if(env === 'production', $.jsonminify()))
         .pipe(gulp.dest(outputDir + 'assets/json'));
 });
