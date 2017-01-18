@@ -5948,8 +5948,14 @@ s {
 [id*=collapse] > div > h3,
 .codepen-url {
   padding: 6px;
-  background: #dadada;
   border-radius: 5px; }
+
+[id*=collapse] > div > h3 {
+  background: #4f7194;
+  color: #dedede; }
+
+.codepen-url {
+  background: #dadada; }
 
 .panel-heading {
   background: #efefef; }
@@ -5989,16 +5995,17 @@ img.visible-xs {
 .scrollup img {
   height: 35px; }
 
-textarea[disabled] {
+textarea {
   border: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  overflow: auto;
-  resize: none;
-  min-height: 5em; }
+  overflow: visible;
+  /* 	resize: none; */
+  /* 	min-height:6em; */
+  outline: none; }
 
 textarea.bg-success {
   border: 2px solid green !important; }

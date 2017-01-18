@@ -49,8 +49,14 @@ s {
 
 [id*=collapse] > div > h3, .codepen-url {
 	padding: 6px;
-    background: $bordercolor;
     border-radius: 5px;
+}
+[id*=collapse] > div > h3 {
+    background: mix(#4388ce, $basecolor, 50%);
+    color:tint($basecolor, 80%);
+}
+.codepen-url {
+    background: $bordercolor;
 }
 .panel-heading { 
 background:tint($basecolor, 90%);
@@ -91,13 +97,14 @@ img.visible-xs {
 .scrollup img {
 	height:35px;
 }
-textarea[disabled] {
+textarea {
 	border:none; 
 	display:flex;
 	width:100%;
-	overflow: auto;
-	resize: none;
-	min-height:5em;
+	overflow: visible;
+/* 	resize: none; */
+/* 	min-height:6em; */
+	outline:none;
 }
 
 textarea.bg-success{
