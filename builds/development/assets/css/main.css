@@ -5908,10 +5908,6 @@ body {
   .edit-items a {
     margin-top: 10px; } }
 
-.btn,
-.form-control {
-  border-radius: 0px !important; }
-
 .text-upper {
   text-transform: uppercase; }
 
@@ -6012,5 +6008,8 @@ textarea.bg-success {
 
 textarea.bg-danger {
   border: 2px solid red !important; }
+
+#dynamic_datas {
+  margin: 15px 0 0 0; }
 
 /*# sourceMappingURL=maps/main.css.map */
