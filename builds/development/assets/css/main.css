@@ -5977,6 +5977,9 @@ img.visible-xs {
   border: 1px solid #e1e1e8;
   border-radius: 4px; }
 
+.code-highlight {
+  background: yellow; }
+
 .page-title {
   background-color: #cecece;
   padding: 10px;
@@ -6030,5 +6033,8 @@ textarea.bg-danger {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
+.solutions-list h3 {
+  margin: 15px 0; }
 
 /*# sourceMappingURL=maps/main.css.map */

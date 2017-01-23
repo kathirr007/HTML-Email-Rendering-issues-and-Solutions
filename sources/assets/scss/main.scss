@@ -18,6 +18,9 @@
 h1, h2, h3, h4, h5, h6 {
 	color:$headingcolor;
 }
+h1, .h1, h2, .h2, h3, .h3 {
+	
+}
 
 a {
 	color:$basecolor;
@@ -74,7 +77,9 @@ img.visible-xs {
     border: 1px solid #e1e1e8;
     border-radius: 4px;
 }
-
+.code-highlight {
+	background:yellow;
+}
 .page-title {
 	background-color: tint($basecolor, 70%);
     padding: 10px;
@@ -119,4 +124,6 @@ textarea.bg-danger{
 	align-items:center;
 	justify-content:space-between;
 }
-
+.solutions-list h3 {
+	margin:15px 0;
+}
