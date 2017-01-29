@@ -113,7 +113,7 @@ $(document).ready(function() {
                 });
                 if (searchResult == '') {
                     $('#search_datas').removeClass('bg-success').addClass('bg-danger');
-                    searchResult += '<p style="" class="text-danger">No results found.</p>';
+                    searchResult += '<p style="" class="text-danger">Sorry, No results found. Try something else.</p>';
                 }
                 $("#search_datas").empty().append('<h4 class="text-success">Search results related to the keyword "' + searchValue + '"</h4>' + searchResult);
             }

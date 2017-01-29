@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -28,62 +27,80 @@
             </header>
             <div class="main-content container">
                 <div id="static_contents">
-                    <h3>HTML Email coding tips and Best practices</h3>
-                    <ol>
-                        <li>
-                            <p>It is best to start with HTML5 Doctype. Since now a days responsive is mandatory for all clients we need to code our HTML creatives with responisve ready. To make responsive we will be using media queries and some of the CSS3
-                                styles. So, it is best to use CSS3 with HTML5 Doctype.</p>
-                        </li>
-                        <li>
-                            <p>Don't forget to add responsive meta tags to ensure the responsive work properly</p>
-                            <p class="bg-info highlight"> <em class="text-success">mandatory</em>
-                                <br>
-                                <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</code>
-                                <br>
-                                <em class="text-warning">this is optional</em>
-                                <br>
-                                <code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;</code>
-                                <br>
-                            </p>
-                        </li>
-                        <li>
-                            <p>Start with 100% table and add content table with align center property to make sure the content aligned center to the page</p>
-                            <p class="bg-info highlight"> <em class="text-success">mandatory</em>
-                                <br>
-                                <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</code>
-                                <br>
-                                <em class="text-warning">this is optional</em>
-                                <br>
-                                <code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;</code>
-                                <br>
-                            </p>
-                        </li>
-                        <li>
-                            <p>Write the codes clean and neat to look good and readable to all developers like giving proper indents, adding meaningful classes and ids, adding reasonable title and alt texts to the images etc., which makes you a good coder.</p>
-                        </li>
-                        <li>
-                            <p>Always use nested table</p>
-                        </li>
-                    </ol>
-                </div>
-                <div class="solutions-list page-header">
-                    <h3>HTML Email Rendering Issues list with fixes</h3>
-                    <form class="has-feedback" method="get" action="/search" id="search">
-                        <input name="q" type="text" size="20" placeholder="Search..." style="outline:none;" class="form-control" />
-                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                    </form>
-                </div>
-                <div class="panel-group highlight" id="search_datas" style="display: none;">
-
-                </div>
-                <div class="panel-group" id="dynamic_datas">
-                    <!-- Emergency contacts templates -->
-                    <div class="panel panel-default">
-                        <a data-toggle="collapse" data-parent="#dynamic_datas" href="#collapse1">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">Dynamic Solutions list goes</h4>
+                    <ul class="nav nav-pills" id="contentsNav">
+                        <li class="active"><a data-toggle="pill" href="#issuesNsolutions">Issues & Solutions</a></li>
+                        <li><a data-toggle="pill" href="#coding-tips">Best Practices</a></li>
+                        <li><a data-toggle="pill" href="#menu2">Menu 2</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="issuesNsolutions" class="tab-pane fade in active">
+                            <div class="solutions-list page-header">
+                                <h3>HTML Email Rendering Issues list with fixes</h3>
+                                <form class="has-feedback" method="get" action="/search" id="search">
+                                    <input name="q" type="text" size="20" placeholder="Search..." style="outline:none;" class="form-control" />
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                </form>
                             </div>
-                        </a>
+                            <div class="panel-group highlight" id="search_datas" style="display: none;">
+
+                            </div>
+                            <div class="panel-group" id="dynamic_datas">
+                                <!-- Emergency contacts templates -->
+                                <div class="panel panel-default">
+                                    <a data-toggle="collapse" data-parent="#dynamic_datas" href="#collapse1">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">Dynamic Solutions list goes</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="coding-tips" class="tab-pane fade">
+                            <div class="page-header">
+                                <h3>HTML Email coding tips and Best practices</h3>
+                            </div>
+                            <ol>
+                                <li>
+                                    <p>It is best to start with HTML5 Doctype. Since now a days responsive is mandatory for all clients we need to code our HTML creatives with responisve ready. To make responsive we will be using media queries and some of
+                                        the CSS3 styles. So, it is best to use CSS3 with HTML5 Doctype.</p>
+                                </li>
+                                <li>
+                                    <p>Don't forget to add responsive meta tags to ensure the responsive work properly</p>
+                                    <p class="bg-info highlight"> <em class="text-success">mandatory</em>
+                                        <br>
+                                        <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</code>
+                                        <br>
+                                        <em class="text-warning">this is optional</em>
+                                        <br>
+                                        <code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;</code>
+                                        <br>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Start with 100% table and add content table with align center property to make sure the content aligned center to the page</p>
+                                    <p class="bg-info highlight"> <em class="text-success">mandatory</em>
+                                        <br>
+                                        <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</code>
+                                        <br>
+                                        <em class="text-warning">this is optional</em>
+                                        <br>
+                                        <code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;</code>
+                                        <br>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Write the codes clean and neat to look good and readable to all developers like giving proper indents, adding meaningful classes and ids, adding reasonable title and alt texts to the images etc., which makes you a good
+                                        coder.</p>
+                                </li>
+                                <li>
+                                    <p>Always use nested table</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            <h3>Menu 2</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
                     </div>
                 </div>
                 <a href="#top" class="scrollup"><img src="assets/images/arrow-circle-up.svg" /></a>
@@ -96,7 +113,6 @@
             element.style.height = (element.scrollHeight) + "px";
         }
     </script>
-
 </body>
 
 </html>

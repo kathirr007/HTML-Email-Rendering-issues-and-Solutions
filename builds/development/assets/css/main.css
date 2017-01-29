@@ -5958,15 +5958,23 @@ s {
 .codepen-url {
   background: #dadada; }
 
-.panel-heading {
+#contentsNav {
+  margin-top: 1em; }
+
+.panel-heading,
+#contentsNav li a {
   background: #efefef; }
 
-.panel-heading:hover {
+.panel-heading:hover,
+#contentsNav li a:hover {
   background: #9c9c9c;
   color: white;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s; }
+
+#contentsNav li.active a {
+  background: #365367; }
 
 img.visible-xs {
   margin: 0 auto !important; }
