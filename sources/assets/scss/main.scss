@@ -58,15 +58,20 @@ s {
 .codepen-url {
     background: $bordercolor;
 }
-.panel-heading { 
-background:tint($basecolor, 90%);
+#contentsNav {
+	margin-top: 1em;
 }
-.panel-heading:hover {
+.panel-heading, #contentsNav li a { 
+background:tint($basecolor, 90%) ;
+}
+.panel-heading:hover, #contentsNav li a:hover {
 background:tint($basecolor, 40%);
 color:tint($basecolor, 100%);
 transition:all 0.2s;	
 }
-
+#contentsNav li.active a { 
+background: mix(#114B73, $basecolor, 50%);
+}
 img.visible-xs {
 	margin:0 auto !important;
 }
