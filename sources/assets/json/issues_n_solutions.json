@@ -7,7 +7,7 @@
         "solutions": [
           {
             "id": "1",
-            "solution": "<p>To resolve this we need to wrap the images to a <strong>div</strong> like <span class=\"code-highlight\"><span><</span>div align=\"right\" style=\"font-size: 0; line-height: 0;\"<span>></span> <span><</span>/div<span>></span></span> and for all images inside that <strong>div</strong> this style needs to be added <span class=\"code-highlight\">style=\"margin:0;border:none;\"</span></p>",
+            "solution": "<p>To resolve this we need to wrap the images to a <strong>div</strong> like <span class=\"code-highlight\"><span><</span>div align=\"right\" style=\"font-size: 0; line-height: 0;\"<span>></span> <span><</span>/div<span>></span></span> and for all images inside that <strong>div</strong> this style needs to be added <span class=\"code-highlight\">style=\"margin:0;border:none;\"</span> and <span class=\"code-highlight\">align=\"left\"</span></p>",
             "codepen_url": "https://codepen.io/kathirr007/pen/apVxOQ"
           }
         ]
