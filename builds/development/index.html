@@ -30,7 +30,7 @@
                     <ul class="nav nav-pills" id="contentsNav">
                         <li class="active"><a data-toggle="pill" href="#issuesNsolutions">Issues & Solutions</a></li>
                         <li><a data-toggle="pill" href="#coding-tips">Best Practices</a></li>
-                        <li><a data-toggle="pill" href="#menu2">Menu 2</a></li>
+                        <li><a data-toggle="pill" href="#snippets">Usefull Code Snippets</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="issuesNsolutions" class="tab-pane fade in active">
@@ -61,8 +61,8 @@
                             </div>
                             <ol>
                                 <li>
-                                    <p>It is best to start with HTML5 Doctype. Since now a days responsive is mandatory for all clients we need to code our HTML creatives with responisve ready. To make responsive we will be using media queries and some of
-                                        the CSS3 styles. So, it is best to use CSS3 with HTML5 Doctype.</p>
+                                    <p>It is best to start with <code>HTML5</code> Doctype. Since now a days responsive is mandatory for all clients we need to code our HTML creatives with responisve ready. To make responsive we will be using media queries
+                                        and some of the <code>CSS3</code> styles. So, it is best to use <code>CSS3</code> with <code>HTML5</code> Doctype.</p>
                                 </li>
                                 <li>
                                     <p>Don't forget to add responsive meta tags to ensure the responsive work properly</p>
@@ -78,15 +78,51 @@
                                 </li>
                                 <li>
                                     <p>Start with 100% table and add content table with align center property to make sure the content aligned center to the page</p>
-                                    <p class="bg-info highlight"> <em class="text-success">mandatory</em>
-                                        <br>
-                                        <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</code>
-                                        <br>
-                                        <em class="text-warning">this is optional</em>
-                                        <br>
-                                        <code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;</code>
-                                        <br>
-                                    </p>
+                                    <pre class="bg-info">
+  <code> 
+  <span class="tocken tags"><</span>!-- wrapper table --<span class="tocken tags">></span>
+  <span class="tocken tags"><</span>table width="100%" border="0" cellspacing="0" cellpadding="0"<span class="tocken tags">></span>
+  <span class="tocken tags"><</span>tbody<span class="tocken tags">></span>
+    <span class="tocken tags"><</span>tr<span class="tocken tags">></span>
+      <span class="tocken tags"><</span>td align="center" valign="top"<span class="tocken tags">></span>
+  <span class="tocken tags"><</span>!-- conent table --<span class="tocken tags">></span>
+        <span class="tocken tags"><</span>table width="600" border="0" cellspacing="0" cellpadding="0" align="center"<span class="tocken tags">></span>
+        <span class="tocken tags"><</span>tbody<span class="tocken tags">></span>
+          <span class="tocken tags"><</span>tr<span class="tocken tags">></span>
+            <span class="tocken tags"><</span>td valign="top"<span class="tocken tags">></span>Here goes the actual email contents<span class="tocken tags"><</span>/td<span class="tocken tags">></span>
+          <span class="tocken tags"><</span>/tr<span class="tocken tags">></span>
+        <span class="tocken tags"><</span>/tbody<span class="tocken tags">></span>
+        <span class="tocken tags"><</span>/table<span class="tocken tags">></span>
+  <span class="tocken tags"><</span>!-- conent table ends --<span class="tocken tags">></span>  
+      <span class="tocken tags"><</span>/td<span class="tocken tags">></span>
+    <span class="tocken tags"><</span>/tr<span class="tocken tags">></span>
+  <span class="tocken tags"><</span>/tbody<span class="tocken tags">></span>
+  <span class="tocken tags"><</span>/table<span class="tocken tags">></span>
+  <span class="tocken tags"><</span>!-- wrapper table ends --<span class="tocken tags">></span>
+  </code>
+</pre>
+                                </li>
+                                <li>
+                                    <p>Try not to use <code>padding</code> & <code>margin</code> as much as possible. It is better not to use <code>margin</code> inline styles for desktop versions. For mobile versions you are free to use all major <code>CSS3</code>                                        styles, since all mobiles supports almost all <code>HTML5</code> and <code>CSS3</code> specifications.</p>
+                                </li>
+                                <li>
+                                    <p>For empty row spaces use this code instead of using spacer images</p>
+                                    <pre class="bg-info">
+<code><span class="tocken tags"><</span>tr<span class="tocken tags">></span>
+<span class="tocken tags"><</span>td valign="top" style="font-size:1px; line-height:1px;" height="10" class="height_01"<span class="tocken tags">></span><span class="tocken tags"><</span>!--[if gt mso 14]<span class="tocken tags">></span><span class="tocken tags">&</span><span class="tocken tags">n</span><span class="tocken tags">b</span><span class="tocken tags">s</span><span class="tocken tags">p</span><span class="tocken tags">;</span><span class="tocken tags"><</span>![endif]--<span class="tocken tags">></span><span class="tocken tags"><</span>/td<span class="tocken tags">></span>
+<span class="tocken tags"><</span>/tr<span class="tocken tags">></span></code>
+</pre>
+                                    <p>Here height will be varied depends on how much height needed and the following Outlook specific conditional codes needs to be added to the <code><strong>head</strong></code> section by targeting the <code>class="height_01"</code></p>
+                                    <pre class="bg-info">
+<code><span class="tocken tags"><</span>!--[if gt mso 14]<span class="tocken tags">></span>
+<span class="tocken tags"><</span>style type="text/css"<span class="tocken tags">></span>
+.height_01, #height_01 {
+font-size:1px;
+line-height:1px;     
+}
+<span class="tocken tags"><</span>/style<span class="tocken tags">></span>
+<span class="tocken tags"><</span>![endif]--<span class="tocken tags">></span></code>
+</pre>
                                 </li>
                                 <li>
                                     <p>Write the codes clean and neat to look good and readable to all developers like giving proper indents, adding meaningful classes and ids, adding reasonable title and alt texts to the images etc., which makes you a good
@@ -97,7 +133,7 @@
                                 </li>
                             </ol>
                         </div>
-                        <div id="menu2" class="tab-pane fade">
+                        <div id="snippets" class="tab-pane fade">
                             <h3>Menu 2</h3>
                             <p>Some content in menu 2.</p>
                         </div>
