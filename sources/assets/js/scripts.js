@@ -48,7 +48,7 @@ $(document).ready(function() {
                 issueName = issuesNSolutionsList[idx].issue_name,
                 solutions = issuesNSolutionsList[idx].solutions,
                 sanSolutions = replaceHtmlEntites;
-            console.log(solutions);
+            // console.log(solutions);
             // console.log(typeof(solutions));
             solutionsList += '<div class="panel panel-default">\
                         <a data-toggle="collapse" data-parent="#dynamic_datas" href="#collapse' + issueId + '">\
@@ -71,13 +71,13 @@ $(document).ready(function() {
             solutionsList += '</div></div></div>';
         });
         $(document).on("keyup", "input[name='q']", function() {
-            $('#search_datas').css({'display':'block', 'margin':'15px 0 30px 0'})
+            $('#search_datas').css({ 'display': 'block', 'margin': '15px 0 30px 0' })
             var searchValue = $(this).val(),
                 searchQuery = searchValue.toLowerCase();
-            console.log(searchQuery);
+            // console.log(searchQuery);
             var searchResult = '';
             if (searchQuery == '') {
-                $("#search_datas").css({'display':'none'}).empty();
+                $("#search_datas").css({ 'display': 'none' }).empty();
             } else {
                 $.each(issuesNSolutionsList, function(i, item) {
                     var searchTitle = issuesNSolutionsList[i].issue_name.toLowerCase(),
@@ -85,11 +85,9 @@ $(document).ready(function() {
                         issueName = issuesNSolutionsList[i].issue_name,
                         solutions = issuesNSolutionsList[i].solutions,
                         sanSolutions = replaceHtmlEntites;
-                    console.log(searchTitle);
-
+                    // console.log(searchTitle);
                     if (searchTitle.indexOf(searchQuery) != -1) {
                         $('#search_datas').removeClass('bg-danger').addClass('bg-success');
-                        
                         searchResult += '<div class="panel panel-default">\
                         <a data-toggle="collapse" data-parent="#dynamic_datas" href="#collapse' + issueId + '">\
                             <div class="panel-heading">\
@@ -116,6 +114,36 @@ $(document).ready(function() {
                     searchResult += '<p style="" class="text-danger">Sorry, No results found. Try something else.</p>';
                 }
                 $("#search_datas").empty().append('<h4 class="text-success">Search results related to the keyword "' + searchValue + '"</h4>' + searchResult);
+            }
+        });
+        var snippets = $('#snippets div.panel');
+        console.log(snippets);
+        $(document).on("keyup", "input[name='snippets']", function() {
+            $('#search_snippets').css({ 'display': 'block', 'margin': '15px 0 30px 0' })
+            var searchValue = $(this).val(),
+                searchQuery = searchValue.toLowerCase();
+            // console.log(searchQuery);
+            var searchResult = '';
+            if (searchQuery == '') {
+                $("#search_snippets").css({ 'display': 'none' }).empty();
+            } else {
+                $.each(snippets, function(i, item) {
+                    var searchTitle = snippets[i].innerHTML.toLowerCase(),
+                        // issueId = snippets[i].issue_id,
+                        // issueName = snippets[i].issue_name,
+                        // solutions = snippets[i].solutions,
+                        sanSolutions = replaceHtmlEntites;
+                    // console.log(searchTitle);
+                    if (searchTitle.indexOf(searchQuery) != -1) {
+                        $('#search_snippets').removeClass('bg-danger').addClass('bg-success');
+                        searchResult += '<div class="panel panel-default">'+snippets[i].innerHTML+'</div>';
+                    }
+                });
+                if (searchResult == '') {
+                    $('#search_snippets').removeClass('bg-success').addClass('bg-danger');
+                    searchResult += '<p style="" class="text-danger">Sorry, No results found. Try something else.</p>';
+                }
+                $("#search_snippets").empty().append('<h4 class="text-success">Search results related to the keyword "' + searchValue + '"</h4>' + searchResult);
             }
         });
         document.getElementById('dynamic_datas').innerHTML = solutionsList;

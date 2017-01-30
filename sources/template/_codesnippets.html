@@ -1,10 +1,18 @@
-<div id="snippets" class="tab-pane fade panel-group">
-  <div class="page-header">
+<div id="snippets" class="tab-pane fade">
+  <div class="snippets_list page-header">
     <h3>Usefull code snippets for HTML emails</h3>
+    <form class="has-feedback" method="get" action="/search" id="search">
+      <input name="snippets" type="text" size="20" placeholder="Search..." style="outline:none;" class="form-control" />
+      <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    </form>
   </div>
-<!-- @include _snippet01.html -->
-<!-- @include _snippet02.html -->
-<!-- @include _snippet03.html -->
-<!-- @include _snippet04.html -->
-<!-- @include _snippet05.html -->
+  <div class="highlight panel-group" id="search_snippets" style="display: none;">
+  </div>
+  <div class="panel-group">
+    <!-- @include _snippet01.html -->
+    <!-- @include _snippet02.html -->
+    <!-- @include _snippet03.html -->
+    <!-- @include _snippet04.html -->
+    <!-- @include _snippet05.html -->
+  </div>
 </div>

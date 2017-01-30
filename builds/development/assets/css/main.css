@@ -6028,7 +6028,8 @@ textarea.bg-danger {
 #dynamic_datas {
   margin: 15px 0 15px 0; }
 
-.solutions-list {
+.solutions-list,
+.snippets_list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6042,7 +6043,8 @@ textarea.bg-danger {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.solutions-list h3 {
+.solutions-list h3,
+.snippets_list h3 {
   margin: 15px 0; }
 
 /*# sourceMappingURL=maps/main.css.map */

@@ -124,11 +124,11 @@ textarea.bg-danger{
 #dynamic_datas{
 	margin:15px 0 15px 0;
 }
-.solutions-list {
+.solutions-list, .snippets_list {
 	display:flex;
 	align-items:center;
 	justify-content:space-between;
 }
-.solutions-list h3 {
+.solutions-list h3, .snippets_list h3 {
 	margin:15px 0;
 }
