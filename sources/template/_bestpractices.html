@@ -7,6 +7,9 @@
       <p>It is best to start with <code>HTML5</code> Doctype. Since now a days responsive is mandatory for all clients we need to code our HTML creatives with responisve ready. To make responsive we will be using media queries and some of the <code>CSS3</code> styles. So, it is best to use <code>CSS3</code> with <code>HTML5</code> Doctype.</p>
     </li>
     <li>
+      <p>Write the codes clean and neat to look good and readable to all developers like giving proper indents, adding meaningful classes and ids, adding reasonable title and alt texts to the images etc., which makes you a good coder.</p>
+    </li>
+    <li>
       <p>Don't forget to add responsive meta tags to ensure the responsive work properly</p>
       <p class="bg-info highlight"> <em class="text-success">mandatory</em>
         <br>
@@ -20,7 +23,7 @@
     </li>
     <li>
       <p>Start with 100% table and add content table with align center property to make sure the content aligned center to the page</p>
-<pre class="bg-info">
+      <pre class="bg-info">
   <code> 
   <span class="tocken tags"><</span>!-- wrapper table --<span class="tocken tags">></span>
   <span class="tocken tags"><</span>table width="100%" border="0" cellspacing="0" cellpadding="0"<span class="tocken tags">></span>
@@ -49,13 +52,13 @@
     </li>
     <li>
       <p>For empty row spaces use this code instead of using spacer images</p>
-<pre class="bg-info">
+      <pre class="bg-info">
 <code><span class="tocken tags"><</span>tr<span class="tocken tags">></span>
 <span class="tocken tags"><</span>td valign="top" style="font-size:1px; line-height:1px;" height="10" class="height_01"<span class="tocken tags">></span><span class="tocken tags"><</span>!--[if gt mso 14]<span class="tocken tags">></span><span class="tocken tags">&</span><span class="tocken tags">n</span><span class="tocken tags">b</span><span class="tocken tags">s</span><span class="tocken tags">p</span><span class="tocken tags">;</span><span class="tocken tags"><</span>![endif]--<span class="tocken tags">></span><span class="tocken tags"><</span>/td<span class="tocken tags">></span>
 <span class="tocken tags"><</span>/tr<span class="tocken tags">></span></code>
 </pre>
       <p>Here height will be varied depends on how much height needed and the following Outlook specific conditional codes needs to be added to the <code><strong>head</strong></code> section by targeting the <code>class="height_01"</code></p>
-<pre class="bg-info">
+      <pre class="bg-info">
 <code><span class="tocken tags"><</span>!--[if gt mso 14]<span class="tocken tags">></span>
 <span class="tocken tags"><</span>style type="text/css"<span class="tocken tags">></span>
 .height_01, #height_01 {
@@ -65,13 +68,12 @@ line-height:1px;
 <span class="tocken tags"><</span>/style<span class="tocken tags">></span>
 <span class="tocken tags"><</span>![endif]--<span class="tocken tags">></span></code>
 </pre>
-
-<small>Note: This will target only MS Outlook versions greater than 2013. Because only those versions ie: greater than MS Outlook 2013 which causes the spacing issue of empty rows which is not more than 16px height.</small>
-<p>In this one <code>id="height_01"</code> is added for future purppose to make use of id, in case if the class styles not working.</p>
+      <small>Note: This will target only MS Outlook versions greater than 2013. Because only those versions ie: greater than MS Outlook 2013 which causes the spacing issue of empty rows which is not more than 16px height.</small>
+      <p>In this one <code>id="height_01"</code> is added for future purppose to make use of id, in case if the class styles not working.</p>
     </li>
     <li>
       <p>To align any content to centered to the parent block, use this code. Either it may be text contents or image.</p>
-<pre class="bg-info"><code><span class="tags"><</span>tr<span class="tags">></span>
+      <pre class="bg-info"><code><span class="tags"><</span>tr<span class="tags">></span>
 <span class="tags"><</span>td valign="top" align="center"<span class="tags">></span>
 <span class="tags"><</span>table border="0" cellspacing="0" cellpadding="0" align="center" class="align_center"<span class="tags">></span>
 <span class="tags"><</span>tr<span class="tags">></span>
@@ -80,17 +82,14 @@ line-height:1px;
 <span class="tags"><</span>/table<span class="tags">></span>
 <span class="tags"><</span>/td<span class="tags">></span>
 <span class="tags"><</span>/tr<span class="tags">></span></code></pre>
-<p>Here the class <code>class="align_center"</code> is to make any block to center aligned for mobile versions. Either it may be right aligned or left aligned content in desktop versions. The following styles needs to be added to the media query for mobile responsive.</p>
-<pre class="bg-info"><code>.align_center{
+      <p>Here the class <code>class="align_center"</code> is to make any block to center aligned for mobile versions. Either it may be right aligned or left aligned content in desktop versions. The following styles needs to be added to the media query for mobile responsive.</p>
+      <pre class="bg-info"><code>.align_center{
 float:none;
 margin:0 auto !important;
 }</code></pre>
     </li>
     <li>
-      <p>Write the codes clean and neat to look good and readable to all developers like giving proper indents, adding meaningful classes and ids, adding reasonable title and alt texts to the images etc., which makes you a good coder.</p>
-    </li>
-    <li>
-      <p>Always use nested table</p>
+      <p>Always use nested tables. Try not to use stacked table coding style.</p>
     </li>
   </ol>
 </div>
