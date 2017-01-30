@@ -89,7 +89,7 @@ $(document).ready(function() {
                     if (searchTitle.indexOf(searchQuery) != -1) {
                         $('#search_datas').removeClass('bg-danger').addClass('bg-success');
                         searchResult += '<div class="panel panel-default">\
-                        <a data-toggle="collapse" data-parent="#dynamic_datas" href="#collapse' + issueId + '">\
+                        <a data-toggle="collapse" data-parent="#search_datas" href="#collapse' + issueId + '">\
                             <div class="panel-heading">\
                                 <h4 class="panel-title">' + issueName + '</h4>\
                             </div>\
@@ -117,6 +117,8 @@ $(document).ready(function() {
             }
         });
         var snippets = $('#snippets div.panel');
+            // snippetsTitle = snippets[0].children[0].innerHTML,
+            // snippetsContent = snippets[0].children[1].innerHTML;
         console.log(snippets);
         $(document).on("keyup", "input[name='snippets']", function() {
             $('#search_snippets').css({ 'display': 'block', 'margin': '15px 0 30px 0' })
@@ -128,15 +130,16 @@ $(document).ready(function() {
                 $("#search_snippets").css({ 'display': 'none' }).empty();
             } else {
                 $.each(snippets, function(i, item) {
-                    var searchTitle = snippets[i].innerHTML.toLowerCase(),
-                        // issueId = snippets[i].issue_id,
-                        // issueName = snippets[i].issue_name,
-                        // solutions = snippets[i].solutions,
+                    var searchTitle = snippets[i].children[0].innerHTML.toLowerCase(),
+                        snippetsTitle = snippets[i].children[0].innerHTML,
+                        snippetsContent = snippets[i].children[1].innerHTML,
                         sanSolutions = replaceHtmlEntites;
                     // console.log(searchTitle);
                     if (searchTitle.indexOf(searchQuery) != -1) {
                         $('#search_snippets').removeClass('bg-danger').addClass('bg-success');
-                        searchResult += '<div class="panel panel-default">'+snippets[i].innerHTML+'</div>';
+                        searchResult += '<div class="panel panel-default">\
+                        <a data-toggle="collapse" data-parent="#search_snippets" href="#snippet' + i + '">'+ snippetsTitle + '</a>\
+                        <div id="snippet' + i + '" class="panel-collapse collapse">'+ snippetsContent +'</div></div></div>';
                     }
                 });
                 if (searchResult == '') {
