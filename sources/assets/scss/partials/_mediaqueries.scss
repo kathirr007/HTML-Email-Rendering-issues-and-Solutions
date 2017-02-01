@@ -73,10 +73,10 @@ header.page-title {
 /*    width:100% !important; */
 /*    padding:0 !important; */
  }
- .solutions-list {
+ .solutions-list, .snippets_list{
   display: block !important;
  }
- .solutions-list h3, .solutions-list form {
+ .solutions-list h3, .solutions-list form, .snippets_list h3, .snippets_list form {
   display:block;
   width: 100%;
 }
