@@ -47,7 +47,7 @@ s {
 	font-size:5vw;
 } */
 
-[id*=collapse] > div > h3, [id*=snippet] > div.panel-body > h3, .codepen-url {
+[id*=collapse] > div > h3, [id*=snippet] > div.panel-body > h3, .codepen-url, #bookmarks ul li a {
 	padding: 6px;
     border-radius: 5px;
 }
@@ -61,10 +61,10 @@ s {
 #contentsNav {
 	margin-top: 1em;
 }
-.panel-heading, #contentsNav li a { 
+.panel-heading, #contentsNav li a, #bookmarks ul li a { 
 background:tint($basecolor, 90%) ;
 }
-.panel-heading:hover, #contentsNav li a:hover {
+.panel-heading:hover, #contentsNav li a:hover, #bookmarks ul li a:hover {
 background:tint($basecolor, 40%);
 color:tint($basecolor, 100%);
 transition:all 0.2s;	
@@ -131,4 +131,13 @@ textarea.bg-danger{
 }
 .solutions-list h3, .snippets_list h3 {
 	margin:15px 0;
+}
+#bookmarks ul {
+	list-style-type: none;
+	padding: 0;
+}
+#bookmarks ul li a {
+	display:block;
+	padding: 10px;
+	margin-bottom: 5px;
 }

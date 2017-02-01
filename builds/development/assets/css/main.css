@@ -5948,7 +5948,8 @@ s {
 } */
 [id*=collapse] > div > h3,
 [id*=snippet] > div.panel-body > h3,
-.codepen-url {
+.codepen-url,
+#bookmarks ul li a {
   padding: 6px;
   border-radius: 5px; }
 
@@ -5964,11 +5965,13 @@ s {
   margin-top: 1em; }
 
 .panel-heading,
-#contentsNav li a {
+#contentsNav li a,
+#bookmarks ul li a {
   background: #efefef; }
 
 .panel-heading:hover,
-#contentsNav li a:hover {
+#contentsNav li a:hover,
+#bookmarks ul li a:hover {
   background: #9c9c9c;
   color: white;
   -webkit-transition: all 0.2s;
@@ -6048,5 +6051,14 @@ textarea.bg-danger {
 .solutions-list h3,
 .snippets_list h3 {
   margin: 15px 0; }
+
+#bookmarks ul {
+  list-style-type: none;
+  padding: 0; }
+
+#bookmarks ul li a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 5px; }
 
 /*# sourceMappingURL=maps/main.css.map */

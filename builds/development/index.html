@@ -30,7 +30,8 @@
                     <ul class="nav nav-pills" id="contentsNav">
                         <li class="active"><a data-toggle="pill" href="#issuesNsolutions">Issues & Solutions</a></li>
                         <li><a data-toggle="pill" href="#coding-tips">Best Practices</a></li>
-                        <li><a data-toggle="pill" href="#snippets">Usefull Code Snippets</a></li>
+                        <li><a data-toggle="pill" href="#snippets">Snippets</a></li>
+                        <li><a data-toggle="pill" href="#bookmarks">References</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="issuesNsolutions" class="tab-pane fade in active">
@@ -165,6 +166,140 @@ margin:0 auto !important;
                             <div class="highlight panel-group" id="search_snippets" style="display: none;">
                             </div>
 
+                            <div class="panel panel-default">
+                                <a data-toggle="collapse" data-parent="#snippets" href="#snippettemplate">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">Standard HTML email template</h4>
+                                    </div>
+                                </a>
+                                <div id="snippettemplate" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Standard HTML email template with all neccessary classses and styles added</h3>
+                                        <div>
+                                            <p>
+                                                <pre class="bg-info">
+<code>
+<span><</span>!DOCTYPE html<span>></span>
+<span><</span>html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\"<span>></span>
+<span><</span>head<span>></span>
+<span><</span>meta charset=\"utf-8\"<span>></span>
+<span><</span>meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"<span>></span>
+<span><</span>meta name=\"format-detection\" content=\"telephone=no\"<span>></span>
+<span><</span>title<span>></span>Cartier<span><</span>/title<span>></span>
+<span><</span>style type=\"text/css\"<span>></span>
+body { margin: 0px; padding: 0px; background-color: #FFFFFF; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none !important; -ms-text-size-adjust: none !important; }
+* { line-height: normal !important; }
+a[href^=\"x-apple-data-detectors:\"] { color: inherit; text-decoration: inherit; }
+a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
+a { text-decoration: none; }
+div { display:inherit !important; }
+
+@media screen and (max-device-width: 480px) {
+*[class~=full] { width: 100% !important; min-width: 100% !important; }
+*[class~=contents] { width: 84.375% !important; }
+*[class~=hide] { display: none !important; }
+*[class~=show] { display: block !important; font-size: inherit !important; max-height: none !important; width: auto !important; line-height: normal !important; overflow: visible !important; }
+*[class~=imgfull] { width: 100% !important; height: auto !important; }
+*[class~=text_center] { text-align: center !important; }
+*[class~=align_center] { float: none !important; margin: 0 auto !important; }
+*[class~=align_right] { float: right !important; }
+*[class~=align_left] { float: left !important; }
+*[class~=coldrop] { display: block !important; width: 100% !important; padding: 0px !important; }
+.arrange_top { display: table-header-group !important; }
+.arrange_bottom { display: table-footer-group !important; }
+*[class=autoheight] { height: auto !important; }
+*[class=autowidth] { width: auto !important; }
+*[class=autowidthheight] { width: auto !important; height: auto !important; }
+body[yahoo] *[class~=no_bg] { background: none !important; background-color: #ffffff !important; }
+body[yahoo] *[class~=top_banner] { width: 100% !important; background-size: cover !important; background-position: 100% top !important; }
+body[yahoo] *[class~=top_banner] { height: 172px !important; }
+.top_banner_top { height: 100px !important; width: 100%; }
+body[yahoo] *[class~=footer_bg] { width: 100% !important; background-size: 100% !important; background-repeat: no-repeat !important; background-color: #ffffff; }
+body[yahoo] *[class~=offer_contents] { border-radius: 0px 0px 10px 10px; overflow: hidden; display: flex; background-color: #fff; box-shadow: 1px 0px 3px #cbcbcb; justify-content: center; }
+body[yahoo] *[class~=offer_image_link] { overflow: hidden; height: 320px; display: block; }
+body[yahoo] *[class~=offer_bg_white] { background-color: #ffffff !important; }
+body[yahoo] *[class~=offer_text] { background-color: #ffffff !important; border-top-right-radius: 10px !important; border-top-left-radius: 10px !important; }
+body[yahoo] *[class~=offer_img_curved] { border-radius: 10px !important; }
+*[class~=padding_lr10] { padding: 0px 10px 0px 10px !important; }
+*[class~=padding_t10] { padding: 10px 0px 0px 0px !important; }
+*[class~=nopad] { padding: 0px 0px 0px 0px !important; }
+*[class~=margin_b10] { margin-bottom: 10px !important; }
+*[class~=margin_t10] { margin-top: 10px !important; }
+*[class~=height20] { height: 20px !important; }
+*[class~=height15] { height: 15px !important; }
+*[class~=height10] { height: 10px !important; }
+*[class~=height5] { height: 5px !important; }
+}
+
+@media screen and (max-device-width: 414px) {
+body[yahoo] *[class~=offer_image_link] { height: 285px; }
+}
+
+@media screen and (max-device-width: 375px) {
+body[yahoo] *[class~=offer_image_link] { height: 255px; }
+}
+
+@media screen and (max-device-width: 320px), screen and (max-device-width: 360px) {
+*[class~=hide2] { display: none !important; }
+body[yahoo] *[class~=offer_image_link] { height: 220px; }
+}
+<span><</span>/style<span>></span>
+
+<span><</span>!--[if gte mso 9]<span>></span>
+<span><</span>xml<span>></span>
+  <span><</span>o:OfficeDocumentSettings<span>></span>
+    <span><</span>o:AllowPNG/<span>></span>
+    <span><</span>o:PixelsPerInch<span>></span>96<span><</span>/o:PixelsPerInch<span>></span>
+ <span><</span>/o:OfficeDocumentSettings<span>></span>
+<span><</span>/xml<span>></span>
+<span><</span>![endif]--<span>></span>
+
+<span><</span>!--[if gt mso 14]<span>></span>
+<span><</span>style type=\"text/css\"<span>></span>
+    .height_01 {
+    font-size:1px;
+    line-height:1px;    
+    }
+/*Windows 10 phone link fix*/
+    span.MsoHyperlink {
+    mso-style-priority:100 !important;
+    color:inherit !important;
+    text-decoration:none !important;
+}    
+<span><</span>/style<span>></span>
+<span><</span>![endif]--<span>></span>
+
+<span><</span>/head<span>></span>
+
+<span><</span>body yahoo=\"fix\"<span>></span>
+<span><</span>!-- wrapper table --<span>></span>
+<span><</span>table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"table-layout:fixed;\"<span>></span>
+<span><</span>tbody<span>></span>
+<span><</span>tr<span>></span>
+<span><</span>td style=\"vertical-align:top;\" align=\"center\" bgcolor=\"#FFFFFF\"<span>></span>
+<span><</span>!-- contents table --<span>></span>
+<span><</span>table class=\"full\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"640\" style=\"min-width:640px;\"<span>></span>
+<span><</span>tbody<span>></span>
+<span><</span>tr<span>></span>
+<span><</span>td style=\"vertical-align:top;\" align=\"center\"<span>></span>Here goes the actual Email contents<span><</span>/td<span>></span>
+<span><</span>/tr<span>></span>
+<span><</span>/tbody<span>></span>
+<span><</span>/table<span>></span>
+<span><</span>!-- contents table ends --<span>></span>
+<span><</span>/td<span>></span>
+<span><</span>/tr<span>></span>
+<span><</span>/tbody<span>></span>
+<span><</span>/table<span>></span>
+<span><</span>!-- wrapper table ends --<span>></span>
+<span><</span>/body<span>></span>
+<span><</span>/html<span>></span>
+</code>
+</pre>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="panel panel-default">
                                 <a data-toggle="collapse" data-parent="#snippets" href="#snippet01">
                                     <div class="panel-heading">
@@ -349,6 +484,17 @@ display:block !important;
                                 </div>
                             </div>
 
+                        </div>
+
+                        <div id="bookmarks" class="tab-pane fade panel-group">
+                            <div class="snippets_list page-header">
+                                <h3>Usefull reference links for HTML emails</h3>
+                            </div>
+                            <ul>
+                                <li><a href="https://backgrounds.cm/" target="_blank">Bulletproof background images to HTML Emails from Campaign Monitor</a></li>
+                                <li><a href="https://buttons.cm/" target="_blank">Bulletproof email buttons for HTML Emails from Campaign Monitor</a></li>
+                                <li></li>
+                            </ul>
                         </div>
 
                     </div>
