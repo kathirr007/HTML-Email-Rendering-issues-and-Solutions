@@ -2,31 +2,8 @@
   {
     "issuesAndSolutions": [
       {
-        "issue_id": "21",
-        "issue_name": "This is added by Swathi for testing",
-        "solutions": [
-          {
-            "id": "1",
-            "solution": "",
-            "codepen_url": ""
-          }
-        ]
-      },
-      
-      {
-        "issue_id": "20",
-        "issue_name": "This is added by GP for testing",
-        "solutions": [
-          {
-            "id": "1",
-            "solution": "",
-            "codepen_url": ""
-          }
-        ]
-      },
-      {
         "issue_id": "19",
-        "issue_name": "If the banner image is sliced into multiple parts to give different links for the same image a white line will appear in between the sliced images",
+        "issue_name": "If an image is sliced into multiple parts to give different links for the same image a white line will appear in between the sliced images",
         "solutions": [
           {
             "id": "1",
@@ -68,28 +45,6 @@
         ]
       },
       {
-        "issue_id": "17",
-        "issue_name": "In Windows 10 Mail, a blue line may occur before the Map image",
-        "solutions": [
-          {
-            "id": "1",
-            "solution": "",
-            "codepen_url": ""
-          }
-        ]
-      },
-      {
-        "issue_id": "16",
-        "issue_name": "Southeastern Railway – Making the Map Image’s background as White and to the standard width and height",
-        "solutions": [
-          {
-            "id": "1",
-            "solution": "",
-            "codepen_url": ""
-          }
-        ]
-      },
-      {
         "issue_id": "15",
         "issue_name": "Southeastern Railway – Rendering issue may occur in shadow image(Top and bottom)",
         "solutions": [
@@ -107,7 +62,7 @@
           {
             "id": "1",
             "solution": "<p>Check the solution in <a data-toggle=\"collapse\" data-parent=\"#dynamic_datas\" href=\"#collapse3\" class=\"collapsed\" aria-expanded=\"false\"><strong>here</strong></a></p>",
-            "codepen_url": ""
+            "codepen_url": "http://codepen.io/kathirr007/pen/bggEMp"
           }
         ]
       },
@@ -123,34 +78,28 @@
         ]
       },
       {
-        "issue_id": "12",
-        "issue_name": "Follow Us or Get social text in the footer part will not render correctly",
-        "solutions": [
-          {
-            "id": "1",
-            "solution": "",
-            "codepen_url": ""
-          }
-        ]
-      },
-      {
         "issue_id": "11",
         "issue_name": "In some creative, only the images will display but the text part will be missed",
         "solutions": [
           {
             "id": "1",
-            "solution": "",
-            "codepen_url": ""
-          }
-        ]
-      },
-      {
-        "issue_id": "10",
-        "issue_name": "If the creative contains bullet points, we will notice the alignment  issue in some domains",
-        "solutions": [
-          {
-            "id": "1",
-            "solution": "",
+            "solution": "<p>This rendering issue will appear if the follwing code is there in the <code>HTML</code> <code>head</code> section</p>
+<pre class=\"bg-info\"><code><span><</span>!--[if gte mso 15]<span>></span><br><span><</span>style type=\"text/css\" media=\"all\"<span>></span><br>
+/* Outlook 2013 Height Fix */<br>
+<span class=\"code-highlight\">body { font-size: 0; line-height: 0; }<br>
+tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }</span><br>
+<span><</span>/style<span>></span><br>
+<span><</span>![endif]--<span>></span></code></pre>
+<p>To resolve this just remove those highlighted styles</p>
+<pre class=\"bg-info\"><code><span><</span>!--[if gte mso 15]<span>></span><br>
+<span><</span>style type=\"text/css\" media=\"all\"<span>></span><br>
+/* Outlook 2013 Height Fix */<br>
+<span><</span>![endif]--<span>></span></code></pre>
+<p>Here is the screenshot of rendering issues with resolved one.</p>
+<p class=\"text-center\"><strong>The image with the issue</strong></p>
+<p><a href=\"assets/images/issuesNsolutions/android4.4_long_link_text.jpg\"><img class=\"img-responsive\" src=\"assets/images/issuesNsolutions/texts_not_visible_properly.jpg\" alt=\"\" width=\"752\" height=\"591\"></a></p>
+<p class=\"text-center\"><strong>The image with the issue resolved</strong></p>
+<p><a href=\"assets/images/issuesNsolutions/android4.4_long_link_text.jpg\"><img class=\"img-responsive\" src=\"assets/images/issuesNsolutions/texts_not_visible_properly_resolved.jpg\" alt=\"\" width=\"691\" height=\"599\"></a></p>",
             "codepen_url": ""
           }
         ]
@@ -200,8 +149,8 @@ Check if the <strong>contents table</strong> has the <strong>100% wrapper table<
         "solutions": [
           {
             "id": "1",
-            "solution": "",
-            "codepen_url": ""
+            "solution": "<p>Check the solution in <a data-toggle=\"collapse\" data-parent=\"#dynamic_datas\" href=\"#collapse19\" class=\"collapsed\" aria-expanded=\"false\"><strong>here</strong></a></p>",
+            "codepen_url": "https://codepen.io/kathirr007/pen/apVxOQ"
           }
         ]
       },
@@ -211,7 +160,18 @@ Check if the <strong>contents table</strong> has the <strong>100% wrapper table<
         "solutions": [
           {
             "id": "1",
-            "solution": "",
+            "solution": "<p>This one will happen if the line hight value of the image or the containing <code><span>&lt;</span>td<span>&gt;</span></code></p>
+<p>To resolve the issue just remove the <code>line-height</code> and <code>mso-line-height-rule:exactly</code> for both image and the containing <code><span>&lt;</span>td<span>&gt;</span></code></p>
+<p>Here the source code with rendering issue</p>
+<pre class=\"bg-info\"><code><span><</span>td align=\"center\" style=\"font-size: 11px; color: #767676; font-family: Verdana, Geneva, sans-serif; <span class=\"code-highlight\">line-height: 12px; mso-line-height-rule: exactly;</span> text-decoration: none\"<span>></span><br>
+<span><</span>a class=\"\" href=\"#\" style=\"color:#767676; text-decoration:none;\"<span>></span><span><</span>img alt=\"\" class=\"\" height=\"22\" src=\"https://placehold.it/85x22\" style=\"border:none; font-size:11px;\" width=\"85\"/<span>></span><span><</span>/a<span>></span><br>
+<span><</span>/td<span>></span></code></pre>
+<p>Here the source code with rendering issue resolved</p>
+<pre class=\"bg-info\"><code><span><</span>td align=\"center\" style=\"font-size: 11px; color: #767676; font-family: Verdana, Geneva, sans-serif; text-decoration: none\"<span>></span>
+<span><</span>a class=\"\" href=\"#\" style=\"color:#767676; text-decoration:none;\"<span>></span><span><</span>img alt=\"\" class=\"\" height=\"22\" src=\"https://placehold.it/85x22\" style=\"border:none; font-size:11px;\" width=\"85\"/<span>></span><span><</span>/a<span>></span>
+<span><</span>/td<span>></span></code></pre><p>Here is the screenshot of rendering issues with resolved one.</p>
+<p class=\"text-center\"><strong>The screenshot of the issue and resolved</strong></p>
+<p><a href=\"assets/images/issuesNsolutions/image_not_visible_full.jpg\" target=\"_blank\"><img class=\"img-responsive\" src=\"assets/images/issuesNsolutions/image_not_visible_full.jpg\" alt=\"\"></a></p>",
             "codepen_url": ""
           }
         ]
@@ -233,8 +193,8 @@ Check if the <strong>contents table</strong> has the <strong>100% wrapper table<
         "solutions": [
           {
             "id": "1",
-            "solution": "",
-            "codepen_url": ""
+            "solution": "<p>Check the solution in <a data-toggle=\"collapse\" data-parent=\"#dynamic_datas\" href=\"#collapse4\" class=\"collapsed\" aria-expanded=\"false\"><strong>here</strong></a></p>",
+            "codepen_url": "http://codepen.io/kathirr007/pen/YNewBX?editors=1100"
           }
         ]
       },
@@ -244,8 +204,54 @@ Check if the <strong>contents table</strong> has the <strong>100% wrapper table<
         "solutions": [
           {
             "id": "1",
-            "solution": "",
-            "codepen_url": ""
+            "solution": "<p>Round corner border is missing in the top right side of the issue will appear if we slice the round edge images with less than the height of 16px. If we do slice the images with more than the height of 16px, we can avoid this rendering issue</p>
+<p>The CTA button with round edge issue will be resovlved if we use the following vml script with CTA button code.</p>
+<p>The script has two parts wrapped with a <code><span>&lt;</span>div<span>&gt;</span></code> tag first one is for all MS Office Outlook clients and the other part is for all other email clients except MS Office Outlook clients.</p>
+<p>The first part of the code for MS Office Outlook is as follows</p>
+<pre class=\"bg-info highlight\"><code><span><</span>!--[if mso]<span>></span><br>
+      <span><</span>v:roundrect xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" href=\"#\" style=\"height:40px;v-text-anchor:middle;width:310px;\" arcsize=\"10%\" strokecolor=\"#009cde\" fillcolor=\"#009cde\"<span>></span><br>
+        <span><</span>w:anchorlock/<span>></span><br>
+        <span><</span>center style=\"color:#ffffff;font-family:Arial;font-size:14px; font-weight:bold;\"<span>></span>CTA Text<span><</span>/center<span>></span><br>
+      <span><</span>/v:roundrect<span>></span><br>
+<span><</span>![endif]--<span>></span></code></pre>
+<p>In this <code>arcsize=\"{acrsize%}\"</code> is the round edge size of the CTA button this value should be in percentage, <code>strokecolor=\"#{strokecolor}\"</code> color of the border to the CTA <code>fillcolor=\"{#fillcolor}\"</code> is the background-color of CTA & <code>href=\"{link}\"</code> is the actual link for CTA. If there is no need of border give same color to both <code>strokecolor</code> and <code>fillcolor</code></p>
+<p>The second part of the code for all other clients except MS Office Outlook is as follows</p>
+<pre class=\"bg-info highlight\"><code><span><</span>!--[if !(mso)]<span>></span><span><</span>!--<span>></span><br>
+<span><</span>table width=\"310\" class=\"container\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"<span>></span><br>
+<span><</span>tr<span>></span> <br>
+<span><</span>td bgcolor=\"#009cde\" style=\"font-family:Arial; font-size:16px; color:#666666; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;\" valign=\"middle\"<span>></span><span><</span>table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"<span>></span><br>
+<span><</span>tr<span>></span><br>
+<span><</span>td style=\"font-family:Arial; font-size:14px; color:#FFFFFF;\" valign=\"middle\" align=\"center\"<span>></span><span><</span>a style=\"display:block; text-decoration:none; color:#ffffff; padding:10px 0px 10px 0px; font-weight:bold;\" href=\"#\" target=\"_blank\"<span>></span>CTA Text<span><</span>/a<span>></span><span><</span>/td<span>></span><br>
+<span><</span>/tr<span>></span><br>
+<span><</span>/table<span>></span><span><</span>/td<span>></span><br>
+<span><</span>/tr<span>></span><br>
+<span><</span>/table<span>></span><br>
+<span><</span>!--<span><</span>![endif]--<span>></span></code></pre>
+<p>Both two parts wrapped with <code><span>&lt;</span>div<span>&gt;</span></code> will be as below</p>
+<p>Here the <strong>width</strong>, <strong>height</strong> & <strong>background color</strong> of the CTA button varies depends on the requirement</p>
+<pre class=\"bg-info\"><code><span><</span>div<span>></span><br>
+<span><</span>!--[if mso]<span>></span><br>
+      <span><</span>v:roundrect xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" href=\"#\" style=\"height:40px;v-text-anchor:middle;width:310px;\" arcsize=\"10%\" strokecolor=\"#009cde\" fillcolor=\"#009cde\"<span>></span><br>
+        <span><</span>w:anchorlock/<span>></span><br>
+        <span><</span>center style=\"color:#ffffff;font-family:Arial;font-size:14px; font-weight:bold;\"<span>></span>CTA Text<span><</span>/center<span>></span><br>
+      <span><</span>/v:roundrect<span>></span><br>
+<span><</span>![endif]--<span>></span><br><br>
+<span><</span>!--[if !(mso)]<span>></span><span><</span>!--<span>></span><br>
+<span><</span>table width=\"310\" class=\"container\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"<span>></span><br>
+<span><</span>tr<span>></span> <br>
+<span><</span>td bgcolor=\"#009cde\" style=\"font-family:Arial; font-size:16px; color:#666666; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;\" valign=\"middle\"<span>></span><span><</span>table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"<span>></span><br>
+<span><</span>tr<span>></span><br>
+<span><</span>td style=\"font-family:Arial; font-size:14px; color:#FFFFFF;\" valign=\"middle\" align=\"center\"<span>></span><span><</span>a style=\"display:block; text-decoration:none; color:#ffffff; padding:10px 0px 10px 0px; font-weight:bold;\" href=\"#\" target=\"_blank\"<span>></span>CTA Text<span><</span>/a<span>></span><span><</span>/td<span>></span><br>
+<span><</span>/tr<span>></span><br>
+<span><</span>/table<span>></span><span><</span>/td<span>></span><br>
+<span><</span>/tr<span>></span><br>
+<span><</span>/table<span>></span><br>
+<span><</span>!--<span><</span>![endif]--<span>></span><br>
+<span><</span>/div<span>></span></code></pre>
+<p>Here is the screenshot of rendering issues with resolved one.</p>
+<p class=\"text-center\"><strong>The screenshot of the issue and resolved</strong></p>
+<p><a href=\"assets/images/issuesNsolutions/windows10_issues_resolved.jpg\" target=\"_blank\"><img class=\"img-responsive\" src=\"assets/images/issuesNsolutions/windows10_issues_resolved.jpg\" alt=\"\" width=\"1041\" height=\"688\"></a></p>",
+            "codepen_url": "http://codepen.io/kathirr007/pen/YNewBX?editors=1100"
           }
         ]
       },
