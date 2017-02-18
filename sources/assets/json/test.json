@@ -12,3 +12,4 @@
 		]
 	}
 ]
+// @include ../template/test.html

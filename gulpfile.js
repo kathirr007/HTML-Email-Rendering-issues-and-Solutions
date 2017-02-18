@@ -100,6 +100,14 @@ gulp.task('json', function() {
         .pipe($.if(env === 'production', $.jsonminify()))
         .pipe(gulp.dest(outputDir + 'assets/json'));
 });
+gulp.task('jsontest', function() {
+    gulp.src(jsonSources)
+        .pipe($.preprocess())
+        // .pipe($.jsbeautifier())
+        .pipe($.jsonminify())
+        .pipe($.if(env === 'production', $.jsonminify()))
+        .pipe(gulp.dest(outputDir + 'assets/json'));
+});
 gulp.task('deploy', ['html', 'sass', 'js', 'images', 'json'], function() {
     return gulp.src('./builds/development/**/*')
         .pipe($.ghPages());
