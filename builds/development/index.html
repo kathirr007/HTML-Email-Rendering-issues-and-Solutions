@@ -321,6 +321,18 @@ body[yahoo] *[class~=offer_image_link] { height: 220px; }
                                                     <h5>Regular expressions to find all <strong>%LINK_ID</strong> in HTML creative</h5>
                                                     <code>%link_id=([^\s]*\d{8,})</code>
                                                 </li>
+                                                <li>
+                                                    <h5>To find any html tag with closing tag from HTML</h5>
+                                                    <p>
+                                                        <code><span><</span>%TAG%\b[^<span>></span>]*<span>></span>(.*?)|<span><</span>\/%TAG%<span>></span></code>
+                                                    </p>
+                                                    <p>Here replace <code>%TAG%</code> with the tag which needs to be match.</p>
+                                                </li>
+                                                <li>
+                                                    <h5>Regular expressions to find all <strong>%LINK_ID</strong> in HTML creative</h5>
+                                                    <code>%link_id=([^\s]*\d{8,})</code>
+                                                </li>
+
                                             </ol>
 
                                         </div>
