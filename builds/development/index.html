@@ -311,19 +311,31 @@ body[yahoo] *[class~=top_banner] { width: 100% !important; background-size: cove
                                                     <code>%link_id=([^\s]*\d{8,})</code>
                                                 </li>
                                                 <li>
-                                                    <h5>To find any html tag with closing tag from HTML</h5>
+                                                    <h5>To grap any <strong>specific html tag</strong> with closing tag from HTML</h5>
                                                     <p>
                                                         <code><span><</span>%TAG%\b[^<span>></span>]*<span>></span>(.*?)|<span><</span>\/%TAG%<span>></span></code>
                                                     </p>
                                                     <p>Here replace <code>%TAG%</code> with the tag which needs to be match.</p>
                                                 </li>
                                                 <li>
-                                                    <h5>Regular expressions to find all <strong>%LINK_ID</strong> in HTML creative</h5>
-                                                    <code>%link_id=([^\s]*\d{8,})</code>
+                                                    <h5>To find all <strong>href values</strong> in HTML</h5>
+                                                    <p>
+                                                        <code>href="([^"]*")</code>
+                                                    </p>
                                                 </li>
-
+                                                <li>
+                                                    <h5>Regular expressions to find all <strong>empty attributes</strong> in HTML creative</h5>
+                                                    <code>\w+=""|\w+="\s{1,}"</code>
+                                                </li>
+                                                <li>
+                                                    <h5>Regular expressions to find all <strong>empty tags except <code><span><</span>td<span>></span><span><</span>/td<span>></span></code></strong> in HTML creative</h5>
+                                                    <code><([A-Z][A-Z0-9]*)\b[^td>]*>\s*<\/\1></code>
+                                                </li>
+                                                <li>
+                                                    <h5>Regular expressions to find all <strong>title texts</strong> in HTML creative</h5>
+                                                    <code>title="([^"]*")</code>
+                                                </li>
                                             </ol>
-
                                         </div>
                                     </div>
                                 </div>
@@ -553,6 +565,7 @@ display:block !important;
                                 <li><a href="http://regexr.com/" target="_blank">For regular expressions</a></li>
                                 <li><a href="http://www.amp-what.com/" target="_blank">HTML codes for special characters & symbols</a></li>
                                 <li><a href="http://r12a.github.io/apps/conversion/" target="_blank">All in one Unicode convertors</a></li>
+                                <li><a href="http://www.lexilogos.com/keyboard/polish.htm" target="_blank">Online Multilingual keyboard</a></li>
                                 <li><a href="https://www.emailonacid.com/" target="_blank">All in one place for All kind Email troubleshootings</a></li>
                                 <li><a href="https://litmus.com/blog/16-tips-troubleshooting-html-email/code-therapy-troubleshooting" target="_blank">Code Therapy: Troubleshooting HTML Email from Litmus</a></li>
                                 <li><a href="https://litmus.com/community/learning/8-outlook-overview" target="_blank">MS Outlook Overview from Litmus</a></li>
