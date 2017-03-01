@@ -33,6 +33,11 @@
             <h5>Regular expressions to find all <strong>empty tags except <code><span><</span>td<span>></span><span><</span>/td<span>></span></code></strong> in HTML creative</h5>
             <code><([A-Z][A-Z0-9]*)\b[^td>]*>\s*<\/\1></code>
           </li>
+<li>
+            <h5>Regular expressions to find all <strong>all MS Outolook conditional codes</strong> in HTML creative</h5>
+            <code><span><</span>!--\[if[^<span>></span>]*<span>></span>.*<span><</span>!\[endif\]--<span>></span></code>
+          </li>
+
           <li>
             <h5>Regular expressions to find all <strong>title texts</strong> in HTML creative</h5>
             <code>title="([^"]*")</code>
