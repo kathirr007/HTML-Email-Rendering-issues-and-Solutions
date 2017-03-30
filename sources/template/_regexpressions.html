@@ -45,6 +45,12 @@
             <code>class="?([^"])*"|<span><</span>tbody\b[^<span>></span>]*<span>></span>(.*?)|<span><</span>\/tbody<span>></span>|title="([^"]*")|id="?([^"])*"|<span><</span>!--.*?--<span>></span>|\w+=""|\w+="\s{1,}"</code>
            
           </li>
+          <li>
+            <h5>Regular expressions to find and wrap all <strong>attributes</strong> with "" in HTML creative</h5>
+            <code>(\s\w+=)(\d{1,})</code><br>
+            replace it with regex pattern <strong>$1"$2"</strong> to wrap all value attributes like <strong>width, height, border, cellspacing, cellpadding, colspan, rowspan</strong> with double quotes.
+           
+          </li>
         </ol>
       </div>
     </div>
