@@ -42,7 +42,7 @@
             <h5>Regular expressions to find all <strong>title / class / id / alt texts</strong> in HTML creative</h5>
             <code>title="([^"]*")</code>, <code>class="([^"]*")</code>, <code>id="([^"]*")</code>, <code>alt="([^"]*")</code><br>
             or All at once <br>
-            <code>class="?([^"])*"|<span><</span>tbody\b[^<span>></span>]*<span>></span>(.*?)|<span><</span>\/tbody<span>></span>|title="([^"]*")|id="?([^"])*"|<span><</span>!--.*?--<span>></span>|\w+=""|\w+="\s{1,}"</code>
+            <code>class="?([^"])*"|<span><</span>tbody\b[^<span>></span>]*<span>></span>(.*?)|<span><</span>\/tbody<span>></span>|title="([^"]*")|id="?([^"])*"|<span><</span>!--.*?--<span>></span>|\w+[^alt]=""|\w+[^alt]="\s{1,}"</code>
            
           </li>
           <li>
