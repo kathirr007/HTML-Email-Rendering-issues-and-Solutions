@@ -5,7 +5,7 @@
   </a>
   <div id="regexes" class="panel-collapse collapse">
     <div class="panel-body">
-      <h3 class="text-center">Useful Regular Expressions</h3>
+      <h3 class="text-center">Useful Regular Expressions </h3>
       <div>
         <ol>
           <li>
@@ -33,23 +33,22 @@
             <h5>Regular expressions to find all <strong>empty tags except <code><span><</span>td<span>></span><span><</span>/td<span>></span></code></strong> in HTML creative</h5>
             <code><([A-Z][A-Z0-9]*)\b[^td>]*>\s*<\/\1></code>
           </li>
-<li>
+          <li>
             <h5>Regular expressions to find all <strong>MS Outolook conditional codes</strong> in HTML creative</h5>
             <code><span><</span>!--\[if[^<span>></span>]*<span>></span>(.|\n)*?<span><</span>!\[endif\]--<span>></span></code>
           </li>
-
           <li>
             <h5>Regular expressions to find all <strong>title / class / id / alt texts</strong> in HTML creative</h5>
             <code>title="([^"]*")</code>, <code>class="([^"]*")</code>, <code>id="([^"]*")</code>, <code>alt="([^"]*")</code><br>
             or All at once except <strong>alt=""</strong><br>
             <code>class="?([^"])*"|<span><</span>tbody\b[^<span>></span>]*<span>></span>(.*?)|<span><</span>\/tbody<span>></span>|title="([^"]*")|id="?([^"])*"|<span><</span>!--.*?--<span>></span>|\b(?:(?!alt)\w)+\b="\s{0,}"</code>
-           
+            
           </li>
           <li>
             <h5>Regular expressions to find and wrap all <strong>attributes</strong> with "" in HTML creative</h5>
             <code>(\s\w+=)(\d{1,})</code><br>
             replace it with regex pattern <strong>$1"$2"</strong> to wrap all value attributes like <strong>width, height, border, cellspacing, cellpadding, colspan, rowspan</strong> with double quotes.
-           
+            
           </li>
         </ol>
       </div>
