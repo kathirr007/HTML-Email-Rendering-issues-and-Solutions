@@ -167,19 +167,22 @@ gulp.task('browsersync', cb => {
     server: {
       baseDir: outputDir
     },
-    open: true,
+    open: false,
     notify: true
   })
   cb()
 })
-gulp.task('watch', cb => {
-  gulp.watch(jsSources, gulp.series('js'))
-  gulp.watch(jsonSources, gulp.series('json'))
-  gulp.watch(sassSources, gulp.series('sass'))
-  gulp.watch(imgSources, gulp.series('images'))
-  gulp.watch(htmlSources.watch, gulp.series('html'))
-  cb()
-}) // default travis CI
+gulp.task(
+  'watch',
+  gulp.parallel('connect', cb => {
+    gulp.watch(jsSources, gulp.series('js'))
+    gulp.watch(jsonSources, gulp.series('json'))
+    gulp.watch(sassSources, gulp.series('sass'))
+    gulp.watch(imgSources, gulp.series('images'))
+    gulp.watch(htmlSources.watch, gulp.series('html'))
+    cb()
+  })
+) // default travis CI
 
 gulp.task(
   'build',
@@ -188,5 +191,5 @@ gulp.task(
 // default gulp
 gulp.task(
   'default',
-  gulp.parallel('html', 'sass', 'js', 'images', 'connect', 'json', 'watch')
+  gulp.parallel('html', 'sass', 'js', 'images', 'json', 'watch')
 )
