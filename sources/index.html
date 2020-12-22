@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- @include template/_meta_all.html -->
-  </head>
-  <body>
-    <!--container-->
-    <div class="container-fluid">
-      <div class="main clearfix" id="top">
-        <header>
-          <h1 class="text-center page-title">HTML solutions, tips & best practices</h1>
-        </header>
-        <div class="main-content container">
-          <div id="static_contents">
-            <ul class="nav nav-pills" id="contentsNav">
-              <li class="active"><a data-toggle="pill" href="#issuesNsolutions">Issues & Solutions</a></li>
-              <li><a data-toggle="pill" href="#coding-tips">Best Practices</a></li>
-              <li><a data-toggle="pill" href="#snippets">Snippets</a></li>
-              <li><a data-toggle="pill" href="#bookmarks">References</a></li>
-            </ul>
-            <div class="tab-content">
-<!-- @include template/_issuesNsolutions.html -->
-<!-- @include template/_bestpractices.html -->
-<!-- @include template/_codesnippets.html -->
-<!-- @include template/_bookmarks.html -->
-            </div>
+
+<head>
+  <!-- @include template/_meta_all.html -->
+</head>
+
+<body>
+  <!--container-->
+  <div class="container-fluid">
+    <div class="main clearfix" id="top">
+      <header>
+        <h1 class="text-center page-title">HTML solutions, tips & best practices</h1>
+      </header>
+      <div class="main-content container">
+        <div id="static_contents">
+          <ul class="nav nav-pills" id="contentsNav">
+            <li class="active"><a data-toggle="pill" href="#issuesNsolutions">Issues & Solutions</a></li>
+            <li><a data-toggle="pill" href="#coding-tips">Best Practices</a></li>
+            <li><a data-toggle="pill" href="#snippets">Snippets</a></li>
+            <li><a data-toggle="pill" href="#bookmarks">References</a></li>
+          </ul>
+          <div class="tab-content">
+            <!-- @include template/_issuesNsolutions.html -->
+            <!-- @include template/_bestpractices.html -->
+            <!-- @include template/_codesnippets.html -->
+            <!-- @include template/_bookmarks.html -->
           </div>
-          <a href="#top" class="scrollup"><img src="assets/images/arrow-circle-up.svg" /></a>
         </div>
+        <a href="#top" class="scrollup"><img src="assets/images/arrow-circle-up.svg" /></a>
       </div>
     </div>
-    <script type="text/javascript">
+  </div>
+  <script type="text/javascript">
     function auto_grow(element) {
-    element.style.height = "5px";
-    element.style.height = (element.scrollHeight) + "px";
+      element.style.height = "5px";
+      element.style.height = (element.scrollHeight) + "px";
     }
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
