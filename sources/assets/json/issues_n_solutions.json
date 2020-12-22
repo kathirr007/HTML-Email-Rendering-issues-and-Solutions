@@ -85,16 +85,19 @@
             "id": "1",
             "solution": "<p>This rendering issue will appear if the follwing code is there in the <code>HTML</code> <code>head</code> section</p>
 <pre class=\"bg-info\"><code><span><</span>!--[if gte mso 15]<span>></span><br><span><</span>style type=\"text/css\" media=\"all\"<span>></span><br>
-/* Outlook 2013 Height Fix */<br>
+            /* Outlook 2013 Height Fix */<br>
 <span class=\"code-highlight\">body { font-size: 0; line-height: 0; }<br>
-tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }</span><br>
+tr { font-size: 1px; mso-line-height-alt: 0; mso-margin-top-alt: 1px;
+            }</span><br>
 <span><</span>/style<span>></span><br>
-<span><</span>![endif]--<span>></span></code></pre>
+<span><</span>![endif
+            ]--<span>></span></code></pre>
 <p>To resolve this just remove those highlighted styles</p>
 <pre class=\"bg-info\"><code><span><</span>!--[if gte mso 15]<span>></span><br>
 <span><</span>style type=\"text/css\" media=\"all\"<span>></span><br>
-/* Outlook 2013 Height Fix */<br>
-<span><</span>![endif]--<span>></span></code></pre>
+            /* Outlook 2013 Height Fix */<br>
+<span><</span>![endif
+            ]--<span>></span></code></pre>
 <p>Here is the screenshot of rendering issues with resolved one.</p>
 <p class=\"text-center\"><strong>The image with the issue</strong></p>
 <p><a href=\"assets/images/issuesNsolutions/android4.4_long_link_text.jpg\"><img class=\"img-responsive\" src=\"assets/images/issuesNsolutions/texts_not_visible_properly.jpg\" alt=\"\" width=\"752\" height=\"591\"></a></p>
@@ -213,7 +216,8 @@ Check if the <strong>contents table</strong> has the <strong>100% wrapper table<
         <span><</span>w:anchorlock/<span>></span><br>
         <span><</span>center style=\"color:#ffffff;font-family:Arial;font-size:14px; font-weight:bold;\"<span>></span>CTA Text<span><</span>/center<span>></span><br>
       <span><</span>/v:roundrect<span>></span><br>
-<span><</span>![endif]--<span>></span></code></pre>
+<span><</span>![endif
+            ]--<span>></span></code></pre>
 <p>In this <code>arcsize=\"{acrsize%}\"</code> is the round edge size of the CTA button this value should be in percentage, <code>strokecolor=\"#{strokecolor}\"</code> color of the border to the CTA <code>fillcolor=\"{#fillcolor}\"</code> is the background-color of CTA & <code>href=\"{link}\"</code> is the actual link for CTA. If there is no need of border give same color to both <code>strokecolor</code> and <code>fillcolor</code></p>
 <p>The second part of the code for all other clients except MS Office Outlook is as follows</p>
 <pre class=\"bg-info highlight\"><code><span><</span>!--[if !(mso)]<span>></span><span><</span>!--<span>></span><br>
@@ -226,17 +230,21 @@ Check if the <strong>contents table</strong> has the <strong>100% wrapper table<
 <span><</span>/table<span>></span><span><</span>/td<span>></span><br>
 <span><</span>/tr<span>></span><br>
 <span><</span>/table<span>></span><br>
-<span><</span>!--<span><</span>![endif]--<span>></span></code></pre>
+<span><</span>!--<span><</span>![endif
+            ]--<span>></span></code></pre>
 <p>Both two parts wrapped with <code><span>&lt;</span>div<span>&gt;</span></code> will be as below</p>
 <p>Here the <strong>width</strong>, <strong>height</strong> & <strong>background color</strong> of the CTA button varies depends on the requirement</p>
 <pre class=\"bg-info\"><code><span><</span>div<span>></span><br>
-<span><</span>!--[if mso]<span>></span><br>
+<span><</span>!--[if mso
+            ]<span>></span><br>
       <span><</span>v:roundrect xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" href=\"#\" style=\"height:40px;v-text-anchor:middle;width:310px;\" arcsize=\"10%\" strokecolor=\"#009cde\" fillcolor=\"#009cde\"<span>></span><br>
         <span><</span>w:anchorlock/<span>></span><br>
         <span><</span>center style=\"color:#ffffff;font-family:Arial;font-size:14px; font-weight:bold;\"<span>></span>CTA Text<span><</span>/center<span>></span><br>
       <span><</span>/v:roundrect<span>></span><br>
-<span><</span>![endif]--<span>></span><br><br>
-<span><</span>!--[if !(mso)]<span>></span><span><</span>!--<span>></span><br>
+<span><</span>![endif
+            ]--<span>></span><br><br>
+<span><</span>!--[if !(mso)
+            ]<span>></span><span><</span>!--<span>></span><br>
 <span><</span>table width=\"310\" class=\"container\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"<span>></span><br>
 <span><</span>tr<span>></span> <br>
 <span><</span>td bgcolor=\"#009cde\" style=\"font-family:Arial; font-size:16px; color:#666666; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;\" valign=\"middle\"<span>></span><span><</span>table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"<span>></span><br>
@@ -246,7 +254,8 @@ Check if the <strong>contents table</strong> has the <strong>100% wrapper table<
 <span><</span>/table<span>></span><span><</span>/td<span>></span><br>
 <span><</span>/tr<span>></span><br>
 <span><</span>/table<span>></span><br>
-<span><</span>!--<span><</span>![endif]--<span>></span><br>
+<span><</span>!--<span><</span>![endif
+            ]--<span>></span><br>
 <span><</span>/div<span>></span></code></pre>
 <p>Here is the screenshot of rendering issues with resolved one.</p>
 <p class=\"text-center\"><strong>The screenshot of the issue and resolved</strong></p>
@@ -269,12 +278,13 @@ Check if the <strong>contents table</strong> has the <strong>100% wrapper table<
 <span>&lt;</span>style type=&quot;text/css&quot;<span>&gt;</span><br>
 /*Windows 10 phone link fix*/<br>
 a:link, span.MsoHyperlink {<br>
-mso-style-priority:100 !important;<br>
+mso-style-priority: 100 !important;<br>
 color:inherit !important;<br>
 text-decoration:none !important;<br>
-}<br>
+            }<br>
 <span>&lt;</span>/style<span>&gt;</span><br>
-  <span>&lt;</span>![endif]--<span>&gt;</span>
+  <span>&lt;</span>![endif
+            ]--<span>&gt;</span>
 </p>
 <p>To remove underline to all the linked texts the following style should be added to the <strong>style</strong> tag in the <strong>head</strong> section<br>
 Note: <em>Before doing the below steps make sure to add the syle <span class=\"code-highlight\">text-decoration:underline;</span> to all links which should come with underline.</em> </p>
@@ -286,36 +296,48 @@ Note: <em>Before doing the below steps make sure to add the syle <span class=\"c
 <span class=\"code-highlight\"><span><</span>meta name=\"format-detection\" content=\"telephone=no\"<span>></span></span><br>
 <span>&lt;</span>title<span>&gt;</span>Untitled Document<span>&lt;</span>/title<span>&gt;</span><br>
 <span>&lt;</span>style type=&quot;text/css&quot;<span>&gt;</span><br>
-body { font-family: arial; font-size: 14px; width: 80%; margin: 10px auto; }<br>
-.page-title { background-color: lightgrey; padding: 10px; border-radius: 5px; }<br>
-.text-center { text-align: center; }<br>
-code { padding: 10px; background-color: lightblue; display: block; }<br>
-span.code-highlight { background-color: yellow; }<br>
-a[href^=&quot;x-apple-data-detectors:&quot;] { color: inherit; text-decoration: inherit; }<br>
-a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }<br>
+body { font-family: arial; font-size: 14px; width: 80%; margin: 10px auto;
+            }<br>
+.page-title { background-color: lightgrey; padding: 10px; border-radius: 5px;
+            }<br>
+.text-center { text-align: center;
+            }<br>
+code { padding: 10px; background-color: lightblue; display: block;
+            }<br>
+span.code-highlight { background-color: yellow;
+            }<br>
+a[href^=&quot;x-apple-data-detectors:&quot;
+            ] { color: inherit; text-decoration: inherit;
+            }<br>
+a[x-apple-data-detectors
+            ] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;
+            }<br>
 <span class=\"code-highlight\">a { text-decoration:none; }</span><br>
 <span>&lt;</span>/style<span>&gt;</span><br>
 <br>
 <span>&lt;</span>!-- Outlook specific codes goes here --<span>&gt;</span><br>
-<span>&lt;</span>!--[if gt mso 14]<span>&gt;</span><br>
+<span>&lt;</span>!--[if gt mso 14
+            ]<span>&gt;</span><br>
 <span>&lt;</span>style type=&quot;text/css&quot;<span>&gt;</span><br>
 /* Hight issue fix for greaer than MS Outlook 2013*/<br>
 .height_01, #height_01 {<br>
-font-size:1px;<br>
-line-height:1px; <br>
-}<br>
+font-size: 1px;<br>
+line-height: 1px; <br>
+            }<br>
 <span>&lt;</span>/style<span>&gt;</span><br>
-<span>&lt;</span>![endif]--<span>&gt;</span><br>
+<span>&lt;</span>![endif
+            ]--<span>&gt;</span><br>
 <span class=\"code-highlight\"><span>&lt;</span>!--[if gt mso 15]<span>&gt;</span><br>
 <span>&lt;</span>style type=&quot;text/css&quot;<span>&gt;</span><br>
 /*Windows 10 phone link fix*/<br>
 a:link, span.MsoHyperlink {<br>
-mso-style-priority:100 !important;<br>
+mso-style-priority: 100 !important;<br>
 color:inherit !important;<br>
 text-decoration:none !important;<br>
-}<br>
+            }<br>
 <span>&lt;</span>/style<span>&gt;</span><br>
-<span>&lt;</span>![endif]--<span>&gt;</span></span><br>
+<span>&lt;</span>![endif
+            ]--<span>&gt;</span></span><br>
 <span>&lt;</span>/head<span>&gt;</span>
 </p>",
             "codepen_url": "http://codepen.io/kathirr007/pen/bggEMp"
@@ -351,16 +373,17 @@ text-decoration:none !important;<br>
 <p>a[href^=\"x-apple-data-detectors:\"] {<br>
 color: inherit;<br>
 text-decoration: inherit;<br>
-}</p>
+            }</p>
 <p>and</p>
-<p>a[x-apple-data-detectors] {<br>
+<p>a[x-apple-data-detectors
+            ] {<br>
 color: inherit !important;<br>
 text-decoration: none !important;<br>
 font-size: inherit !important;<br>
 font-family: inherit !important;<br>
 font-weight: inherit !important;<br>
 line-height: inherit !important;<br>
-}</p>
+            }</p>
 </div>
 <p>Before adding the above code to style tag, make sure to add this meta tag to the <strong>head</strong> section
 <p class=\"highlight bg-info\"> <span><</span>meta name=\"format-detection\" content=\"telephone=no\"<span>></span> </p>
@@ -380,5 +403,4 @@ line-height: inherit !important;<br>
   {
     "snippets": []
   }
-
 ]

@@ -1,15 +1,15 @@
 [
 	{
-		"name":"Kathiravan",
-		"Age":"30",
-		"Jobs":[
+		"name": "Kathiravan",
+		"Age": "30",
+		"Jobs": [
 			{
-				"Job 01":"Sangeetha communications",
-				"Job 02":"Sangeetha Telcom",
-				"Job 03":"Sangeetha Info",
-				"Job 04":// @include ../template/test.html
+				"Job 01": "Sangeetha communications",
+				"Job 02": "Sangeetha Telcom",
+				"Job 03": "Sangeetha Info",
+				"Job 04": // @include ../../template/test.html
 			}
 		]
 	}
 ]
-// @include ../template/test.html
+// @include ../../template/test.html
