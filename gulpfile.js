@@ -21,7 +21,7 @@ var sassOpts = {}
 env = process.env.NODE_ENV || 'development'
 devBuild = process.env.NODE_ENV || 'development'
 sourceDir = 'sources/'
-outputDir = env == 'development' ? 'builds/development/' : 'builds/production/'
+outputDir = env == 'development' ? 'builds/development/' : 'dist/'
 nodeModules = './node_modules/'
 bootstrapSources = nodeModules + 'bootstrap-sass/'
 fonts = [bootstrapSources + 'assets/fonts/**/*', sourceDir + 'assets/fonts/*.*']
