@@ -4,7 +4,7 @@
   "description": "List of Rendering issues in HTML - Email Newsletter marketting with solutions and best practices to avoid the issues",
   "main": "index.html",
   "scripts": {
-    "deploy": "./deploy-ghpages.sh",
+    "deploy": "bash ./deploy-ghpages.sh",
     "gh-pages-travis": "gh-pages-travis"
   },
   "repository": {
