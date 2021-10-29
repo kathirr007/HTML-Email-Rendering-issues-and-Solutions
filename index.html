@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>HTML Email Solutuions</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/ScrollMagic.min.js"></script>
+    <script src="assets/js/plugins/debug.addIndicators.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+</head>
+
+<body>
+    <!--container-->
+    <div class="container-fluid">
+        <div class="main clearfix" id="top">
+            <header>
+                <h1 class="text-center page-title">HTML Email solutions, tips & best practices</h1>
+            </header>
+            <div class="main-content container">
+                <div id="static_contents">
+                    <ul class="nav nav-pills" id="contentsNav">
+                        <li class="active"><a data-toggle="pill" href="#issuesNsolutions">Issues & Solutions</a></li>
+                        <li><a data-toggle="pill" href="#coding-tips">Best Practices</a></li>
+                        <li><a data-toggle="pill" href="#snippets">Snippets</a></li>
+                        <li><a data-toggle="pill" href="#bookmarks">References</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="issuesNsolutions" class="tab-pane fade in active">
+                            <div class="solutions-list page-header">
+                                <h3>HTML Email Rendering Issues list with fixes</h3>
+                                <form class="has-feedback" method="get" action="/search" id="search">
+                                    <input name="q" type="text" size="20" placeholder="Search..." style="outline:none;" class="form-control" />
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                </form>
+                            </div>
+                            <div class="panel-group highlight" id="search_datas" style="display: none;">
+
+                            </div>
+                            <div class="panel-group" id="dynamic_datas">
+                                <!-- Emergency contacts templates -->
+                                <div class="panel panel-default">
+                                    <a data-toggle="collapse" data-parent="#dynamic_datas" href="#collapse1">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">Dynamic Solutions list goes here</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="coding-tips" class="tab-pane fade">
+                            <div class="page-header">
+                                <h3>HTML Email coding tips and Best practices</h3>
+                            </div>
+                            <ol>
+                                <li>
+                                    <p>It is best to start with <code>HTML5</code> Doctype. Since now a days responsive is mandatory for all clients we need to code our HTML creatives with responisve ready. To make responsive we will be using media queries and some of the <code>CSS3</code> styles. So, it is best to use <code>CSS3</code> with <code>HTML5</code> Doctype.</p>
+                                </li>
+                                <li>
+                                    <p>Write the codes clean and neat to look good and readable to all developers like giving proper indents, adding meaningful classes and ids, adding reasonable title and alt texts to the images etc., which makes you a good coder.</p>
+                                </li>
+                                <li>
+                                    <p>Don't forget to add responsive meta tags to ensure the responsive work properly</p>
+                                    <p class="bg-info highlight"> <em class="text-success">mandatory</em>
+                                        <br>
+                                        <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</code>
+                                        <br>
+                                        <em class="text-warning">this is optional</em>
+                                        <br>
+                                        <code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;</code>
+                                        <br>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Start with 100% table and add content table with align center property to make sure the content aligned center to the page</p>
+                                    <pre class="bg-info">
+              <code> 
+              <span class="tocken tags"><</span>!-- wrapper table --<span class="tocken tags">></span>
+              <span class="tocken tags"><</span>table width="100%" border="0" cellspacing="0" cellpadding="0"<span class="tocken tags">></span>
+              <span class="tocken tags"><</span>tbody<span class="tocken tags">></span>
+                <span class="tocken tags"><</span>tr<span class="tocken tags">></span>
+                  <span class="tocken tags"><</span>td align="center" valign="top"<span class="tocken tags">></span>
+              <span class="tocken tags"><</span>!-- conent table --<span class="tocken tags">></span>
+                    <span class="tocken tags"><</span>table width="600" border="0" cellspacing="0" cellpadding="0" align="center"<span class="tocken tags">></span>
+                    <span class="tocken tags"><</span>tbody<span class="tocken tags">></span>
+                      <span class="tocken tags"><</span>tr<span class="tocken tags">></span>
+                        <span class="tocken tags"><</span>td valign="top"<span class="tocken tags">></span>Here goes the actual email contents<span class="tocken tags"><</span>/td<span class="tocken tags">></span>
+                      <span class="tocken tags"><</span>/tr<span class="tocken tags">></span>
+                    <span class="tocken tags"><</span>/tbody<span class="tocken tags">></span>
+                    <span class="tocken tags"><</span>/table<span class="tocken tags">></span>
+              <span class="tocken tags"><</span>!-- conent table ends --<span class="tocken tags">></span>  
+                  <span class="tocken tags"><</span>/td<span class="tocken tags">></span>
+                <span class="tocken tags"><</span>/tr<span class="tocken tags">></span>
+              <span class="tocken tags"><</span>/tbody<span class="tocken tags">></span>
+              <span class="tocken tags"><</span>/table<span class="tocken tags">></span>
+              <span class="tocken tags"><</span>!-- wrapper table ends --<span class="tocken tags">></span>
+              </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <p>Try to keep all rows in a table has single column. If multiple columns needed insert a table for that particular row and add the coloumns needed.</p>
+                                </li>
+                                <li>
+                                    <p>Make sure all rows in a table has same number of columns, if not make them same using colspan</p>
+                                </li>
+                                <li>
+                                    <p>Try not to use <code>padding</code> & <code>margin</code> as much as possible. It is better not to use <code>margin</code> inline styles for desktop versions. For mobile versions you are free to use all major <code>CSS3</code> styles, since all mobiles supports almost all <code>HTML5</code> and <code>CSS3</code> specifications.</p>
+                                </li>
+                                <li>
+                                    <p>For empty row spaces use this code instead of using spacer images</p>
+                                    <pre class="bg-info">
+            <code><span class="tocken tags"><</span>tr<span class="tocken tags">></span>
+            <span class="tocken tags"><</span>td valign="top" style="font-size:1px; line-height:1px;" height="10" class="height_01"<span class="tocken tags">></span><span class="tocken tags"><</span>!--[if gt mso 14]<span class="tocken tags">></span><span class="tocken tags">&</span><span class="tocken tags">n</span><span class="tocken tags">b</span><span class="tocken tags">s</span><span class="tocken tags">p</span><span class="tocken tags">;</span><span class="tocken tags"><</span>![endif]--<span class="tocken tags">></span><span class="tocken tags"><</span>/td<span class="tocken tags">></span>
+            <span class="tocken tags"><</span>/tr<span class="tocken tags">></span></code>
+            </pre>
+                                    <p>Here height will be varied depends on how much height needed and the following Outlook specific conditional codes needs to be added to the <code><strong>head</strong></code> section by targeting the <code>class="height_01"</code></p>
+                                    <pre class="bg-info">
+            <code><span class="tocken tags"><</span>!--[if gt mso 14]<span class="tocken tags">></span>
+            <span class="tocken tags"><</span>style type="text/css"<span class="tocken tags">></span>
+            .height_01, #height_01 {
+            font-size:1px;
+            line-height:1px;     
+            }
+            <span class="tocken tags"><</span>/style<span class="tocken tags">></span>
+            <span class="tocken tags"><</span>![endif]--<span class="tocken tags">></span></code>
+            </pre>
+                                    <small>Note: This will target only MS Outlook versions greater than 2013. Because only those versions ie: greater than MS Outlook 2013 which causes the spacing issue of empty rows which is not more than 16px height.</small>
+                                    <p>In this one <code>id="height_01"</code> is added for future purppose to make use of id, in case if the class styles not working.</p>
+                                </li>
+                                <li>
+                                    <p>To align any content to centered to the parent block, use this code. Either it may be text contents or image.</p>
+                                    <pre class="bg-info"><code><span class="tags"><</span>tr<span class="tags">></span>
+            <span class="tags"><</span>td valign="top" align="center"<span class="tags">></span>
+            <span class="tags"><</span>table border="0" cellspacing="0" cellpadding="0" align="center" class="align_center"<span class="tags">></span>
+            <span class="tags"><</span>tr<span class="tags">></span>
+              <span class="tags"><</span>td valign="top" align="center"<span class="tags">></span>Centered contents goes here.<span class="tags"><</span>/td<span class="tags">></span>
+            <span class="tags"><</span>/tr<span class="tags">></span>
+            <span class="tags"><</span>/table<span class="tags">></span>
+            <span class="tags"><</span>/td<span class="tags">></span>
+            <span class="tags"><</span>/tr<span class="tags">></span></code></pre>
+                                    <p>Here the class <code>class="align_center"</code> is to make any block to center aligned for mobile versions. Either it may be right aligned or left aligned content in desktop versions. The following styles needs to be added to the media query for mobile responsive.</p>
+                                    <pre class="bg-info"><code>.align_center{
+            float:none;
+            margin:0 auto !important;
+            }</code></pre>
+                                </li>
+                                <li>
+                                    <p>Always use nested tables. Try not to use stacked table coding style.</p>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div id="snippets" class="tab-pane fade panel-group">
+                            <div class="snippets_list page-header">
+                                <h3>Usefull code snippets for HTML emails</h3>
+                                <form class="has-feedback" method="get" action="/search" id="search">
+                                    <input name="snippets" type="text" size="20" placeholder="Search..." style="outline:none;" class="form-control" />
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                </form>
+                            </div>
+                            <div class="highlight panel-group" id="search_snippets" style="display: none;">
+                            </div>
+
+                            <div class="panel panel-default">
+                                <a data-toggle="collapse" data-parent="#snippets" href="#snippettemplate">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">Standard HTML email template</h4>
+                                    </div>
+                                </a>
+                                <div id="snippettemplate" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Standard HTML email template with all neccessary classses and styles added</h3>
+                                        <div>
+                                            <p>
+                                            <pre class="bg-info">
+            <code>
+            <span><</span>!DOCTYPE html<span>></span>
+            <span><</span>html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"<span>></span>
+            <span><</span>head<span>></span>
+            <span><</span>meta charset="utf-8"<span>></span>
+            <span><</span>meta name="viewport" content="width=device-width, initial-scale=1"<span>></span>
+            <span><</span>meta name="format-detection" content="telephone=no"<span>></span>
+            <span><</span>title<span>></span>Cartier<span><</span>/title<span>></span>
+            <span><</span>style type="text/css"<span>></span>
+            body { margin: 0px; padding: 0px; background-color: #FFFFFF; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none !important; -ms-text-size-adjust: none !important; }
+            * { line-height: normal !important; }
+            a[href^="x-apple-data-detectors:"] { color: inherit; text-decoration: inherit; }
+            a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
+            a { text-decoration: none; }
+            div { display:inherit !important; }
+            
+            @media screen and (max-device-width: 480px) {
+            *[class~=full] { width: 100% !important; min-width: 100% !important; }
+            *[class~=contents] { width: 84.375% !important; }
+            *[class~=hide] { display: none !important; }
+            *[class~=show] { display: block !important; font-size: inherit !important; max-height: none !important; width: auto !important; line-height: normal !important; overflow: visible !important; }
+            *[class~=imgfull] { width: 100% !important; height: auto !important; }
+            *[class~=text_center] { text-align: center !important; }
+            *[class~=align_center] { float: none !important; margin: 0 auto !important; }
+            *[class~=align_right] { float: right !important; }
+            *[class~=align_left] { float: left !important; }
+            *[class~=coldrop] { display: block !important; width: 100% !important; padding: 0px !important; }
+            .arrange_top { display: table-header-group !important; }
+            .arrange_bottom { display: table-footer-group !important; }
+            *[class=autoheight] { height: auto !important; }
+            *[class=autowidth] { width: auto !important; }
+            *[class=autowidthheight] { width: auto !important; height: auto !important; }
+            body[yahoo] *[class~=no_bg] { background: none !important; background-color: #ffffff !important; }
+            body[yahoo] *[class~=top_banner] { width: 100% !important; background-size: cover !important; background-position: 100% top !important; }
+            *[class~=padding_lr10] { padding: 0px 10px 0px 10px !important; }
+            *[class~=padding_t10] { padding: 10px 0px 0px 0px !important; }
+            *[class~=nopad] { padding: 0px 0px 0px 0px !important; }
+            *[class~=margin_b10] { margin-bottom: 10px !important; }
+            *[class~=margin_t10] { margin-top: 10px !important; }
+            *[class~=height20] { height: 20px !important; }
+            *[class~=height15] { height: 15px !important; }
+            *[class~=height10] { height: 10px !important; }
+            *[class~=height5] { height: 5px !important; }
+            }
+            
+            @media screen and (max-device-width: 414px) {
+            }
+            
+            @media screen and (max-device-width: 375px) {
+            }
+            
+            @media screen and (max-device-width: 320px), screen and (max-device-width: 360px) {
+            *[class~=hide2] { display: none !important; }
+            }
+            <span><</span>/style<span>></span>
+            
+            <span><</span>!--[if gte mso 9]<span>></span>
+            <span><</span>xml<span>></span>
+              <span><</span>o:OfficeDocumentSettings<span>></span>
+                <span><</span>o:AllowPNG/<span>></span>
+                <span><</span>o:PixelsPerInch<span>></span>96<span><</span>/o:PixelsPerInch<span>></span>
+             <span><</span>/o:OfficeDocumentSettings<span>></span>
+            <span><</span>/xml<span>></span>
+            <span><</span>![endif]--<span>></span>
+            
+            <span><</span>!--[if gt mso 14]<span>></span>
+            <span><</span>style type="text/css"<span>></span>
+                .height_01 {
+                font-size:1px;
+                line-height:1px;    
+                }
+            /*Windows 10 phone link fix*/
+                span.MsoHyperlink {
+                mso-style-priority:100 !important;
+                color:inherit !important;
+                text-decoration:none !important;
+            }    
+            <span><</span>/style<span>></span>
+            <span><</span>![endif]--<span>></span>
+            
+            <span><</span>/head<span>></span>
+            
+            <span><</span>body yahoo="fix"<span>></span>
+            <span><</span>!-- wrapper table --<span>></span>
+            <span><</span>table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed;"<span>></span>
+            <span><</span>tbody<span>></span>
+            <span><</span>tr<span>></span>
+            <span><</span>td style="vertical-align:top;" align="center" bgcolor="#FFFFFF"<span>></span>
+            <span><</span>!-- contents table --<span>></span>
+            <span><</span>table class="full" align="center" border="0" cellpadding="0" cellspacing="0" width="640" style="min-width:640px;"<span>></span>
+            <span><</span>tbody<span>></span>
+            <span><</span>tr<span>></span>
+            <span><</span>td style="vertical-align:top;" align="center"<span>></span>Here goes the actual Email contents<span><</span>/td<span>></span>
+            <span><</span>/tr<span>></span>
+            <span><</span>/tbody<span>></span>
+            <span><</span>/table<span>></span>
+            <span><</span>!-- contents table ends --<span>></span>
+            <span><</span>/td<span>></span>
+            <span><</span>/tr<span>></span>
+            <span><</span>/tbody<span>></span>
+            <span><</span>/table<span>></span>
+            <span><</span>!-- wrapper table ends --<span>></span>
+            <span><</span>/body<span>></span>
+            <span><</span>/html<span>></span>
+            </code>
+            </pre>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <a data-toggle="collapse" data-parent="#snippets" href="#regexes">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">Useful Regular Expressions</h4>
+                                    </div>
+                                </a>
+                                <div id="regexes" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Useful Regular Expressions </h3>
+                                        <div>
+                                            <ol>
+                                                <li>
+                                                    <h5>Regular expressions to find all <strong>%LINK_ID</strong> in HTML creative</h5>
+                                                    <code>%link_id=([^\s]*\d{8,})</code>
+                                                </li>
+                                                <li>
+                                                    <h5>To grap any <strong>specific html tag</strong> with closing tag from HTML</h5>
+                                                    <p>
+                                                        <code><span>
+                                                                << /span>%TAG%\b[^<span>></span>]*<span>></span>(.*?)|<span>
+                                                                        << /span>\/%TAG%<span>></span></code>
+                                                    </p>
+                                                    <p>Here replace <code>%TAG%</code> with the tag which needs to be match.</p>
+                                                </li>
+                                                <li>
+                                                    <h5>To find all <strong>href values</strong> in HTML</h5>
+                                                    <p>
+                                                        <code>href="([^"]*")</code>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <h5>Regular expressions to find all <strong>empty attributes</strong> in HTML creative except <strong>alt=""</strong></h5>
+                                                    <code>\b(?:(?!alt)\w)+\b="\s{0,}"</code>
+                                                </li>
+                                                <li>
+                                                    <h5>Regular expressions to find all <strong>empty tags except <code><span>
+                                                                    << /span>td<span>></span><span>
+                                                                            << /span>/td<span>></span></code></strong> in HTML creative</h5>
+                                                    <code>
+                                                        <([A-Z][A-Z0-9]*)\b[^td>]*>\s*<\ /\1>
+                                                    </code>
+                                                </li>
+                                                <li>
+                                                    <h5>Regular expressions to find all <strong>MS Outolook conditional codes</strong> in HTML creative</h5>
+                                                    <code><span>
+                                                            << /span>!--\[if[^<span>></span>]*<span>></span>(.|\n)*?<span>
+                                                                    << /span>!\[endif\]--<span>></span></code>
+                                                </li>
+                                                <li>
+                                                    <h5>Regular expressions to find all <strong>title / class / id / alt texts</strong> in HTML creative</h5>
+                                                    <code>title="([^"]*")</code>, <code>class="([^"]*")</code>, <code>id="([^"]*")</code>, <code>alt="([^"]*")</code><br>
+                                                    or All at once except <strong>alt=""</strong><br>
+                                                    <code>class="?([^"])*"|<span>
+                                                            << /span>tbody\b[^<span>></span>]*<span>></span>(.*?)|<span>
+                                                                    << /span>\/tbody<span>></span>|title="([^"]*")|id="?([^"])*"|<span>
+                                                                            << /span>!--.*?--<span>></span>|\b(?:(?!alt)\w)+\b="\s{0,}"</code>
+                                                </li>
+                                                <li>
+                                                    <h5>Regular expressions to find and wrap all <strong>attributes</strong> with "" in HTML creative</h5>
+                                                    <code>(\s\w+=)(\d{1,})</code><br>
+                                                    replace it with regex pattern <strong>$1"$2"</strong> to wrap all value attributes like <strong>width, height, border, cellspacing, cellpadding, colspan, rowspan</strong> with double quotes.
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <a data-toggle="collapse" data-parent="#snippets" href="#snippet01">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">Gmail Webmail Targeting</h4>
+                                    </div>
+                                </a>
+                                <div id="snippet01" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Gmail Webmail Targeting</h3>
+                                        <div>
+                                            <p>
+                                            <pre class="bg-info">
+            <code>
+            <span class="tags"><</span>!DOCTYPE html<span class="tags">></span>
+            <span class="tags"><</span>html lang="en"<span class="tags">></span>
+            <span class="tags"><</span>head<span class="tags">></span>
+            <span class="tags"><</span>style<span class="tags">></span>
+            u + .body .gmail{
+            display:block !important;
+            }
+            <span class="tags"><</span>/style<span class="tags">></span>
+            <span class="tags"><</span>/head<span class="tags">></span>
+            <span class="tags"><</span>body class="body"<span class="tags">></span>
+            <span class="tags"><</span>div class="gmail" style="display:none;"<span class="tags">></span>THIS IS GMAIL<span class="tags"><</span>/div<span class="tags">></span>
+            <span class="tags"><</span>/body<span class="tags">></span>
+            <span class="tags"><</span>/html<span class="tags">></span>
+            </code>
+            </pre>
+                                            </p>
+                                            <p class="">Check the Original resource from Litmus <a href="https://litmus.com/community/snippets/93-gmail-webmail-targeting" target="_blank"><strong>here</strong></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <a data-toggle="collapse" data-parent="#snippets" href="#snippet02">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">Call to Action with background-image and hover effect</h4>
+                                    </div>
+                                </a>
+                                <div id="snippet02" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Call to Action with background-image and hover effect</h3>
+                                        <div>
+                                            <p>
+                                            <pre class="bg-info"><code><span class="tags"><</span>!doctype html<span class="tags">></span>
+            <span class="tags"><</span>html<span class="tags">></span>
+            <span class="tags"><</span>head<span class="tags">></span>
+            <span class="tags"><</span>meta charset="utf-8"<span class="tags">></span>
+            
+            <span class="tags"><</span>/head<span class="tags">></span>
+            
+            <span class="tags"><</span>body<span class="tags">></span>
+            <span class="tags"><</span>tr<span class="tags">></span>
+            <span class="tags"><</span>td<span class="tags">></span>
+            <span class="tags"><</span>table<span class="tags">></span>
+            <span class="tags"><</span>tr<span class="tags">></span>
+                <span class="tags"><</span>td align="center"<span class="tags">></span>
+                    <span class="tags"><</span>table width="200" class="CTA0hoverzone" border="0" cellspacing="0" cellpadding="0"<span class="tags">></span>
+                        <span class="tags"><</span>tr<span class="tags">></span>
+                            <span class="tags"><</span>!--Background--<span class="tags">></span>
+                            <span class="tags"><</span>td bgcolor="#960096" class="CTA0hovermodif" style="background-image: url(http://www.maxiweb.fr/demo/pourlitmus/bg.png);" background="http://www.maxiweb.fr/demo/pourlitmus/bg.png" width="320" height="40" valign="middle" align="center"<span class="tags">></span>
+                            <span class="tags"><</span>!--[if gte mso 9]<span class="tags">></span><span class="tags"><</span>v:rect style="width: 320px; height: 40px;" strokecolor="none"<span class="tags">></span><span class="tags"><</span>v:fill type="tile" color="#960096" src="http://www.maxiweb.fr/demo/pourlitmus/bg.png"<span class="tags">></span><span class="tags"><</span>/v:fill<span class="tags">></span><span class="tags"><</span>/v:rect<span class="tags">></span><span class="tags"><</span>v:shape id="theText" style="position: absolute; width: 320px; height: 40px;"<span class="tags">></span><span class="tags"><</span>![endif]--<span class="tags">></span>
+                                <span class="tags"><</span>table width="320" border="0" cellspacing="0" cellpadding="0"<span class="tags">></span>
+                                    <span class="tags"><</span>tr<span class="tags">></span>
+                                        <span class="tags"><</span>!--partie texte du bouton--<span class="tags">></span>                
+                                        <span class="tags"><</span>td height="40" width="270" valign="middle" style="text-align:center; mso-line-height-rule:exactly;"<span class="tags">></span>
+                                            <span class="tags"><</span>a href="#" style="display: table-cell; height: 40px; width: 270px; vertical-align: middle; font-family: Arial, sans-serif; font-size: 14px; line-height: 18px; font-weight: 400; color: #ffffff; text-shadow:2px 2px 2px #000; text-decoration: none;"<span class="tags">></span>
+                                                CTA 0
+                                            <span class="tags"><</span>/a<span class="tags">></span>
+                                        <span class="tags"><</span>/td<span class="tags">></span>
+                                        <span class="tags"><</span>!--partie image du bouton--<span class="tags">></span>                
+                                        <span class="tags"><</span>td width="50" height="40"<span class="tags">></span>
+                                            <span class="tags"><</span>a href="#" style="text-decoration: none;"<span class="tags">></span>
+                                                <span class="tags"><</span>img src="http://www.maxiweb.fr/demo/pourlitmus/fleche.png" width="50" height="30" alt="&raquo;" border="0" style="display: block; font-family: Arial, sans-serif; font-size: 14px; font-weight: 400; color: #ffffff; position: relative; top: 0px; left: 10px; text-decoration: none;"/<span class="tags">></span>
+                                            <span class="tags"><</span>/a<span class="tags">></span>
+                                        <span class="tags"><</span>/td<span class="tags">></span>
+                                    <span class="tags"><</span>/tr<span class="tags">></span>
+                                <span class="tags"><</span>/table<span class="tags">></span>
+                                <span class="tags"><</span>!--[if gte mso 9]<span class="tags">></span><span class="tags"><</span>/v:shape<span class="tags">></span><span class="tags"><</span>![endif]--<span class="tags">></span>
+                            <span class="tags"><</span>/td<span class="tags">></span>
+                        <span class="tags"><</span>/tr<span class="tags">></span> 
+                        <span class="tags"><</span>!--FIN du Background--<span class="tags">></span>
+                        <span class="tags"><</span>!--ligne en dessous du bouton--<span class="tags">></span>
+                        <span class="tags"><</span>tr<span class="tags">></span>
+                            <span class="tags"><</span>td height="3" class="CTA0traithover" style="font-size:0px; line-height:0px;" bgcolor="#640064"<span class="tags">></span>&nbsp;<span class="tags"><</span>/td<span class="tags">></span>
+                        <span class="tags"><</span>/tr<span class="tags">></span>
+                    <span class="tags"><</span>/table<span class="tags">></span>
+                <span class="tags"><</span>/td<span class="tags">></span>
+            <span class="tags"><</span>/tr<span class="tags">></span>
+            <span class="tags"><</span>/table<span class="tags">></span>
+            <span class="tags"><</span>/td<span class="tags">></span>
+            <span class="tags"><</span>/tr<span class="tags">></span>
+            
+            <span class="tags"><</span>/body<span class="tags">></span>
+            <span class="tags"><</span>/html<span class="tags">></span>
+            
+            </code></pre>
+                                            </p>
+                                            <p class="">Check the Original resource from Litmus <a href="https://litmus.com/community/snippets/41-call-to-action-with-background-image-and-hover-effect" target="_blank"><strong>here</strong></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <a data-toggle="collapse" data-parent="#snippets" href="#snippet03">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">Outlook 2002-2013 Targeting</h4>
+                                    </div>
+                                </a>
+                                <div id="snippet03" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Outlook 2002-2013 Targeting</h3>
+                                        <div>
+                                            <p>
+                                            <pre class="bg-info"><code><span class="tags"><</span>!--[if gte mso 10]<span class="tags">></span>
+              {content}
+            <span class="tags"><</span>![endif]--<span class="tags">></span>
+            
+            <span class="tags"><</span>!--[if gt mso 9]<span class="tags">></span>
+              {content}
+            <span class="tags"><</span>![endif]--<span class="tags">></span></code></pre>
+                                            </p>
+                                            <p class="">Check the Original resource from Litmus <a href="https://litmus.com/community/snippets/65-outlook-2002-2013-targeting" target="_blank"><strong>here</strong></a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <a data-toggle="collapse" data-parent="#snippets" href="#snippet04">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">Outlook 2000-2010 Targeting</h4>
+                                    </div>
+                                </a>
+                                <div id="snippet04" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Outlook 2000-2010 Targeting</h3>
+                                        <div>
+                                            <p>
+                                            <pre class="bg-info"><code><span class="tags"><</span>!--[if lte mso 14]<span class="tags">></span>
+              {content}
+            <span class="tags"><</span>![endif]--<span class="tags">></span>
+            
+            <span class="tags"><</span>!--[if lt mso 15]<span class="tags">></span>
+              {content}
+            <span class="tags"><</span>![endif]--<span class="tags">></span></code></pre>
+                                            </p>
+                                            <p class="">Check the Original resource from Litmus <a href="https://litmus.com/community/snippets/62-outlook-2000-2010-targeting" target="_blank"><strong>here</strong></a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <a data-toggle="collapse" data-parent="#snippets" href="#snippet05">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">Outlook 2010-2013 Targeting</h4>
+                                    </div>
+                                </a>
+                                <div id="snippet05" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Outlook 2010-2013 Targeting</h3>
+                                        <div>
+                                            <p>
+                                            <pre class="bg-info"><code><span class="tags"><</span>!--[if gte mso 14]<span class="tags">></span>
+              {content}
+            <span class="tags"><</span>![endif]--<span class="tags">></span>
+            
+            <span class="tags"><</span>!--[if gt mso 12]<span class="tags">></span>
+              {content}
+            <span class="tags"><</span>![endif]--<span class="tags">></span></code></pre>
+                                            </p>
+                                            <p class="">Check the Original resource from Litmus <a href="https://litmus.com/community/snippets/70-outlook-2010-2013-targeting" target="_blank"><strong>here</strong></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <a data-toggle="collapse" data-parent="#snippets" href="#snippet06">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">Hide and show</h4>
+                                    </div>
+                                </a>
+                                <div id="snippet06" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Hide and show</h3>
+                                        <div>
+                                            <p>
+                                            <pre class="bg-info"><code><span><</span>!--[if !mso]<span>></span><span><</span>!--<span>></span>
+            <span><</span>tr<span>></span>
+              <span><</span>td valign="top"<span>></span><span><</span>div class="show" style="display: none; font-size: 0; max-height: 0; width:0px; line-height: 0; padding: 0;mso-hide: all; overflow:hidden;"<span>></span>
+            <span><</span>!-- mobile codes goes here --<span>></span>
+            
+            <span><</span>/div<span>></span><span><</span>/td<span>></span>
+            <span><</span>/tr<span>></span>
+            <span><</span>!--<span><</span>![endif]--<span>></span></code></pre>
+                                            </p>
+                                            <p>Make sure to add the following styles for the class <strong>show</strong> for mobile versions</p>
+                                            <p>
+                                            <pre><code>*[class~=show] { display: block !important; font-size: inherit !important; max-height: none !important; width: auto !important; line-height: normal !important; overflow: visible !important; }</code></pre>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="bookmarks" class="tab-pane fade panel-group">
+                            <div class="snippets_list page-header">
+                                <h3>Usefull reference links for HTML emails</h3>
+                            </div>
+                            <ul>
+
+                                <li><a href="https://www.diffchecker.com/" target="_blank">Diff Checker</a></li>
+                                <li><a href="https://backgrounds.cm/" target="_blank">Bulletproof background images to HTML Emails from Campaign
+                                        Monitor</a></li>
+                                <li><a href="https://buttons.cm/" target="_blank">Bulletproof email buttons for HTML Emails from Campaign
+                                        Monitor</a></li>
+                                <li><a href="http://regexr.com/" target="_blank">For regular expressions</a></li>
+                                <li><a href="http://www.amp-what.com/" target="_blank">HTML codes for special characters & symbols</a></li>
+                                <li><a href="http://r12a.github.io/apps/conversion/" target="_blank">All in one Unicode convertors</a></li>
+                                <li><a href="http://www.lexilogos.com/keyboard/polish.htm" target="_blank">Online Multilingual keyboard</a></li>
+                                <li><a href="https://www.emailonacid.com/" target="_blank">All in one place for All kind Email troubleshootings</a>
+                                </li>
+                                <li><a href="https://litmus.com/blog/16-tips-troubleshooting-html-email/code-therapy-troubleshooting" target="_blank">Code Therapy: Troubleshooting HTML Email from Litmus</a></li>
+                                <li><a href="https://litmus.com/community/learning/8-outlook-overview" target="_blank">MS Outlook Overview from
+                                        Litmus</a></li>
+                                <li><a href="https://www.campaignmonitor.com/dev-resources/" target="_blank">Tools for coding HTML emails from
+                                        Campaignmonitor</a></li>
+                                <li><a href="http://spamassassin.apache.org/" target="_blank">Open-Source Spam Filter</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="#top" class="scrollup"><img src="assets/images/arrow-circle-up.svg" /></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function auto_grow(element) {
+            element.style.height = "5px";
+            element.style.height = (element.scrollHeight) + "px";
+        }
+    </script>
+</body>
+
+</html>
