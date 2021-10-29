@@ -96,9 +96,9 @@ gulp.task('html', () => {
     .src(sourceDir + '*.html')
     .pipe($.preprocess({ context: { devBuild: devBuild } }))
     .pipe($.jsbeautifier())
-    .pipe(
-      $.if(devBuild === 'production', $.htmlmin({ collapseWhitespace: true }))
-    )
+    // .pipe(
+    //   $.if(devBuild === 'production', $.htmlmin({ collapseWhitespace: true }))
+    // )
     .pipe(gulp.dest(outputDir))
     .pipe($.connect.reload())
 })
